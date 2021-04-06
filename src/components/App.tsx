@@ -1,15 +1,16 @@
 import React from "react";
 import "./styles/main.scss";
-import { Container, SubContainer, Navigation, Logo } from "./ui";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Container } from "./ui";
+import { Header } from "./frontend";
 
 const App = (): JSX.Element => {
   return (
-    <Container>
-      <SubContainer>
-        <Logo />
-        <Navigation />
-      </SubContainer>
-    </Container>
+    <Router>
+      <Container>
+        <Header />
+      </Container>
+    </Router>
   );
 };
 

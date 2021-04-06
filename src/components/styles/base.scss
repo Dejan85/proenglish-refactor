@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // width: 100% !important;
+  // This defines what 1rem is
+  font-size: 62.5%; // 1rem = 10px (inace je 16px. 10 smo dobili tako sto smo 10px / 16px * 100 = 62.5%)
+
+  @include respond(1800) {
+    // font-size: 56.25%; // 1 rem = 9 / 16 * 100 = 75%
+    font-size: 50%; // 1 rem = 9 / 16 * 100 = 75%
+  }
+
+  @include respond(1200) {
+    font-size: 50%; // 1 rem = 8 / 16 * 100 = 56.25%
+  }
+
+  @include respond(900) {
+    font-size: 43.75%; // 1 rem = 7 / 16 * 100 = 50%
+  }
+
+  @include respond(600) {
+    font-size: 30%; // 1 rem = 3 / 16 * 100 = 30%
+  }
+
+  // display: flex;
+  // margin: 0 auto;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

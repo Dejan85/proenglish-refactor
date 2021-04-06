@@ -1,0 +1,44 @@
+// media query manager
+
+/*
+0 - 600px:        Phone
+600 - 900px:      Tablet and Portrait
+900 - 1200px:     Tablet landscape
+1200 - 1800px:    Is where normal styles apply
+1800 +      :     Big desktop
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == 600 {
+    @media (max-width: 37.5em) {
+      // 600px  (600 / 16px)  16px je default vrednost em-a
+      @content;
+    }
+  }
+
+  @if $breakpoint == 900 {
+    @media (max-width: 56.25em) {
+      // 900px  (900 / 16px)  16px je default vrednost em-a
+      @content;
+    }
+  }
+
+  @if $breakpoint == 1200 {
+    @media (max-width: 75em) {
+      // 1200px  (1200 / 16px)  16px je default vrednost em-a
+      @content;
+    }
+  }
+
+  @if $breakpoint == 1800 {
+    @media (max-width: 112.5em) {
+      // 1800px  (1800 / 16px)  16px je default vrednost em-a
+      @content;
+    }
+  }
+}

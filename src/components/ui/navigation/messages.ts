@@ -1,0 +1,1 @@
+export const navigationLinks: string[] = ['Home', "O nama", "Pripreme za ispite", "Cenovnik", "Događaji", "Blog", "Kontakt"]

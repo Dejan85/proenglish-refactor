@@ -1,7 +1,14 @@
 import React from "react";
+import { WrapperType } from "./types";
+import img from "./images/logo2.png";
 
 const Logo = (): JSX.Element => {
-  return <div>Logo</div>;
+  const Wrapper: WrapperType = "div";
+  return (
+    <Wrapper className="logo">
+      <img src={img} alt="img" />
+    </Wrapper>
+  );
 };
 
 export default Logo;

@@ -1,0 +1,2 @@
+export const linksText: string[] = ['Home', "O nama", "Pripreme za ispite", "Cenovnik", "Događaji", "Blog", "Kontakt"];
+export const linksPath: string[] = ['Home', "O nama", "Pripreme za ispite", "Cenovnik", "Događaji", "Blog", "Kontakt"];

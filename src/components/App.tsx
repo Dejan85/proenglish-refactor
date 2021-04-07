@@ -6,11 +6,14 @@ import { Header } from "./frontend";
 
 const App = (): JSX.Element => {
   return (
-    <Router>
-      <Container>
+    <Container>
+      <Router>
         <Header />
-      </Container>
-    </Router>
+        <Switch>
+          <Route path="/">{/* home */}</Route>
+        </Switch>
+      </Router>
+    </Container>
   );
 };
 

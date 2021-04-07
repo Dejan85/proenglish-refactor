@@ -1,15 +1,21 @@
 import React from "react";
-import { WrapperType } from "./types";
-import Link from "./partials/Link";
-import { navigationLinks } from "./messages";
+import { WrapperType, NavigationProps } from "./types";
+import List from "./partials/List";
 
-const Navigation = () => {
-  const Wrapper: WrapperType = "div";
+const Navigation = (props: NavigationProps) => {
+  const { routerLink, linksText, linksPath } = props;
+  const Wrapper: WrapperType = "ul";
+  const Link: any = routerLink;
+
   return (
     <Wrapper className="navigation">
-      {navigationLinks.map((link) => (
-        <Link key={link} text={link} />
-      ))}
+      <List>
+        {linksText?.map((text: string, index: number) => (
+          <Link key={text} to={linksPath[index]}>
+            {text}
+          </Link>
+        ))}
+      </List>
     </Wrapper>
   );
 };

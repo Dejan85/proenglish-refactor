@@ -4,7 +4,7 @@ import { WrapperType, ListProps } from "../types";
 const List = (props: ListProps) => {
   const { children } = props;
   const Wrapper: WrapperType = "li";
-  return <Wrapper>{children}</Wrapper>;
+  return <Wrapper className="navigation__list">{children}</Wrapper>;
 };
 
 export default List;

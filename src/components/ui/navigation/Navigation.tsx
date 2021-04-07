@@ -9,13 +9,18 @@ const Navigation = (props: NavigationProps) => {
 
   return (
     <Wrapper className="navigation">
-      <List>
-        {linksText?.map((text: string, index: number) => (
-          <Link key={text} to={linksPath[index]}>
+      {linksText?.map((text: string, index: number) => (
+        <List key={text}>
+          <Link
+            className="navigation__link"
+            activeClassName="active"
+            exact
+            to={linksPath[index]}
+          >
             {text}
           </Link>
-        ))}
-      </List>
+        </List>
+      ))}
     </Wrapper>
   );
 };

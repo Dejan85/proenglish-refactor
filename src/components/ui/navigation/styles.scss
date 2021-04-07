@@ -1,7 +1,39 @@
 .navigation {
   display: flex;
+  justify-content: flex-end;
   max-width: 66.5rem;
   width: 100%;
   height: 6rem;
-  background-color: red;
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    transition: all 0.5s;
+
+    &:hover {
+      background: #ee9a20;
+      color: white;
+    }
+
+    // font
+    text-decoration: none;
+    color: #1a1a24;
+    font-size: 1.6rem;
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+  }
+}
+
+.active {
+  background: #ee9a20;
+  color: white;
 }

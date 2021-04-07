@@ -1,5 +1,6 @@
 import React from "react";
-import { WrapperType, SubContainerProps } from "./types";
+import { SubContainerProps } from "./types";
+import { WrapperType } from "~/src/components/global-types";
 
 const SubContainer = (props: SubContainerProps) => {
   const { children } = props;

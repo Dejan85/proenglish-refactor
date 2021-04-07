@@ -1,5 +1,6 @@
 import React from "react";
-import { WrapperType, NavigationProps } from "./types";
+import { WrapperType } from "~/src/components/global-types";
+import { NavigationProps } from "./types";
 import List from "./partials/List";
 
 const Navigation = (props: NavigationProps) => {

@@ -1,5 +1,6 @@
 import React from "react";
-import { WrapperType } from "./types";
+import { WrapperType } from "~/src/components/global-types";
+
 import img from "./images/logo2.png";
 
 const Logo = (): JSX.Element => {

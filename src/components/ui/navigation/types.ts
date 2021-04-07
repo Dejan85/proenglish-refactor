@@ -11,5 +11,3 @@ export interface NavigationProps {
 export interface ListProps {
     children?: JSX.Element | JSX.Element[];
 }
-
-export type WrapperType = keyof JSX.IntrinsicElements;

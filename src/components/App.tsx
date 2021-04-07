@@ -1,5 +1,4 @@
 import React from "react";
-import "./styles/main.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Container } from "./ui";
 import { Header } from "./frontend";

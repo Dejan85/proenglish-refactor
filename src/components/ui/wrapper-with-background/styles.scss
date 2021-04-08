@@ -1,5 +1,9 @@
 .wrapper-with-background {
   width: 100%;
-  background-color: red;
-  height: 12400px;
+  background-image: url("./images/bckg.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 70rem;
 }

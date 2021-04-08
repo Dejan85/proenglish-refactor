@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { ContainerProps } from "./types";
 import { WrapperType } from "~/src/global-types";
 
@@ -8,4 +8,4 @@ const Container = (props: ContainerProps): JSX.Element => {
   return <Wrapper className="container">{children}</Wrapper>;
 };
 
-export default memo(Container);
+export default Container;

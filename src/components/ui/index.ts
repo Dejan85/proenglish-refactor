@@ -4,3 +4,5 @@ export { Navigation } from './navigation';
 export { Logo } from './logo';
 export { WrapperWithBackground } from './wrapper-with-background';
 export { Header } from './header';
+export { WelcomeText } from './welcome-text';
+export { Text } from './text';

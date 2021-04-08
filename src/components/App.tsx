@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Container } from "~/src/components/ui";
-import { Header } from "~/src/components/frontend";
+import { Header, Home } from "~/src/components/frontend";
 
 const App = (): JSX.Element => {
   return (
@@ -9,7 +9,9 @@ const App = (): JSX.Element => {
       <Router>
         <Header />
         <Switch>
-          <Route path="/">{/* home */}</Route>
+          <Route path="/">
+            <Home />
+          </Route>
           <Route path="/onama">{/* home */}</Route>
           <Route path="/kursevi">{/* home */}</Route>
           <Route path="/ispiti">{/* home */}</Route>

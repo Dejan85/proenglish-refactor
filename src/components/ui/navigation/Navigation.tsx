@@ -1,5 +1,5 @@
 import React from "react";
-import { WrapperType } from "~/src/components/global-types";
+import { WrapperType } from "~/src/global-types";
 import { NavigationProps } from "./types";
 import List from "./partials/List";
 

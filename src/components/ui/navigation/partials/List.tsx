@@ -1,6 +1,6 @@
 import React from "react";
 import { ListProps } from "../types";
-import { WrapperType } from "~/src/components/global-types";
+import { WrapperType } from "~/src/global-types";
 
 const List = (props: ListProps) => {
   const { children } = props;

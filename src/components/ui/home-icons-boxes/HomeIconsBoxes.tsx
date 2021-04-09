@@ -1,10 +1,17 @@
 import React from "react";
 import { WrapperType } from "~/src/global-types";
-import { iconsClassName } from "./constants";
+import Box from "./Box";
+import { iconsClassName, boxesText } from "./constants";
+import uniqid from "uniqid";
 
-function HomeIconsBoxes() {
+const generateBoxes = () =>
+  iconsClassName.map((icon: string, i: number) => (
+    <Box key={uniqid()} iconClassName={icon} text={boxesText[i]} />
+  ));
+
+function HomeIconsBoxes(): JSX.Element {
   const Wrapper: WrapperType = "div";
-  return <Wrapper></Wrapper>;
+  return <Wrapper>{generateBoxes()}</Wrapper>;
 }
 
 export default HomeIconsBoxes;

@@ -24,7 +24,7 @@ const renderHeading = (text: string): JSX.Element => (
   <Heading as="h2" text={text} className="default-heading" />
 );
 
-const renderText = (text: string): JSX.Element[] | JSX.Element => (
+const renderText = (text: string): JSX.Element => (
   <Text as="p" text={text} className="default-paragraph" />
 );
 const renderLink = (text: string): JSX.Element => (

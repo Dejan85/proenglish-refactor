@@ -9,7 +9,7 @@ const className: string = "navigation";
 const linkClassName: string = "navigation__link";
 const activeClassName: string = "active";
 
-const Navigation = (props: NavigationProps) => {
+const Navigation = (props: NavigationProps): JSX.Element => {
   const { routerLink, linksText, linksPath } = props;
   const Link: any = routerLink;
 

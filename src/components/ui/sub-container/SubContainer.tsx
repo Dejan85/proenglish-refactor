@@ -2,10 +2,12 @@ import React from "react";
 import { SubContainerProps } from "./types";
 import { WrapperType } from "~/src/global-types";
 
-const SubContainer = (props: SubContainerProps) => {
+const Wrapper: WrapperType = "div";
+const className: string = "sub-container";
+
+const SubContainer = (props: SubContainerProps): JSX.Element => {
   const { children } = props;
-  const Wrapper: WrapperType = "div";
-  return <Wrapper className="sub-container">{children}</Wrapper>;
+  return <Wrapper className={className}>{children}</Wrapper>;
 };
 
 export default SubContainer;

@@ -1,14 +1,8 @@
 import React from "react";
-import { WrapperWithBackground } from "~/src/components/ui";
+import { WelcomePage } from "./partials";
 
 const Home = (): JSX.Element => {
-  return (
-    // <div className="home">
-    <WrapperWithBackground>
-      <p>neki text</p>
-    </WrapperWithBackground>
-    // </div>
-  );
+  return <WelcomePage />;
 };
 
 export default Home;

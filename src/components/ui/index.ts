@@ -11,4 +11,5 @@ export { HomeIconsBoxes } from './home-icons-boxes';
 export { FontAwesomeIcon } from './font-awesome-icon';
 export { ContentContainer } from './content-container';
 export { Image } from './image';
-export { Button } from './button';
+export { Button } from './Button';
+export { Link } from './Link';

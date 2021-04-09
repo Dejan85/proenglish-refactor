@@ -5,7 +5,7 @@ import {
   Text,
   Heading,
   Image,
-  Button,
+  Button as ButtonUi,
 } from "~/src/components/ui";
 import { aboutText } from "./messages";
 import uniqid from "uniqid";
@@ -17,11 +17,11 @@ const renderText = (): JSX.Element[] =>
   aboutText.map((text: string) => (
     <Text key={uniqid()} as="p" text={text} className={className} />
   ));
-const renderButton = (): JSX.Element => <Button />;
+const renderButton = (): JSX.Element => <ButtonUi />;
 const renderImage = (): JSX.Element => <Image alt="img" src={img} />;
 
 const text = renderText();
-const button = renderButton();
+const Button = renderButton();
 const image = renderImage();
 
 const About = (): JSX.Element => {
@@ -31,7 +31,7 @@ const About = (): JSX.Element => {
         <ContentContainer.TextSide>
           <Heading as="h2" text="Ko smo mi?" className={className} />
           {text}
-          {button}
+          {Button}
         </ContentContainer.TextSide>
         <ContentContainer.ImageSide>{image}</ContentContainer.ImageSide>
       </ContentContainer>

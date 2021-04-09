@@ -1,10 +1,10 @@
 import React from "react";
 
-const Wrapper = "button";
+const Wrapper = "div";
 const className: string = "button";
 
 const Button = (props) => {
-  return <Wrapper className={className}></Wrapper>;
+  return <Wrapper className={className}>text</Wrapper>;
 };
 
 export default Button;

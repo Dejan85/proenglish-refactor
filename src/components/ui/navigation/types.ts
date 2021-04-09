@@ -1,9 +1,8 @@
-import { RefAttributes, ReactElement, JSXElementConstructor } from "react";
-import { LinkProps } from "react-router-dom";
+import { RouterLinkType } from '~/src/global-types';
 
 export interface NavigationProps {
     children?: JSX.Element | JSX.Element[];
-    routerLink: <S = any>(props: LinkProps<S> & RefAttributes<HTMLAnchorElement>) => ReactElement<any, string | JSXElementConstructor<any>> | null;
+    routerLink: RouterLinkType;
     linksText: string[];
     linksPath: string[];
 }

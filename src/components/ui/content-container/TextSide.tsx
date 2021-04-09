@@ -2,7 +2,7 @@ import React from "react";
 import { WrapperType } from "~/src/global-types";
 import { ContentContainerProps } from "./types";
 
-const Wrapper = "div";
+const Wrapper: WrapperType = "div";
 const className = "text-side";
 
 const TextSide = (props: ContentContainerProps) => {

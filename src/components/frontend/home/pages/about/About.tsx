@@ -5,9 +5,11 @@ import {
   SubContainer,
   Text,
   Heading,
+  Image,
 } from "~/src/components/ui";
 import { aboutText } from "./messages";
 import uniqid from "uniqid";
+import img from "./images/img.jpg";
 
 const className: string = "about";
 
@@ -26,7 +28,9 @@ const About = () => {
           <Heading as="h2" text="Ko smo mi?" className={className} />
           {text}
         </ContentContainer.TextSide>
-        <ContentContainer.ImageSide>Ovde ide slika</ContentContainer.ImageSide>
+        <ContentContainer.ImageSide>
+          <Image alt="img" src={img} />
+        </ContentContainer.ImageSide>
       </ContentContainer>
     </SubContainer>
   );

@@ -10,3 +10,4 @@ export { Heading } from './heading';
 export { HomeIconsBoxes } from './home-icons-boxes';
 export { FontAwesomeIcon } from './font-awesome-icon';
 export { ContentContainer } from './content-container';
+export { Image } from './image';

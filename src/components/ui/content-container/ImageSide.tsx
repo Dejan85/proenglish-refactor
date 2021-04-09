@@ -1,9 +1,14 @@
 import React from "react";
+import { ContentContainerProps } from "./types";
+import { WrapperType } from "~/src/global-types";
 
-const ImageSide = (props) => {
+const Wrapper: WrapperType = "div";
+const className = "image-side";
+
+const ImageSide = (props: ContentContainerProps) => {
   const { children } = props;
 
-  return <div>{children}</div>;
+  return <Wrapper className={className}>{children}</Wrapper>;
 };
 
 export default ImageSide;

@@ -1,7 +1,8 @@
 import React from "react";
 import { WrapperType } from "~/src/global-types";
+import { WelcomeTextProps } from "./types";
 
-function WelcomeText(props) {
+function WelcomeText(props: WelcomeTextProps) {
   const { children } = props;
   const Wrapper: WrapperType = "div";
   const className = "welcome-text";

@@ -1,7 +1,4 @@
-import { WrapperType } from "~/src/global-types";
-
-
-export interface TextProps {
-    as: WrapperType,
-    text: string;
+export interface WelcomeTextProps {
+    children: JSX.Element | JSX.Element[];
 }
+

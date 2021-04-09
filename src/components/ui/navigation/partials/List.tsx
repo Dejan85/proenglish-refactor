@@ -5,7 +5,7 @@ import { WrapperType } from "~/src/global-types";
 const Wrapper: WrapperType = "li";
 const className: string = "navigation__list";
 
-const List = (props: ListProps) => {
+const List = (props: ListProps): JSX.Element => {
   const { children } = props;
   return <Wrapper className={className}>{children}</Wrapper>;
 };

@@ -5,11 +5,6 @@
   margin-top: 15rem;
 }
 
-.content-container-wrapper {
-  display: flex;
-  outline: 1px solid red;
-}
-
 .text-side {
   display: flex;
   flex-direction: column;
@@ -28,4 +23,8 @@
 
 .set-width-to-50-percent {
   width: 50%;
+}
+
+.set-height-to-55-rem {
+  height: 55rem;
 }

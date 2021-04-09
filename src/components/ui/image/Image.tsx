@@ -12,7 +12,12 @@ const Image = (props: ImageProps) => {
 
   return (
     <Wrapper className={className}>
-      <LazyLoadImage alt={alt} src={src} width={"100%"} />
+      <LazyLoadImage
+        alt={alt}
+        src={src}
+        useIntersectionObserver={true}
+        width={"100%"}
+      />
     </Wrapper>
   );
 };

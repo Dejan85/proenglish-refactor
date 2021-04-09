@@ -9,11 +9,7 @@ const className: string = "content-container";
 
 const ContentContainer = (props: ContentContainerProps): JSX.Element => {
   const { children } = props;
-  return (
-    <Wrapper className={className}>
-      <div>{children}</div>
-    </Wrapper>
-  );
+  return <Wrapper className={className}>{children}</Wrapper>;
 };
 
 ContentContainer.TextSide = TextSide;

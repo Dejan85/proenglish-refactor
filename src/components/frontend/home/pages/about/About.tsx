@@ -13,7 +13,7 @@ const Wrapper: WrapperType = "div";
 const className: string = "about";
 
 const generateText = (): JSX.Element[] =>
-  aboutText.map((text) => (
+  aboutText.map((text: string) => (
     <Text key={uniqid()} as="p" text={text} className="about" />
   ));
 
@@ -25,7 +25,7 @@ const About = () => {
       <Wrapper className={className}>
         <ContentContainer>
           <ContentContainer.TextSide>
-            <Heading as="h1" text="Ko smo mi?" />
+            <Heading as="h2" text="Ko smo mi?" className="about" />
             {text}
           </ContentContainer.TextSide>
           <ContentContainer.ImageSide>

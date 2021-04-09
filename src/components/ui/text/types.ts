@@ -5,4 +5,5 @@ export interface TextProps {
     as: WrapperType,
     text: string;
     className?: string;
+    key?: string;
 }

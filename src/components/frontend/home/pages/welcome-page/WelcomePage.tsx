@@ -14,7 +14,7 @@ const WelcomePage = (): JSX.Element => {
     <>
       <WrapperWithBackground>
         <WelcomeText>
-          <Heading as="h2" text={firstMsg} />
+          <Heading as="h1" text={firstMsg} />
           <Text as="p" text={secondMsg} />
         </WelcomeText>
       </WrapperWithBackground>

@@ -6,11 +6,10 @@
   &__about {
     font-family: $lato-sans-serif;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   &__p {
-    font-size: 2.5rem;
     color: white;
   }
 
@@ -23,5 +22,7 @@
   &__about {
     line-height: 1.4;
     text-align: justify;
+    font-size: 2rem;
+    margin-top: 2rem;
   }
 }

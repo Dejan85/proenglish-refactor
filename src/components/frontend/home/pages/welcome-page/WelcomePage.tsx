@@ -9,7 +9,7 @@ import {
 } from "~/src/components/ui";
 import { firstMsg, secondMsg } from "./messages";
 
-function WelcomePage() {
+const WelcomePage = (): JSX.Element => {
   return (
     <>
       <WrapperWithBackground>
@@ -23,6 +23,6 @@ function WelcomePage() {
       </SubContainer>
     </>
   );
-}
+};
 
 export default WelcomePage;

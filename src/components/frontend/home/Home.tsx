@@ -1,8 +1,13 @@
 import React from "react";
-import { WelcomePage } from "./partials";
+import { WelcomePage, About } from "./pages";
 
 const Home = (): JSX.Element => {
-  return <WelcomePage />;
+  return (
+    <>
+      <WelcomePage />
+      <About />
+    </>
+  );
 };
 
 export default Home;

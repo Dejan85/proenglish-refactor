@@ -1,10 +1,16 @@
 @import "../../styles/variables/fonts.scss";
 
 .text {
-  &__p {
-    font-size: 2.5rem;
+  &__h1,
+  &__h2 {
+    font-size: 4.6rem;
     color: white;
     font-family: $lato-sans-serif;
     text-align: center;
+    line-height: 60px;
+  }
+
+  &__h2 {
+    font-size: 4.4rem;
   }
 }

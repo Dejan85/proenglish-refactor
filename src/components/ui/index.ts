@@ -6,3 +6,4 @@ export { WrapperWithBackground } from './wrapper-with-background';
 export { Header } from './header';
 export { WelcomeText } from './welcome-text';
 export { Text } from './text';
+export { Heading } from './heading';

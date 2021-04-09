@@ -1,11 +1,12 @@
 import React from "react";
-import { WelcomePage, About } from "./pages";
+import { WelcomePage, About, Course } from "./pages";
 
 const Home = (): JSX.Element => {
   return (
     <>
       <WelcomePage />
       <About />
+      <Course />
     </>
   );
 };

@@ -7,3 +7,5 @@ export { Header } from './header';
 export { WelcomeText } from './welcome-text';
 export { Text } from './text';
 export { Heading } from './heading';
+export { HomeIconsBoxes } from './home-icons-boxes';
+export { FontAwesomeIcon } from './font-awesome-icon';

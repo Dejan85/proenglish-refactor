@@ -6,9 +6,8 @@ import { WrapperType } from "~/src/global-types";
 const Wrapper: WrapperType = "div";
 const className: string = "image";
 
-const Image = (props: ImageProps) => {
+const Image = (props: ImageProps): JSX.Element => {
   const { src, alt } = props;
-  console.log("test", src);
 
   return (
     <Wrapper className={className}>

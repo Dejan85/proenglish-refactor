@@ -4,13 +4,13 @@ import { Text, FontAwesomeIcon } from "~/src/components/ui";
 
 function box(props: BoxProps): JSX.Element {
   const { iconClassName, text } = props;
-  const Div: TagProp = "div";
+  const Wrapper: TagProp = "div";
   const className = "box";
   return (
-    <Div className={className}>
+    <Wrapper className={className}>
       <FontAwesomeIcon className={iconClassName} />
       <Text as="p" text={text} />
-    </Div>
+    </Wrapper>
   );
 }
 

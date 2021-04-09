@@ -1,4 +1,16 @@
 .home-icon-boxes {
   outline: 1px solid red;
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 17.6rem;
+  height: 17.6rem;
+  outline: 1px solid green;
 }

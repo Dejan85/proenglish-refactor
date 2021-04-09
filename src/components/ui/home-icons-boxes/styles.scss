@@ -1,3 +1,5 @@
+@import "../../styles/mixins/gradient";
+
 .home-icon-boxes {
   display: flex;
   justify-content: space-between;
@@ -17,7 +19,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: red;
   width: 100%;
   height: 17.6rem;
+
+  &--box0 {
+    @include gradient(#a23272, #b83983);
+  }
+
+  &--box1 {
+    @include gradient(#fb385a, #fd4c45);
+  }
+
+  &--box2 {
+    @include gradient(#ff8c2c, #ffb138);
+  }
+
+  &--box3 {
+    @include gradient(#5db633, #56ab2f);
+  }
+
+  &--box4 {
+    @include gradient(#0085da, #019cef);
+  }
 }

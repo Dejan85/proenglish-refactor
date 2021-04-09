@@ -9,7 +9,12 @@ const className: string = "home-icon-boxes";
 
 const generateBoxes = (): JSX.Element[] =>
   iconsClassName.map((icon: string, i: number) => (
-    <Box key={uniqid()} iconClassName={icon} text={boxesText[i]} />
+    <Box
+      key={uniqid()}
+      iconClassName={icon}
+      text={boxesText[i]}
+      customClassName={`box${i}`}
+    />
   ));
 
 const boxes = generateBoxes();

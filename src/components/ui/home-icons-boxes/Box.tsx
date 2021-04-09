@@ -8,10 +8,16 @@ const className: string = "box";
 const IconContainerClassName: string = `icon-container`;
 
 const Box = (props: BoxProps): JSX.Element => {
-  const { iconClassName, text } = props;
+  const { iconClassName, text, customClassName } = props;
   return (
     <Wrapper className={className}>
-      <IconContainer className={IconContainerClassName}>
+      <IconContainer
+        className={
+          customClassName
+            ? `${IconContainerClassName} ${IconContainerClassName}--${customClassName}`
+            : IconContainerClassName
+        }
+      >
         <FontAwesomeIcon className={iconClassName} />
       </IconContainer>
       <Text as="p" text={text} className="home-boxes-text" />

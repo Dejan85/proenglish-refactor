@@ -23,7 +23,15 @@ const About = () => {
   return (
     <SubContainer>
       <Wrapper className={className}>
-        <ContentContainer>{text}</ContentContainer>
+        <ContentContainer>
+          <ContentContainer.TextSide>
+            <Heading as="h1" text="Ko smo mi?" />
+            {text}
+          </ContentContainer.TextSide>
+          <ContentContainer.ImageSide>
+            Ovde ide slika
+          </ContentContainer.ImageSide>
+        </ContentContainer>
       </Wrapper>
     </SubContainer>
   );

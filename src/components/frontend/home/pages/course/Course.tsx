@@ -34,23 +34,23 @@ const imageUi2 = renderImage2();
 const Course = (): JSX.Element => {
   return (
     <>
-      <ContentContainer>
-        <ContentContainer.ImageSide className="set-width-to-50">
+      <ContentContainer className="set-height-to-70-rem">
+        <ContentContainer.ImageSide className="set-width-to-50-percent">
           {imageUi}
         </ContentContainer.ImageSide>
-        <ContentContainer.TextSide className="set-width-to-50">
+        <ContentContainer.TextSide className="set-width-to-50-percent">
           {headingUi}
           {textUi}
           {linkUi}
         </ContentContainer.TextSide>
       </ContentContainer>
-      <ContentContainer className="reset-margin-top">
-        <ContentContainer.TextSide className="set-width-to-50">
+      <ContentContainer className="reset-margin-top set-height-to-70-rem">
+        <ContentContainer.TextSide className="set-width-to-50-percent">
           {headingUi2}
           {textUi2}
           {linkUi}
         </ContentContainer.TextSide>
-        <ContentContainer.ImageSide className="set-width-to-50">
+        <ContentContainer.ImageSide className="set-width-to-50-percent">
           {imageUi2}
         </ContentContainer.ImageSide>
       </ContentContainer>

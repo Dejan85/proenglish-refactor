@@ -14,7 +14,7 @@ const ImageSide = (props: ContentContainerProps): JSX.Element => {
     <Wrapper
       className={
         customClassName
-          ? `${className} ${className}--${customClassName}`
+          ? `${className} ${className} ${customClassName}`
           : className
       }
     >

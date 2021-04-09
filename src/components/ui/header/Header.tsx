@@ -2,10 +2,12 @@ import React from "react";
 import { WrapperType } from "~/src/global-types";
 import { HeaderProps } from "./types";
 
+const Wrapper: WrapperType = "div";
+const className: string = "header";
+
 const Header = (props: HeaderProps) => {
   const { children } = props;
-  const Header: WrapperType = "div";
-  return <Header className="header">{children}</Header>;
+  return <Wrapper className={className}>{children}</Wrapper>;
 };
 
 export default Header;

@@ -1,10 +1,15 @@
-import { WrapperType, PropsTypes } from "./types";
+import { WrapperType, FontAwesomeIconProps, ContainerType } from "./types";
 import React from "react";
+const I: WrapperType = "i";
+const Container: ContainerType = "div";
 
-function FontAwesomeIcon(props: PropsTypes): JSX.Element {
+function FontAwesomeIcon(props: FontAwesomeIconProps): JSX.Element {
   const { className } = props;
-  const I: WrapperType = "i";
-  return <I className={className} />;
+  return (
+    <Container>
+      <I className={className} />
+    </Container>
+  );
 }
 
 export default FontAwesomeIcon;

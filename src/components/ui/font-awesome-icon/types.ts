@@ -1,5 +1,6 @@
 
 export type WrapperType = "i";
-export interface PropsTypes {
+export type ContainerType = "div";
+export interface FontAwesomeIconProps {
     className: string;
 }

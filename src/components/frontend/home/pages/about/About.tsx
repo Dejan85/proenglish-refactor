@@ -1,11 +1,11 @@
 import React from "react";
-import { WrapperType } from "~/src/global-types";
 import {
   ContentContainer,
   SubContainer,
   Text,
   Heading,
   Image,
+  Button,
 } from "~/src/components/ui";
 import { aboutText } from "./messages";
 import uniqid from "uniqid";
@@ -13,24 +13,27 @@ import img from "./images/img.jpg";
 
 const className: string = "about";
 
-const generateText = (): JSX.Element[] =>
+const renderText = (): JSX.Element[] =>
   aboutText.map((text: string) => (
     <Text key={uniqid()} as="p" text={text} className={className} />
   ));
+const renderButton = (): JSX.Element => <Button />;
+const renderImage = (): JSX.Element => <Image alt="img" src={img} />;
 
-const text = generateText();
+const text = renderText();
+const button = renderButton();
+const image = renderImage();
 
-const About = () => {
+const About = (): JSX.Element => {
   return (
     <SubContainer>
       <ContentContainer>
         <ContentContainer.TextSide>
           <Heading as="h2" text="Ko smo mi?" className={className} />
           {text}
+          {button}
         </ContentContainer.TextSide>
-        <ContentContainer.ImageSide>
-          <Image alt="img" src={img} />
-        </ContentContainer.ImageSide>
+        <ContentContainer.ImageSide>{image}</ContentContainer.ImageSide>
       </ContentContainer>
     </SubContainer>
   );

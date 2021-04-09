@@ -1,22 +1,22 @@
 import React from "react";
-import { TagProp, BoxProps } from "./types";
+import { TagType, BoxProps } from "./types";
 import { Text, FontAwesomeIcon } from "~/src/components/ui";
 
-const Wrapper: TagProp = "div";
-const Container: TagProp = "div";
+const Wrapper: TagType = "div";
+const IconContainer: TagType = "div";
 const className: string = "box";
-const containerClassName: string = `${className}__container`;
+const IconContainerClassName: string = `icon-container`;
 
-function box(props: BoxProps): JSX.Element {
+const Box = (props: BoxProps): JSX.Element => {
   const { iconClassName, text } = props;
   return (
     <Wrapper className={className}>
-      <Container className={containerClassName}>
+      <IconContainer className={IconContainerClassName}>
         <FontAwesomeIcon className={iconClassName} />
-      </Container>
+      </IconContainer>
       <Text as="p" text={text} />
     </Wrapper>
   );
-}
+};
 
-export default box;
+export default Box;

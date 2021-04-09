@@ -1,4 +1,4 @@
-export type TagProp = 'div';
+export type TagType = 'div';
 export interface BoxProps {
     iconClassName: string,
     text: string;

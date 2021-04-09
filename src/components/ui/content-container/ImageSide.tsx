@@ -8,8 +8,6 @@ const ImageSide = (props: ContentContainerProps): JSX.Element => {
   const { children, className: customClassName } = props;
   const className: string = "image-side";
 
-  console.log("test", customClassName);
-
   return (
     <Wrapper
       className={

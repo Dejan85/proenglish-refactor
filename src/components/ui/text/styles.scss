@@ -3,7 +3,7 @@
 .text {
   &__p,
   &__home-boxes-text,
-  &__about {
+  &__default-paragraph {
     font-family: $lato-sans-serif;
     text-align: center;
     font-size: 2.5rem;
@@ -19,7 +19,7 @@
     text-transform: uppercase;
   }
 
-  &__about {
+  &__default-paragraph {
     line-height: 1.4;
     text-align: justify;
     font-size: 2rem;

@@ -12,15 +12,13 @@ import uniqid from "uniqid";
 import img from "./images/img.jpg";
 import { Link as RouterLink } from "react-router-dom";
 
-const className: string = "about";
-
 const renderHeading = (): JSX.Element => (
-  <Heading as="h2" text="Ko smo mi?" className={className} />
+  <Heading as="h2" text="Ko smo mi?" className="default-heading" />
 );
 
 const renderText = (): JSX.Element[] =>
   aboutText.map((text: string) => (
-    <Text key={uniqid()} as="p" text={text} className={className} />
+    <Text key={uniqid()} as="p" text={text} className="default-paragraph" />
   ));
 const renderLink = (): JSX.Element => (
   <Link to="/onama" as={RouterLink} text="Pročitaj više" />

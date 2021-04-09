@@ -13,23 +13,24 @@ import img from "./images/img2.jpg";
 import img2 from "./images/img.jpg";
 
 const renderHeading = (text: string): JSX.Element => (
-  <Heading as="h2" text={text} />
+  <Heading as="h2" text={text} className="default-heading" />
 );
 
-const renderText = (text: string): JSX.Element[] => <Text as="p" text={text} />;
+const renderText = (text: string): JSX.Element[] | JSX.Element => (
+  <Text as="p" text={text} className="default-paragraph" />
+);
 const renderLink = (): JSX.Element => (
   <Link to="/onama" as={RouterLink} text="Pročitaj više" />
 );
-const renderImage = (): JSX.Element => <Image alt="img" src={img} />;
-const renderImage2 = (): JSX.Element => <Image alt="img" src={img2} />;
+const renderImage = (img: string): JSX.Element => <Image alt="img" src={img} />;
 
 const headingUi = renderHeading(headingText);
 const headingUi2 = renderHeading(headingText2);
 const textUi = renderText(text);
 const textUi2 = renderText(text2);
 const linkUi = renderLink();
-const imageUi = renderImage();
-const imageUi2 = renderImage2();
+const imageUi = renderImage(img);
+const imageUi2 = renderImage(img2);
 
 const Course = (): JSX.Element => {
   return (

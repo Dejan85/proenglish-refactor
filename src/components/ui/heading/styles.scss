@@ -2,7 +2,7 @@
 
 .heading {
   &__h1,
-  &__about {
+  &__default-heading {
     font-size: 5rem;
     color: white;
     font-family: $lato-sans-serif;
@@ -11,7 +11,7 @@
     // padding-bottom: 3rem;
   }
 
-  &__about {
+  &__default-heading {
     font-size: 4rem;
     color: #1a1a24;
   }

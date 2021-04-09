@@ -3,7 +3,7 @@ import { WrapperType } from "~/src/global-types";
 import { WelcomeTextProps } from "./types";
 
 const Wrapper: WrapperType = "div";
-const className = "welcome-text";
+const className: string = "welcome-text";
 
 function WelcomeText(props: WelcomeTextProps): JSX.Element {
   const { children } = props;

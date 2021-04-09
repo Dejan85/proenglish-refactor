@@ -1,7 +1,7 @@
 import React from "react";
 import { HeadingProps } from "./types";
 
-function Heading(props: HeadingProps) {
+function Heading(props: HeadingProps): JSX.Element {
   const { as = "h1", text } = props;
   const Wrapper = as;
   const className: string = `text__${as}`;

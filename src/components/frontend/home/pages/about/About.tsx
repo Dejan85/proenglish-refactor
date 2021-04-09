@@ -14,6 +14,10 @@ import { Link as RouterLink } from "react-router-dom";
 
 const className: string = "about";
 
+const renderHeading = (): JSX.Element => (
+  <Heading as="h2" text="Ko smo mi?" className={className} />
+);
+
 const renderText = (): JSX.Element[] =>
   aboutText.map((text: string) => (
     <Text key={uniqid()} as="p" text={text} className={className} />
@@ -23,8 +27,9 @@ const renderLink = (): JSX.Element => (
 );
 const renderImage = (): JSX.Element => <Image alt="img" src={img} />;
 
+const heading = renderHeading();
 const text = renderText();
-const LinkUi = renderLink();
+const linkUi = renderLink();
 const image = renderImage();
 
 const About = (): JSX.Element => {
@@ -32,9 +37,9 @@ const About = (): JSX.Element => {
     <SubContainer>
       <ContentContainer>
         <ContentContainer.TextSide>
-          <Heading as="h2" text="Ko smo mi?" className={className} />
+          {heading}
           {text}
-          {LinkUi}
+          {linkUi}
         </ContentContainer.TextSide>
         <ContentContainer.ImageSide>{image}</ContentContainer.ImageSide>
       </ContentContainer>

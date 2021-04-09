@@ -5,4 +5,5 @@ export const linkText: string = "Zakaži besplatan probni čas";
 export const headingText2: string = "Priprema za međunarodne ispite";
 export const text2: string = "Pripreme za međunarodne ispite su individualizovani kursevi koji omogućavaju merljiv napredak svakog pojedinačnog polaznika. Grupe su pažljivo sastavljene, a samom upisu prethode besplatne konsultacije na kojima procenjujemo vaše znanje u svakoj od četiri jezičke veštine (Reading, Listening, Speaking i Writing). Osim toga, uradićemo i probni test (tj. mock test) ispita koga polažete i pomoći da izaberete onaj na kome ćete postići najbolji skor.";
 export const linkText2: string = "Zakaži besplatne konsultacije";
+export const linkPath: string = "/kontakt";
 

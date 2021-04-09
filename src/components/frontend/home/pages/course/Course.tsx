@@ -15,6 +15,7 @@ import {
   text2,
   linkText,
   linkText2,
+  linkPath,
 } from "./messages";
 import img from "./images/img2.jpg";
 import img2 from "./images/img.jpg";
@@ -27,7 +28,7 @@ const renderText = (text: string): JSX.Element[] | JSX.Element => (
   <Text as="p" text={text} className="default-paragraph" />
 );
 const renderLink = (text: string): JSX.Element => (
-  <Link to="/onama" as={RouterLink} text={text} />
+  <Link to={linkPath} as={RouterLink} text={text} />
 );
 const renderImage = (img: string): JSX.Element => <Image alt="img" src={img} />;
 

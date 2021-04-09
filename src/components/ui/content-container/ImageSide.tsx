@@ -3,12 +3,24 @@ import { ContentContainerProps } from "./types";
 import { WrapperType } from "~/src/global-types";
 
 const Wrapper: WrapperType = "div";
-const className = "image-side";
 
 const ImageSide = (props: ContentContainerProps): JSX.Element => {
-  const { children } = props;
+  const { children, className: customClassName } = props;
+  const className: string = "image-side";
 
-  return <Wrapper className={className}>{children}</Wrapper>;
+  console.log("test", customClassName);
+
+  return (
+    <Wrapper
+      className={
+        customClassName
+          ? `${className} ${className}--${customClassName}`
+          : className
+      }
+    >
+      {children}
+    </Wrapper>
+  );
 };
 
 export default ImageSide;

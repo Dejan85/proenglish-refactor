@@ -35,23 +35,24 @@ const Course = (): JSX.Element => {
   return (
     <>
       <ContentContainer>
-        <ContentContainer.Wrapper>
-          <ContentContainer.ImageSide>{imageUi}</ContentContainer.ImageSide>
-          <ContentContainer.TextSide>
-            {headingUi}
-            {textUi}
-            {linkUi}
-          </ContentContainer.TextSide>
-        </ContentContainer.Wrapper>
-
-        <ContentContainer.Wrapper>
-          <ContentContainer.TextSide>
-            {headingUi2}
-            {textUi2}
-            {linkUi}
-          </ContentContainer.TextSide>
-          <ContentContainer.ImageSide>{imageUi2}</ContentContainer.ImageSide>
-        </ContentContainer.Wrapper>
+        <ContentContainer.ImageSide className="set-width-to-50">
+          {imageUi}
+        </ContentContainer.ImageSide>
+        <ContentContainer.TextSide className="set-width-to-50">
+          {headingUi}
+          {textUi}
+          {linkUi}
+        </ContentContainer.TextSide>
+      </ContentContainer>
+      <ContentContainer className="reset-margin-top">
+        <ContentContainer.TextSide className="set-width-to-50">
+          {headingUi2}
+          {textUi2}
+          {linkUi}
+        </ContentContainer.TextSide>
+        <ContentContainer.ImageSide className="set-width-to-50">
+          {imageUi2}
+        </ContentContainer.ImageSide>
       </ContentContainer>
     </>
   );

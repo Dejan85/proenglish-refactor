@@ -3,9 +3,14 @@
   justify-content: space-between;
   width: 100%;
   margin-top: 15rem;
+
+  &--reset-margin-top {
+    margin-top: 0;
+  }
 }
 
-.wrapper {
+.content-container-wrapper {
+  display: flex;
   outline: 1px solid red;
 }
 
@@ -14,8 +19,16 @@
   flex-direction: column;
   align-items: flex-start;
   width: 49%;
+
+  &--set-width-to-50 {
+    width: 50%;
+  }
 }
 
 .image-side {
   width: 49%;
+
+  &--set-width-to-50 {
+    width: 50%;
+  }
 }

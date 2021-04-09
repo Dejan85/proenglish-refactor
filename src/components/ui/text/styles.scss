@@ -1,17 +1,21 @@
 @import "../../styles/variables/fonts.scss";
 
-.default-paragraph {
+.default-paragraph,
+.welcome-paragraph,
+.home-boxes-paragraph {
   font-family: $lato-sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.default-paragraph {
   line-height: 1.4;
   text-align: justify;
-  font-size: 2rem;
   margin-top: 2rem;
 }
 
 .welcome-paragraph {
   color: white;
-  font-family: $lato-sans-serif;
-  text-align: center;
   font-size: 2.5rem;
   font-weight: 500;
 }
@@ -20,7 +24,4 @@
   padding: 1.3rem 0;
   font-weight: 800;
   text-transform: uppercase;
-  text-align: center;
-  font-size: 2rem;
-  font-family: $lato-sans-serif;
 }

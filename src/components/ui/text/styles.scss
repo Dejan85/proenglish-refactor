@@ -7,4 +7,13 @@
     font-family: $lato-sans-serif;
     text-align: center;
   }
+
+  &__home-boxes-text {
+    padding: 1.3rem 0;
+    font-size: 2rem;
+    font-family: $lato-sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
 }

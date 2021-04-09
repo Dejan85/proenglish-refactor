@@ -1,8 +1,8 @@
 .home-icon-boxes {
-  outline: 1px solid red;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: -10rem;
 }
 
 .box {
@@ -11,7 +11,6 @@
   align-items: center;
   width: 17.6rem;
   height: 25rem;
-  outline: 1px solid green;
 }
 
 .icon-container {

@@ -1,0 +1,25 @@
+@mixin gradient($firstColor, $secondColor) {
+  background: -webkit-linear-gradient(
+    to right,
+    $firstColor,
+    $secondColor
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    $firstColor,
+    $secondColor
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@mixin gradient2($firstColor, $secondColor) {
+  background: -webkit-linear-gradient(
+    to bottom,
+    $firstColor,
+    $secondColor
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    $firstColor,
+    $secondColor
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

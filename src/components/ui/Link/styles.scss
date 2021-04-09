@@ -1,0 +1,20 @@
+@import "../../styles/variables/colors.scss";
+@import "../../styles/variables/fonts.scss";
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background-color: $main-color;
+  font-size: 1.7rem;
+  font-family: $lato-sans-serif;
+  transition: all 0.5s;
+  padding: 1rem 2rem;
+  margin-top: 8rem;
+
+  &:hover {
+    background-color: darken($color: $main-color, $amount: 20%);
+  }
+}

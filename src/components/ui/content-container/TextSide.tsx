@@ -5,8 +5,17 @@ import { ContentContainerProps } from "./types";
 const Wrapper: WrapperType = "div";
 
 const TextSide = (props: ContentContainerProps): JSX.Element => {
-  const { children, className: customClassName } = props;
+  const {
+    children,
+    className: customClassName,
+    wrapContentToRight = false,
+    wrapContentToLeft = false,
+  } = props;
   const className: string = "text-side";
+  const wrapClassName: string =
+    (wrapContentToRight && "wrap-content-right") ||
+    (wrapContentToLeft && "wrap-content-left") ||
+    "";
 
   return (
     <Wrapper
@@ -16,7 +25,11 @@ const TextSide = (props: ContentContainerProps): JSX.Element => {
           : className
       }
     >
-      {children}
+      {wrapContentToRight || wrapContentToLeft ? (
+        <Wrapper className={wrapClassName}>{children}</Wrapper>
+      ) : (
+        children
+      )}
     </Wrapper>
   );
 };

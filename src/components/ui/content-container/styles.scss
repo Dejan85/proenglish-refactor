@@ -5,6 +5,25 @@
   margin-top: 15rem;
 }
 
+.wrap-content-left,
+.wrap-content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  max-width: 60rem;
+  width: 100%;
+  padding-left: 5rem;
+  height: 100%;
+}
+
+.wrap-content-left {
+  align-self: flex-end;
+  align-items: flex-start;
+  padding-left: 0;
+  padding-right: 5rem;
+}
+
 .text-side {
   display: flex;
   flex-direction: column;
@@ -27,4 +46,8 @@
 
 .set-height-to-55-rem {
   height: 55rem;
+}
+
+.box-shadow {
+  box-shadow: 0 0 10px rgb(0 0 0 / 13%);
 }

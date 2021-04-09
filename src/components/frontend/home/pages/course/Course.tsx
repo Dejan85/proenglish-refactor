@@ -8,7 +8,14 @@ import {
   Link,
 } from "~/src/components/ui";
 import { Link as RouterLink } from "react-router-dom";
-import { headingText, headingText2, text, text2 } from "./messages";
+import {
+  headingText,
+  headingText2,
+  text,
+  text2,
+  linkText,
+  linkText2,
+} from "./messages";
 import img from "./images/img2.jpg";
 import img2 from "./images/img.jpg";
 
@@ -19,8 +26,8 @@ const renderHeading = (text: string): JSX.Element => (
 const renderText = (text: string): JSX.Element[] | JSX.Element => (
   <Text as="p" text={text} className="default-paragraph" />
 );
-const renderLink = (): JSX.Element => (
-  <Link to="/onama" as={RouterLink} text="Pročitaj više" />
+const renderLink = (text: string): JSX.Element => (
+  <Link to="/onama" as={RouterLink} text={text} />
 );
 const renderImage = (img: string): JSX.Element => <Image alt="img" src={img} />;
 
@@ -28,28 +35,35 @@ const headingUi = renderHeading(headingText);
 const headingUi2 = renderHeading(headingText2);
 const textUi = renderText(text);
 const textUi2 = renderText(text2);
-const linkUi = renderLink();
+const linkUi = renderLink(linkText);
+const linkUi2 = renderLink(linkText2);
 const imageUi = renderImage(img);
 const imageUi2 = renderImage(img2);
 
 const Course = (): JSX.Element => {
   return (
     <>
-      <ContentContainer className="set-height-to-55-rem">
+      <ContentContainer className="set-height-to-55-rem box-shadow">
         <ContentContainer.ImageSide className="set-width-to-50-percent">
           {imageUi}
         </ContentContainer.ImageSide>
-        <ContentContainer.TextSide className="set-width-to-50-percent">
+        <ContentContainer.TextSide
+          wrapContentToRight
+          className="set-width-to-50-percent"
+        >
           {headingUi}
           {textUi}
           {linkUi}
         </ContentContainer.TextSide>
       </ContentContainer>
       <ContentContainer className="reset-margin-top set-height-to-55-rem">
-        <ContentContainer.TextSide className="set-width-to-50-percent">
+        <ContentContainer.TextSide
+          wrapContentToLeft
+          className="set-width-to-50-percent"
+        >
           {headingUi2}
           {textUi2}
-          {linkUi}
+          {linkUi2}
         </ContentContainer.TextSide>
         <ContentContainer.ImageSide className="set-width-to-50-percent">
           {imageUi2}

@@ -13,3 +13,4 @@ export { ContentContainer } from './content-container';
 export { Image } from './image';
 export { Button } from './Button';
 export { Link } from './Link';
+export { Line } from './Line';

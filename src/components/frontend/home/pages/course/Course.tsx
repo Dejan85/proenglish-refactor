@@ -56,7 +56,7 @@ const Course = (): JSX.Element => {
           {linkUi}
         </ContentContainer.TextSide>
       </ContentContainer>
-      <ContentContainer className="reset-margin-top set-height-to-55-rem">
+      <ContentContainer className="reset-margin-top set-height-to-55-rem box-shadow">
         <ContentContainer.TextSide
           wrapContentToLeft
           className="set-width-to-50-percent"

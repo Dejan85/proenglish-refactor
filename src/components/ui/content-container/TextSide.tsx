@@ -20,9 +20,7 @@ const TextSide = (props: ContentContainerProps): JSX.Element => {
   return (
     <Wrapper
       className={
-        customClassName
-          ? `${className} ${className} ${customClassName}`
-          : className
+        customClassName ? `${className} ${customClassName}` : className
       }
     >
       {wrapContentToRight || wrapContentToLeft ? (

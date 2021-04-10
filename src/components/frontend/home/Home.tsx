@@ -1,5 +1,5 @@
 import React from "react";
-import { WelcomePage, About, Course } from "./pages";
+import { WelcomePage, About, Course, Blog } from "./pages";
 
 const Home = (): JSX.Element => {
   return (
@@ -7,6 +7,7 @@ const Home = (): JSX.Element => {
       <WelcomePage />
       <About />
       <Course />
+      <Blog />
     </>
   );
 };

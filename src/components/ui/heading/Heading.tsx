@@ -8,9 +8,7 @@ function Heading(props: HeadingProps): JSX.Element {
   return (
     <Wrapper
       className={
-        customClassName
-          ? `${className} ${className} ${customClassName}`
-          : className
+        customClassName ? `${className} ${customClassName}` : className
       }
     >
       {text}

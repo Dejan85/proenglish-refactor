@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 15rem;
+  margin-top: 10rem;
 }
 
 .wrap-content-left,
@@ -36,6 +36,10 @@
 }
 
 // halpers
+.justify-content-center {
+  justify-content: center;
+}
+
 .reset-margin-top {
   margin-top: 0;
 }

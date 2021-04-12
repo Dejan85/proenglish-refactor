@@ -20,7 +20,9 @@ const Box = (props: BoxProps): JSX.Element => {
       >
         <FontAwesomeIcon className={iconClassName} />
       </IconContainer>
-      <Text as="p" text={text} className="home-boxes-paragraph" />
+      <Text as="p" className="home-boxes-paragraph">
+        {text}
+      </Text>
     </Wrapper>
   );
 };

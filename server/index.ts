@@ -7,6 +7,11 @@ const app = express();
 dontenv.config();
 const PORT = process.env.PORT || 5000;
 const mongoURI = process.env.MONGO_URI;
+import { blog } from './routes';
+
+
+app.use("/blog", blog);
+
 
 app.use(bodyParser.json({ limit: "30mb" }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));

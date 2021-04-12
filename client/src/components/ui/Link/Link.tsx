@@ -2,7 +2,7 @@ import React from "react";
 import { LinkPropsType } from "./types";
 
 const Link = (props: LinkPropsType) => {
-  const { as = "a", to, href, text, className: customClassName } = props;
+  const { as = "a", to, href, className: customClassName, children } = props;
   const restProps = { to, href };
   const className: string = "link";
 
@@ -14,7 +14,7 @@ const Link = (props: LinkPropsType) => {
       }
       {...restProps}
     >
-      {text}
+      {children}
     </Wrapper>
   );
 };

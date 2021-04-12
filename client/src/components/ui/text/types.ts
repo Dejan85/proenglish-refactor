@@ -3,7 +3,6 @@ import { WrapperType } from "~/src/global-types";
 
 export interface TextProps {
     as: WrapperType,
-    text: string;
     className?: string;
-    key?: string;
+    children: JSX.Element | JSX.Element[] | string;
 }

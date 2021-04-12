@@ -2,7 +2,7 @@ import React from "react";
 import { TextProps } from "./types";
 
 function Text(props: TextProps): JSX.Element {
-  const { as = "p", text, className: customClassName } = props;
+  const { as = "p", className: customClassName, children } = props;
   const Wrapper = as;
   const className: string = "text";
   return (
@@ -13,7 +13,7 @@ function Text(props: TextProps): JSX.Element {
           : className
       }
     >
-      {text}
+      {children}
     </Wrapper>
   );
 }

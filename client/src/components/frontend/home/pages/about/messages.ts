@@ -6,3 +6,5 @@ const text4: string = "Kroz pristup koji je potpuno individualizovan ti pomažem
 export const aboutText: string[] = [text, text2, text3, text4];
 
 export const headingText: string = "Ko smo mi?";
+
+export const linkText: string = "Pročitaj više";

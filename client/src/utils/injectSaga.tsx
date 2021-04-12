@@ -4,6 +4,12 @@ import { ReactReduxContext } from "react-redux";
 
 import getInjectors from "./sagaInjectors";
 
+interface InjectSgaProps {
+  key: string;
+  saga: any;
+  mode?: any;
+}
+
 /**
  * Dynamically injects a saga, passes component's props as saga arguments
  *
@@ -16,7 +22,7 @@ import getInjectors from "./sagaInjectors";
  *   - constants.ONCE_TILL_UNMOUNT — behaves like 'RESTART_ON_REMOUNT' but never runs it again.
  *
  */
-export default ({ key, saga, mode }) => (WrappedComponent) => {
+export default ({ key, saga, mode }: InjectSgaProps) => (WrappedComponent) => {
   class InjectSaga extends React.Component {
     static WrappedComponent = WrappedComponent;
 
@@ -46,7 +52,7 @@ export default ({ key, saga, mode }) => (WrappedComponent) => {
   return hoistNonReactStatics(InjectSaga, WrappedComponent);
 };
 
-const useInjectSaga = ({ key, saga, mode }) => {
+const useInjectSaga = ({ key, saga, mode }: InjectSgaProps) => {
   const context = React.useContext(ReactReduxContext);
   React.useEffect(() => {
     const injectors = getInjectors(context.store);

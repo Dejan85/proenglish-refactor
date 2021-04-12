@@ -1,10 +1,6 @@
-import axios, { AxiosResponse } from 'axios';
+export const request = async (url: string, method: string) => {
 
 
-export const getData = async (url: string) => {
-    try {
-        return await axios.get(url);
-    } catch (err) {
-        return err;
-    }
-};
+    const test = `http://localhost:6000/${url}`;
+    return fetch(test, { method, credentials: 'include' }).then((res) => res.json());
+}

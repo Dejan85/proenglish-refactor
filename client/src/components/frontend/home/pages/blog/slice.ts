@@ -1,7 +1,5 @@
 import { createSlice, createAction } from '@reduxjs/toolkit';
 import { BLOG_SCOPE } from './constants';
-// import { getData } from '~/src/utils/requests';
-import { getData } from "~/src/utils/requests";
 
 
 

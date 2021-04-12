@@ -1,12 +1,16 @@
 import { put, call, takeLatest } from 'redux-saga/effects';
-import axios from 'axios';
 import { setBlogData, fetchBlogData } from './slice';
+import { request } from '~/src/utils/requests';
+
 
 function* fetchBlogDataGenerator() {
     try {
-        const url = "/blog/get";
+        const url = "blog/get";
 
-        const response = yield call(axios, url);
+        const response = yield call(request, url, "GET");
+
+        console.log('test', response);
+
 
         yield put(setBlogData(response));
     } catch (err) {
@@ -15,4 +19,6 @@ function* fetchBlogDataGenerator() {
 };
 
 
-export default takeLatest(fetchBlogData.type, fetchBlogDataGenerator);
+export default function* watchBlog() {
+    yield takeLatest(fetchBlogData.type, fetchBlogDataGenerator);
+}

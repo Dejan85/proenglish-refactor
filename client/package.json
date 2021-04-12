@@ -18,6 +18,7 @@
     "url": "https://github.com/Dejan85/proenglish-refactor/issues"
   },
   "homepage": "https://github.com/Dejan85/proenglish-refactor#readme",
+  "proxy": "http://localhost:6000",
   "devDependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@types/invariant": "^2.2.34",

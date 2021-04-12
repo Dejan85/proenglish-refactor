@@ -1,1 +1,1 @@
-export const BLOG_SCOPE = 'blogData';
+export const BLOG_SCOPE = 'BLOG_SCOPE';

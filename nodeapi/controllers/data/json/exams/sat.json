@@ -1,0 +1,65 @@
+[
+    {
+        "h1": "Kome je namenjen SAT?",
+        "p":"SAT ispit je potreban srednjoškolcima koji se spremaju za osnovne studije u inostranstvu. SAT ispit je
+    nastao u Americi gde i danas služi kao obavezan prijemni ispit: svi srednjoškolci koji u Americi upisuju
+    koledž ili fakultet moraju da polažu SAT. Srednjoškolci iz Evrope, pa i iz Srbije, naravno, koji žele da
+    upišu osnovne studije u Americi moraju da polažu SAT. Pojedini koledži u Evropi, posebno u Italiji
+    (Bocconi i Cattolica koji su visoko rangirani), takodje traže od budućih studenata da polože SAT ispit."
+    },
+    {
+        "h1": "Kada možete da polažete SAT test?",
+        "p":"SAT test se organizuje 7 puta godišnje, a preostali datumi za 2019. godinu su: 5. oktobar (rok za prijavu je 6. septembar), 2. novembar (ovaj rok je uglavnom popunjen), 7. decembar (rok za prijavu je 8. novembar). Ovo su najavljeni datumi za 2020. za koje možete da se prijavite: 14.3.2020. (rok za prijavu je 14.2.), 2.5.2020. (rok je 18.3.), 6.6.2020."
+    },
+    {
+        "h1": "Kada možete da polažete SAT test?",
+        "p" : "SAT test se organizuje 7 puta godišnje, a preostali datumi za 2019. godinu su: 5. oktobar (rok za
+        prijavu je 6. septembar), 2. novembar (ovaj rok je uglavnom popunjen), 7. decembar (rok za prijavu
+        je 8. novembar). Ovo su najavljeni datumi za 2020. za koje možete da se prijavite: 14.3.2020. (rok za
+        prijavu je 14.2.), 2.5.2020. (rok je 18.3.), 6.6.2020."
+    },
+    {
+        "h1" : "Kako izgleda SAT ispit?",
+        "p":"SAT ispit se sastoji iz 3 dela: prvi deo ispita je esej i većina biznis škola ne zahteva da polažete ovaj deo testa. Najbolje je da pre polaganja stupite u kontakt sa fakultetom koji upisujete i da saznate da li vam je esej potreban ili ne. Budući da se SAT koristi u Americi kao prijemni ispit, sasvim je očekivano da je potpuno na engleskom i da ne proverava poznavanje gramatike engleskog jezika niti nastoji da utvrdi koliko dobro sredjoškolci koriste engleski. To je ono što SAT test čini teškim: SAT test kombinuje veštine čitanja, kritičkog razmišljanja i logičkog zaključivanja kroz svoja dva dela koje mi obično nazivamo engleski i matematika, a koji su mnogo kompleksniji nego što zvuči ili izlgeda na prvi pogled.",
+        
+    },
+    {
+        "h1" : "Gde se polaže SAT ispit?",
+        "p": "U Beogradu se SAT trenutnoodržavana tri lokacije, od kojih je prvainajpopularnijaMedjunarodniakademskicentar. U zavisnostiodbrojaprijavljenihučenikazapolaganje SAT ispita, u Beogradu se otvarajuidrugicentri. SAT možete da polažetesamo u centrimakojiimajulicencuidozvolu College Boarda da organizujupolaganje. College Board je organizacijazaduženanasvetskomnivouzasve u vezisa SAT ispitom."
+    },
+    {
+        "h1" : "Šta da raditeakosusvamestazapolaganje SAT ispita u Beogradupopunjena?",
+        "p": "Beograd je jedini grad u Srbijigdemožete da polažete SAT. Medjutim, nasvusreću, državeiznašegokruženjatakodjeorganizujepolaganje SAT ispita, tako da možete test da polažete u Podgorici, SarajevuiliZagrebu. Ovomože da imasvojihprednosti: van Beograduuglavnomnemaprevelikegužvetako da ćetemoždabiti pod manjimpritiskomuprkoslogističkimpoteškoćama u organizacijiprevoza."
+    },
+    {
+        "h1": "Kako da se prijaviteza SAT test?",
+        "p" : "Prijavaza SAT se vrši online, prekointerneta, nasledećemlinku:",
+        "link" : "https://collegereadiness.collegeboard.org/sat-subject-tests/register.",
+        "p1" : "Nemojte da brinete, prijava je dovoljnojednostavna da možetesami da je uradite. Kadakliknetena link, videćetejednostavnauputstva. Započetakćebitipotrebno da kreiratenalog, kaoštobisteradiliinadruštvenimmrežama, a ondakrećeregistracijakoja se odvijakorakpokorak. U tokuregistracijeće se od vas tražiti da popunite par upitnika u vezisapredmetimakojisteimali u srednjojškoli, kaoiocenama. Bitno je da znate da se oveinformacije ne šaljudalje, fakultetimanakojimaćetestudirati, već je u pitanjuinternaanketa College Boardakojiželi da imauvid u profilučenikaradistatističkihpodataka. Poslednjikorak u prijavi je plaćanjetesta. Ispit se plaćakarticamazaelektronskoplaćanje u inostranstvukaoštosu Visa, PayPal islične. Servis je potpunobezbedani ne treba da brinete o zaštitipodataka."
+    },
+    {
+        "h1" : "Kada da se prijaviteza SAT?",
+        "p" : "Na ovomlinkumožete da pogledatedatumeodržavanja SAT testa",
+        "link" : "https://collegereadiness.collegeboard.org/sat-subject-tests/register/test-dates-deadlines.",
+        "p1" : "Iakosvakirokimatačnonaznačen datum do kogtreba da se prijaviteza test, našapreporuka je da prijavuuraditedvamesecaranijejer je u Beograduvelikagužvaivećinaterminasuvećunapredpopunjeni. Ako ne želite da razmišljate o tome da ćetemoždamorati da polažete van Srbije, prijavite se ranije: mesta se popunjavajuvelikombrzinom. "
+    },
+    {
+        "h1" : "Da li da polažem SAT ili SAT Subject test?",
+        "p" : "U većinislučajevafakultetiikoledžitraže da imatepoložen SAT. SAT subject test tražepojedinikoledžiinajbolje je da stupitesanjima u kontaktili da istražitenasajtovima da li vam je potreban Subject test. On se polažeizmatematike, fizike, biologije, hemijeistranihjezika, alinajčešćevamnećebitipotreban. "
+    },
+    {
+        "h1" : "Koliko puta mogu da polažem SAT?",
+        "p" : "SAT test možete da polažeteneograničenbroj puta, a svomefakultetušaljetenajboljiskor. To štosteviše puta polagali SAT nećeuticatina vase šansezaupisnafakultet. "
+    },
+    {
+        "h1" : "Kolikodugovažerezultati SAT ispita?",
+        "p" : "Strogogovoreći, rezultati SAT testa ne mogu da isteknu, alipotpuno je logično da nećetenapravitipauzuod pet godinanakonsrednješkoleionda se vratitinaosnovnestudije. SAT je najbolje da polažete par meseci pre samogupisanaosnovnestudije. "
+    },
+    {
+        "h1" : "Kada da počnetesapripremama?",
+        "p" : "Ne postojiuniverzalanreceptkojivažizasvakogsrednjoškolca, jer je svačijeznanjeengleskograzličito, a inijepotrebansvimaistibrojpoena. Najbolje je da se o SAT ispituinformišete u tokutrećegodinesrednješkolekakobistedobiliprocenusvogznanja, a sapripremamamožete da počnete u drugompolugodištutrećegodineili u tokuleta pre početkačetvrtograzreda da bistesebiostavilidovoljnovremena da izadjetena test idrugi put akoprvi put ne dobijetedovoljnopoena. "
+    },
+    {
+        "p" : "Ako imate dodatnih pitanja, ostavite nam poruku ovde."
+    }
+]

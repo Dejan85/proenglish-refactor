@@ -1,0 +1,97 @@
+[
+    {
+        "h1": "Za koga je TOEFL test?",
+        "p":"TOEFL test je test akademskog znanja engleskog i procenjuje vašu sposobnost da pratite nastavu na engleskom jeziku i da u njoj aktivno učestvujete. TOEFL test je pre svega namenjen studentima koji: a) žele da nastave osnovne studije u inostranstvu jer su dobili stipendiju ili žele da ulože u svoje znanje, b) žele da upišu master studije u inostranstvu na društvenim smerovima (za upis na biznis ili master studije iz ekonomije biće vam potreban ili Gmat ili GRE test), c) upisuju osnovne studije u inostranstvu pa pored SAT testa treba da polažu i TOEFL (ovde možete da pročitate o IELTS ispitu koji traže pojedini fakulteti, iako bi svaki fakultet trebalo da priznaje i TOEFL i IELTS. Ako vas zanimaju sličnost i razlike izmedju ova dva testa i ako ne znate koji da polažete, pročitajte ovde)."
+    },
+    {
+        "h1": "Šta je TOEFL, a šta je TOEFL Ibt?",
+        "p": "Ovo su samo dva različita naziva za jedan isti medjunarodni test – TOEFL. Skraćenica Ibt znači da je
+        TOEFL Internet Based Test koji se polaže preko kompjutera. Na dan polaganja TOEFL testa nećete
+        pričati sa ispitivačem, već ćete sve raditi na kompjuteru: Reading, Listening, Speaking i Writing.
+        Imaćete slušalice za Listening i Writing deo, a za Speaking slušalice sa mikrofonom u koji ćete
+        govoriti, a poseban softver napravljen za TOEFL test će snimati vaše odgovore."
+    },
+    {
+        "h1": "Kako izgleda TOEFL test?",
+        "table": [
+                ["section:", "Reading", "Listening", "Speaking", "Writing"],
+                ["Task:", "3 – 5 academic texts with 13 or 14 questions per text", "6 or 9 tracks", "6 tasks", "2 tasks"],
+                ["Duration:", "60 minutes to 1h 40 min.", "30 – 50 minutes", "15 minutes", "50 minutes"]
+        ]
+    },
+    {
+        "h1":"Kada i gde se polaže TOEFL test?",
+        "p":"Polaganje TOEFL testa se organizuje 50 puta na godišnjem nivou, a mesečno uglavnom postoje 2 ili 3
+        termina. U Beogradu se TOEFL test može polagati na tri lokacije, a znaćete koja lokacija je slobodna
+        za vaš planirani datum polaganja kada počnete sa prijavom za test. U Srbiji, TOEFL test možete da
+        polažete još i u Subotici i Nišu. Razlike u težini testa nema, kao ni u načinu ocenjivanja. Bitno je da
+        znate za ove dve lokacije jer može da se desi da su svi termini u Beogradu popunjeni u trenutku kad vi
+        odlučite da se prijavite za test."
+    },
+    {
+        "h1": "Kako se prijavljujem za TOEFL test?",
+        "h2":"Za TOEFL test se prijavljujete preko zvaničnog TOEFL sajta, a na ovom linku:",
+        "link":"https://v2.ereg.ets.org/ereg/public/jump?_p=TEL.",
+        "p": "Proces prijave je jednostavan i dovoljno je da
+        pratite uputstva korak-po-korak. Na početku, budući da ste novi korisnike, treba da otvorite nalog,
+        kao što radite inače za društvene mreže, a onda pratite uputstva."
+    },
+    {
+        "h1":"Koliko košta TOEFL test i kako se plaća?",
+        "p":"Kao i prijava, i uplata se vrši preko sajta, i to jednom od kartica za elektronsko plaćanje: American
+        Express®, Discover®, JCB®, China Union Pay®, Diners Club®, Mastercard®, VISA® ili preko vašeg
+        PayPal® naloga. Aktuelna cena testa je 190 američkih dolara."
+    },
+    {
+        "h1": "Kada treba da se prijavim za TOEFL test?",
+        "p":"Naša preporuka je da se prijavite mesec dana ranije, ali svakako ne pre nego što dobijete zeleno
+        svetlo od vašeg profesora koji vas sprema za TOEFL. Ukoliko ima slobodnih mesta, za TOEFL možete
+        da se prijavite najkasnije 7 dana pre samog testa. Moguća je prijava sa zakašnjenjem, pod uslovom da
+        ima slobodnih mesta. U tom slučaju plaćate 40 dolara zbog kašnjenja."
+    },
+    {
+        "h1": "Koji je najsigurniji put do potrebnog broja bodova?",
+        "p":"Najsigurniji put do potrebnog broja bodova, iz iskustva naših polaznika, je podrobno informisanje o
+        testu, odgovarajuće i usmerene pripreme i polaganje simulacije TOEFL testa koja je potpuno ista kao i
+        sam test, ali nije zvanična – vaši rezultati se ne šalju na fakultet. Nakon simulacije, u zavisnosti od
+        broja bodova, možete da prijavite test za prvi sledeći slobodan termin ili da poradite na popravljanju
+        svog skora i da onda polažete."
+    },
+    {
+        "h1":"Koliko bodova na TOEFL testu je potrebno da dobijete?",
+        "p": "Maksimalan broj poena koji možete da ostvarite na TOEFL testu je 120. Ovo je broj poena koji
+        ostvaraju napredni C1 nivo i C2 nivo. Ako je vaše znanje već na ovom nivou, moguće je da vam
+        pripreme nisu ni potrebne. Svakako nemojte da rizikujete – zakažite besplatne konsultacije i
+        informišite se pre nego što uplatite 190 dolara. U zavisnosti od toga da li upisujete osnovne ili master
+        studije, biće potrebno da ostvarite od 84 do 110 poena na TOEFL testu. Najlakši način da saznate gde
+        trenutno stojite sa svojim znanjem u odnosu na TOEFL test je besplatno testiranje. Na taj način
+        eliminišete rizik i odgovorno pristupate svom budućem školovanju."
+    },
+    {
+        "h1": "Kada dobijate rezultate TOEFL testa?",
+        "p": "Rezulati TOEFL testa stižu na vaš nalog u proseku 7 radnih dana nakon polaganja testa. Test se obično
+        održava subotom, a rezultate možete da očekujete u drugi sledeći ponedeljak ili utorak nakon
+        polaganja testa."
+    },
+    {
+        "h1": "Koliko puta možete da polažete TOEFL test?",
+        "p": "TOEFL test možete da polažete neograničen broj puta. Jedino ograničenje je da izmedju dva
+        polaganja mora da prodje 12 dana."
+    },
+    {
+        "h1": "Datumi održavanja testa",
+        "p" :"Prvi sledeći slobodan datum jeste 21.9., a u oktobru TOEFL možete da polažete 4., 12., 19. ili 26.
+        oktobra. Ovo su termini do kraja 2019. godine: 2.11., 9.11., 22.11., 23.11., 7.12., 13.12., 14.12.,
+        20.12., 21.12.."
+    },
+    {
+        "h1": "Ko sve priznaje TOEFL test?",
+        "p" : "Ukoliko ste se samostalno upustili u odlazak na studije u inostranstvo, verovatno ste stupili u kontakt
+        sa željenim fakultetom i saznali da li priznaju TOEFL test i koji broj boena vam je potreban. Ako niste,
+        preporučujemo da im pišete, a na ovom linku možete proveriti koje sve obrazovne institucije priznaju
+        TOEFL: http://www.toeflgoanywhere.org/search-who-accepts-toefl. Treća opcije jeste da pronadjete
+        agencije za studije u inostranstvu i da kod njih dodjete do potrebnih informacija. U Beogradu postoji
+        par popularnih i iskusnih agencija, pa biste mogli da se obratite i njima za konkretnije informacije."
+    }
+
+]

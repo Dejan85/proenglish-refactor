@@ -7,14 +7,10 @@ import {
   Image,
   Link,
 } from "~/src/components/ui";
-import { aboutText } from "./messages";
+import { aboutText, headingText } from "./messages";
 import uniqid from "uniqid";
 import img from "./images/img.jpg";
 import { Link as RouterLink } from "react-router-dom";
-
-const renderHeading = (): JSX.Element => (
-  <Heading as="h2" text="Ko smo mi?" className="default-heading" />
-);
 
 const renderText = (): any =>
   aboutText.map(
@@ -27,7 +23,6 @@ const renderLink = (): JSX.Element => (
 );
 const renderImage = (): JSX.Element => <Image alt="img" src={img} />;
 
-const heading = renderHeading();
 const text = renderText();
 const linkUi = renderLink();
 const image = renderImage();
@@ -37,7 +32,9 @@ const About = (): JSX.Element => {
     <SubContainer>
       <ContentContainer>
         <ContentContainer.TextSide>
-          {heading}
+          <Heading as="h2" className="default-heading">
+            {headingText}
+          </Heading>
           {text}
           {linkUi}
         </ContentContainer.TextSide>

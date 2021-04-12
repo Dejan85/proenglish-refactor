@@ -4,3 +4,5 @@ const text3: string = "Ne postoji magični trik koji će ti pomoći da prevaziđ
 const text4: string = "Kroz pristup koji je potpuno individualizovan ti pomažemo da usvojiš gramatiku i reči koje ti možeš da koristiš svakodnevno. Naši kursevi su putovanje do znanja, a kroz metodološki rad ćemo ti pomoći da zadržiš motivaciju i otkloniš mentalne lance zbog kojih misliš da drugi znaju, ali ti nikako ne možeš da naučiš engleski. Naučnici su dokazali da za uspeh nije potreban talenat, već promišljeno vežbanje, relevantne povratne informacije i dobar profesor. Zakaži besplatan probni čas da vidiš na koji način možemo da ti pomognemo.";
 
 export const aboutText: string[] = [text, text2, text3, text4];
+
+export const headingText: string = "Ko smo mi?";

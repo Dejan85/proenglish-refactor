@@ -2,7 +2,7 @@ import React from "react";
 import { HeadingProps } from "./types";
 
 function Heading(props: HeadingProps): JSX.Element {
-  const { as = "h1", text, className: customClassName } = props;
+  const { as = "h1", className: customClassName, children } = props;
   const Wrapper = as;
   const className: string = "heading";
   return (
@@ -11,7 +11,7 @@ function Heading(props: HeadingProps): JSX.Element {
         customClassName ? `${className} ${customClassName}` : className
       }
     >
-      {text}
+      {children}
     </Wrapper>
   );
 }

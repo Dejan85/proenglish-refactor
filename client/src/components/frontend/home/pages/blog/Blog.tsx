@@ -15,13 +15,8 @@ import {
 } from "~/src/components/ui";
 import { headingText } from "./messages";
 
-const renderHeading = (): JSX.Element => (
-  <Heading as="h1" text={headingText} className="default-heading" />
-);
-
 const renderLine = (): JSX.Element => <Line />;
 
-const headingUi = renderHeading();
 const lineUi = renderLine();
 
 const Blog = (): JSX.Element => {
@@ -38,7 +33,9 @@ const Blog = (): JSX.Element => {
   return (
     <SubContainer>
       <ContentContainer className="justify-content-center flex-direction-column">
-        {headingUi}
+        <Heading as="h1" className="default-heading">
+          {headingText}
+        </Heading>
         {lineUi}
       </ContentContainer>
     </SubContainer>

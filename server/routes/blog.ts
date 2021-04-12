@@ -1,8 +1,9 @@
 import express from 'express';
+import { getBlog } from '../controllers/blog';
 
 export const blog = express.Router();
 
-blog.get('/', (req, res) => {
-    res.send("this works");
-});
+blog.get('/', getBlog);
+
+
 

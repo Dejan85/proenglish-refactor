@@ -4,7 +4,7 @@ import { TextProps } from "./types";
 function Text(props: TextProps): JSX.Element {
   const { as = "p", className: customClassName, children } = props;
   const Wrapper = as;
-  const className: string = "text";
+  const className: string = "default-paragraph";
   return (
     <Wrapper
       className={

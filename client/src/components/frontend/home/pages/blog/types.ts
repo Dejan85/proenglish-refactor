@@ -4,6 +4,8 @@ export interface DataType {
     _id: string;
     title: string,
     description: string;
+    body: string;
+    postedBy: string;
 }
 
 export interface InitialStateType {

@@ -10,7 +10,7 @@ const Link = (props: LinkPropsType) => {
   return (
     <Wrapper
       className={
-        customClassName ? `${className}__${customClassName}` : className
+        customClassName ? `${className} ${customClassName}` : className
       }
       {...restProps}
     >

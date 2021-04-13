@@ -1,17 +1,18 @@
 @import "../../styles/variables/fonts.scss";
-
-.default-paragraph,
-.welcome-paragraph,
-.home-boxes-paragraph {
-  font-family: $lato-sans-serif;
-  font-size: 2rem;
-  text-align: center;
-}
+@import "../../styles/variables/colors";
 
 .default-paragraph {
+  font-family: $lato-sans-serif;
   line-height: 1.4;
   text-align: justify;
   margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.welcome-paragraph,
+.home-boxes-paragraph {
+  text-align: center;
+  font-size: 2rem;
 }
 
 .welcome-paragraph {
@@ -24,4 +25,13 @@
   padding: 1.3rem 0;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+.blog-modal-text {
+  display: block;
+  color: $modal-text-color;
+  font-size: 1.7rem;
+  margin-top: 0;
+  padding: 0 1rem;
+  text-align: justify;
 }

@@ -14,10 +14,10 @@ const blogSlice = createSlice({
     initialState,
     reducers: {
         setBlogData(state, action) {
-            const data: object[] = action.payload.data.map(({ photo: { data: { data } }, created, _id, title, description }: DataType) => {
+            const data: object[] = action.payload.data.map(({ photo: { data: { data } }, body, postedBy, created, _id, title, description }: DataType) => {
                 return {
                     photo: base64(data),
-                    created, _id, title, description
+                    created, _id, title, description, body, postedBy
                 };
             });
             state.blogData = data;

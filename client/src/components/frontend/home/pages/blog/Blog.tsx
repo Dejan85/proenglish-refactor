@@ -6,34 +6,12 @@ import { getBlogData } from "./selectors";
 import { BLOG_SCOPE } from "./constants";
 import { reducer, fetchBlogData } from "./slice";
 import saga from "./saga";
-import uniqid from "uniqid";
+import { renderModal, renderLine } from "./helpers";
 
-import {
-  Heading,
-  SubContainer,
-  ContentContainer,
-  Line,
-  BlogModal,
-  Image,
-} from "~/src/components/ui";
+import { Heading, SubContainer, ContentContainer } from "~/src/components/ui";
 import { headingText } from "./messages";
 
-const renderLine = (): JSX.Element => <Line />;
 const lineUi = renderLine();
-
-const renderModal = (data: object[]): JSX.Element[] =>
-  data.slice(0, 4).map(
-    (item: any): JSX.Element => (
-      <BlogModal key={uniqid()}>
-        <Image
-          alt="img"
-          src={item.photo}
-          type="base64"
-          className="height--30rem"
-        />
-      </BlogModal>
-    )
-  );
 
 const Blog = (): JSX.Element => {
   useInjectReducer({ key: BLOG_SCOPE, reducer });

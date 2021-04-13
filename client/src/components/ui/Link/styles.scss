@@ -18,3 +18,23 @@
     background-color: darken($color: $main-color, $amount: 20%);
   }
 }
+
+.modal-link {
+  display: block;
+  height: 9rem;
+  font-size: 2rem;
+  color: $heading-link-color;
+  font-weight: 800;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 0;
+
+  &:hover {
+    color: $main-color;
+    background-color: transparent;
+  }
+}
+
+.no-background-color {
+  background-color: transparent;
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useInjectSaga } from "~/src/utils/injectSaga";
 import { useInjectReducer } from "~/src/utils/injectReducer";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,6 +6,7 @@ import { getBlogData } from "./selectors";
 import { BLOG_SCOPE } from "./constants";
 import { reducer, fetchBlogData } from "./slice";
 import saga from "./saga";
+import uniqid from "uniqid";
 
 import {
   Heading,
@@ -20,11 +21,18 @@ import { headingText } from "./messages";
 const renderLine = (): JSX.Element => <Line />;
 const lineUi = renderLine();
 
+const renderModal = (data: object[]): JSX.Element[] =>
+  data.map(
+    (item: any): JSX.Element => (
+      <BlogModal key={uniqid()}>
+        <Image alt="img" src={item.photo} type="base64" />
+      </BlogModal>
+    )
+  );
+
 const Blog = (): JSX.Element => {
   useInjectReducer({ key: BLOG_SCOPE, reducer });
   useInjectSaga({ key: BLOG_SCOPE, saga });
-
-  const [image, setImage] = useState<string>("");
 
   const dispatch = useDispatch();
   const { blogData } = useSelector(getBlogData);
@@ -33,9 +41,6 @@ const Blog = (): JSX.Element => {
     dispatch(fetchBlogData());
   }, []);
 
-  console.log("test", "render");
-  console.log("test", blogData);
-
   return (
     <SubContainer>
       <ContentContainer className="justify-content-center flex-direction-column">
@@ -43,9 +48,7 @@ const Blog = (): JSX.Element => {
           {headingText}
         </Heading>
         {lineUi}
-        <BlogModal>
-          <Image type="base64" />
-        </BlogModal>
+        {blogData?.length > 0 && renderModal(blogData)}
       </ContentContainer>
     </SubContainer>
   );

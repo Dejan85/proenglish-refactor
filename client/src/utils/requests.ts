@@ -1,6 +1,8 @@
+import axios from 'axios';
+
 export const request = async (url: string, method: string) => {
 
 
-    const test = `http://localhost:6000/${url}`;
-    return fetch(test, { method, credentials: 'include' }).then((res) => res.json());
-}
+    const urlX = `http://localhost:5000/${url}`;
+    return axios(urlX).then((res) => res);
+};

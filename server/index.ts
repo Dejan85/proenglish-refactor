@@ -10,12 +10,13 @@ const mongoURI = process.env.MONGO_URI;
 import { blog } from './routes';
 
 
+app.use(bodyParser.json({ limit: "150kb" }));
+app.use(bodyParser.urlencoded({ limit: "150kb", extended: true }));
+app.use(cors());
+
+
 app.use("/blog", blog);
 
-
-app.use(bodyParser.json({ limit: "30mb" }));
-app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-app.use(cors());
 
 mongoose
   .connect(`${mongoURI}`, {

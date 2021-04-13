@@ -6,6 +6,7 @@ import { getBlogData } from "./selectors";
 import { BLOG_SCOPE } from "./constants";
 import { reducer, fetchBlogData } from "./slice";
 import saga from "./saga";
+// import FileBase from "react-file-base64";
 
 import {
   Heading,
@@ -37,6 +38,11 @@ const Blog = (): JSX.Element => {
           {headingText}
         </Heading>
         {lineUi}
+        {/* <FileBase
+          type="file"
+          multiple={false}
+          onDone={({base64}) => setImage{base64}}
+        /> */}
       </ContentContainer>
     </SubContainer>
   );

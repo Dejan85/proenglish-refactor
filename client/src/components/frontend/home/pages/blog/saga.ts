@@ -5,11 +5,11 @@ import { request } from '~/src/utils/requests';
 
 function* fetchBlogDataGenerator() {
     try {
-        const url = "blog/get";
+        const url = "blog";
 
         const response = yield call(request, url, "GET");
 
-        console.log('test', response);
+        console.log('test', response.data);
 
 
         yield put(setBlogData(response));

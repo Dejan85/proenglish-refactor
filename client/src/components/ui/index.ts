@@ -14,3 +14,4 @@ export { Image } from './image';
 export { Button } from './Button';
 export { Link } from './Link';
 export { Line } from './Line';
+export { BlogModal } from './blog-modal';

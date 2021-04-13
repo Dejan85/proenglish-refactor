@@ -1,8 +1,6 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
-export const request = async (url: string, method: string) => {
-
-
-    const urlX = `http://localhost:5000/${url}`;
-    return axios(urlX).then((res) => res);
+export const request = async (urlProp: string, method: string): Promise<AxiosResponse<any>> => {
+    const urlX = `${process.env.API_URL}/${urlProp}`;
+    return await axios(urlX).then((res) => res);
 };

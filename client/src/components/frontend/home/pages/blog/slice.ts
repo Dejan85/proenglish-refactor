@@ -1,11 +1,11 @@
 import { createSlice, createAction } from '@reduxjs/toolkit';
 import { BLOG_SCOPE } from './constants';
+import { PhotoType, InitialStateType } from './types';
 
 
 
-
-export const initialState = {
-    blogData: null
+export const initialState: InitialStateType = {
+    blogData: []
 };
 
 const blogSlice = createSlice({
@@ -13,7 +13,13 @@ const blogSlice = createSlice({
     initialState,
     reducers: {
         setBlogData(state, action) {
-            state.blogData = action.payload;
+            const data: object[] = action.payload.data.map(({ photo: { data: { data } }, created, _id, title, description }: PhotoType) => {
+                return {
+                    photo: new Buffer.from(data).toString("base64"),
+                    created, _id, title, description
+                };
+            });
+            state.blogData = data;
         }
     }
 });

@@ -1,6 +1,7 @@
 import { createSlice, createAction } from '@reduxjs/toolkit';
 import { BLOG_SCOPE } from './constants';
-import { PhotoType, InitialStateType } from './types';
+import { DataType, InitialStateType } from './types';
+import { base64 } from '~/src/utils/base64';
 
 
 
@@ -13,9 +14,9 @@ const blogSlice = createSlice({
     initialState,
     reducers: {
         setBlogData(state, action) {
-            const data: object[] = action.payload.data.map(({ photo: { data: { data } }, created, _id, title, description }: PhotoType) => {
+            const data: object[] = action.payload.data.map(({ photo: { data: { data } }, created, _id, title, description }: DataType) => {
                 return {
-                    photo: new Buffer.from(data).toString("base64"),
+                    photo: base64(data),
                     created, _id, title, description
                 };
             });

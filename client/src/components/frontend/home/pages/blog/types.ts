@@ -1,4 +1,4 @@
-export interface PhotoType {
+export interface DataType {
     photo: { data: { data: string; }; };
     created: string;
     _id: string;

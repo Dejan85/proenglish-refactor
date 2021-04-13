@@ -2,8 +2,6 @@ import BlogModel from '../models/blog';
 
 export const getBlog = async (req: any, res: any) => {
     try {
-        console.log('test', 'radi');
-
         const blogs = await BlogModel.find();
         res.status(200).json(blogs);
 

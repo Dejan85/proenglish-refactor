@@ -22,10 +22,15 @@ const renderLine = (): JSX.Element => <Line />;
 const lineUi = renderLine();
 
 const renderModal = (data: object[]): JSX.Element[] =>
-  data.map(
+  data.slice(0, 4).map(
     (item: any): JSX.Element => (
       <BlogModal key={uniqid()}>
-        <Image alt="img" src={item.photo} type="base64" />
+        <Image
+          alt="img"
+          src={item.photo}
+          type="base64"
+          className="height--30rem"
+        />
       </BlogModal>
     )
   );
@@ -42,12 +47,14 @@ const Blog = (): JSX.Element => {
   }, []);
 
   return (
-    <SubContainer>
+    <SubContainer className="flex-direction-column">
       <ContentContainer className="justify-content-center flex-direction-column">
         <Heading as="h1" className="default-heading">
           {headingText}
         </Heading>
         {lineUi}
+      </ContentContainer>
+      <ContentContainer className="reset-margin-top">
         {blogData?.length > 0 && renderModal(blogData)}
       </ContentContainer>
     </SubContainer>

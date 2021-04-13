@@ -7,7 +7,10 @@ const Wrapper: WrapperType = "div";
 const className: string = "image";
 
 const Image = (props: ImageProps): JSX.Element => {
-  const { src, alt } = props;
+  const { src: srcProp, alt, type = "img" } = props;
+
+  const base64: string = `data:image/png;base64,${srcProp}`;
+  const src: string = type === "base64" ? base64 : srcProp;
 
   return (
     <Wrapper className={className}>

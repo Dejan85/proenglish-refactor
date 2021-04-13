@@ -6,7 +6,6 @@ import { getBlogData } from "./selectors";
 import { BLOG_SCOPE } from "./constants";
 import { reducer, fetchBlogData } from "./slice";
 import saga from "./saga";
-// import FileBase from "react-file-base64";
 
 import {
   Heading,
@@ -19,7 +18,6 @@ import {
 import { headingText } from "./messages";
 
 const renderLine = (): JSX.Element => <Line />;
-
 const lineUi = renderLine();
 
 const Blog = (): JSX.Element => {
@@ -35,20 +33,6 @@ const Blog = (): JSX.Element => {
     dispatch(fetchBlogData());
   }, []);
 
-  // useEffect(() => {
-  //   if (blogData) {
-  //     const data = blogData[0].photo.data.data;
-  //     // console.log("test", data);
-
-  //     const photo: string = new Buffer.from(data).toString("base64");
-  //     // const photo = btoa(String.fromCharCode(...new Uint8Array(data)));
-
-  //     // console.log("test", photo);
-
-  //     setImage(photo);
-  //   }
-  // }, [blogData]);
-
   console.log("test", "render");
   console.log("test", blogData);
 
@@ -59,14 +43,8 @@ const Blog = (): JSX.Element => {
           {headingText}
         </Heading>
         {lineUi}
-        {/* <FileBase
-          type="file"
-          multiple={false}
-          onDone={({base64}) => setImage{base64}}
-        /> */}
         <BlogModal>
-          <Image />
-          {/* <img src={`data:image/png;base64,${image}`} alt="" /> */}
+          <Image type="base64" />
         </BlogModal>
       </ContentContainer>
     </SubContainer>

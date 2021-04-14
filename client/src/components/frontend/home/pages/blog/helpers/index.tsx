@@ -1,7 +1,6 @@
 import React from "react";
 import uniqid from "uniqid";
 import { Link as LinkRouter } from "react-router-dom";
-
 import { Line, BlogModal, Image, Link, Text } from "~/src/components/ui";
 
 export const renderModal = (data: object[]): JSX.Element[] =>
@@ -20,8 +19,7 @@ export const renderModal = (data: object[]): JSX.Element[] =>
         <Text as="p" className="blog-modal-text">
           {`${item.description.substr(0, 170)}...`}
         </Text>
+        <Line />
       </BlogModal>
     )
   );
-
-export const renderLine = (): JSX.Element => <Line />;

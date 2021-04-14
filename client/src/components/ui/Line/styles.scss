@@ -7,16 +7,16 @@
   width: 100%;
   padding-top: 2rem;
   padding-bottom: 5rem;
+}
 
-  &__small {
-    width: 4rem;
-    height: 0.5rem;
-    background: $main-color;
-  }
+.small-line {
+  width: 4rem;
+  height: 0.5rem;
+  background: $main-color;
+}
 
-  &__large {
-    width: 100%;
-    height: 1px;
-    background: $main-color;
-  }
+.large-line {
+  width: 100%;
+  height: 1px;
+  background: $main-color;
 }

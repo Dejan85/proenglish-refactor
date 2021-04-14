@@ -6,17 +6,19 @@ import { getBlogData } from "./selectors";
 import { BLOG_SCOPE } from "./constants";
 import { reducer, fetchBlogData } from "./slice";
 import saga from "./saga";
-import { renderModal, renderLine } from "./helpers";
+import { renderLine, renderModal } from "./helpers";
 
-import { Heading, SubContainer, ContentContainer } from "~/src/components/ui";
+import {
+  Heading,
+  SubContainer,
+  ContentContainer,
+  Line,
+} from "~/src/components/ui";
 import { headingText } from "./messages";
-
-const lineUi = renderLine();
 
 const Blog = (): JSX.Element => {
   useInjectReducer({ key: BLOG_SCOPE, reducer });
   useInjectSaga({ key: BLOG_SCOPE, saga });
-
   const dispatch = useDispatch();
   const { blogData } = useSelector(getBlogData);
 
@@ -30,10 +32,13 @@ const Blog = (): JSX.Element => {
         <Heading as="h1" className="default-heading">
           {headingText}
         </Heading>
-        {lineUi}
+        <Line>
+          <Line.SmallLine />
+          <Line.LargeLine />
+        </Line>
       </ContentContainer>
       <ContentContainer className="reset-margin-top">
-        {blogData?.length > 0 && renderModal(blogData)}
+        {blogData?.length && renderModal(blogData)}
       </ContentContainer>
     </SubContainer>
   );

@@ -23,7 +23,7 @@ const Blog = (): JSX.Element => {
     dispatch(fetchBlogData());
   }, []);
 
-  return <>{MemoizedUi}</>;
+  return MemoizedUi;
 };
 
 export default Blog;

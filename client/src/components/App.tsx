@@ -7,7 +7,7 @@ const App = (): JSX.Element => {
   return (
     <Container>
       <Router>
-        <Header />
+        {/* <Header /> */}
         <Switch>
           <Route path="/">
             <Home />

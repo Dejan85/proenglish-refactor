@@ -4,10 +4,10 @@ import { WelcomePage, About, Course, Blog } from "./pages";
 const Home = (): JSX.Element => {
   return (
     <>
-      <WelcomePage />
-      {/* <About />
-      <Course />
-      <Blog /> */}
+      {/* <WelcomePage /> */}
+      <About />
+      {/* <Course /> */}
+      {/* <Blog /> */}
     </>
   );
 };

@@ -43,7 +43,7 @@ const RenderModal = (props: { children: object[] }): JSX.Element => {
   );
 };
 
-const RenderLine = (
+const RenderLine: JSX.Element = (
   <Line>
     <Line.SmallLine />
     <Line.LargeLine />

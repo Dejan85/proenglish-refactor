@@ -2,6 +2,7 @@ import React from "react";
 import uniqid from "uniqid";
 import { Link as LinkRouter } from "react-router-dom";
 import { Line, BlogModal, Image, Link, Text } from "~/src/components/ui";
+import { FormatTime } from "~/src/utils/moment";
 
 export const renderModal = (data: object[]): JSX.Element[] =>
   data.slice(0, 4).map(
@@ -22,6 +23,9 @@ export const renderModal = (data: object[]): JSX.Element[] =>
         <Line className="align-item-flex-start">
           <Line.SmallLine />
         </Line>
+        <Text as="span">
+          <FormatTime>{item.created}</FormatTime>
+        </Text>
       </BlogModal>
     )
   );

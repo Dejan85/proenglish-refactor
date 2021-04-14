@@ -6,7 +6,7 @@ import { getBlogData } from "./selectors";
 import { BLOG_SCOPE } from "./constants";
 import { reducer, fetchBlogData } from "./slice";
 import saga from "./saga";
-import { renderLine, renderModal } from "./helpers";
+import { renderModal } from "./helpers";
 
 import {
   Heading,

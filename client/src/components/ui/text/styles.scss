@@ -1,4 +1,4 @@
-@import "../../styles/variables/fonts.scss";
+@import "../../styles/variables/fonts";
 @import "../../styles/variables/colors";
 
 .default-paragraph {
@@ -39,8 +39,20 @@
 .blog-modal-span {
   display: inline-block;
   color: $modal-span-color;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   margin-top: 1rem;
-  padding: 0 1rem;
+  padding: 0 0 0 1rem;
+}
+
+.poppins-sans-serif {
+  font-family: $poppins-sans-serif;
+}
+
+.text-orange {
+  color: $main-color;
+}
+
+.reset-padding-left {
+  padding: 0 0 0 0.3rem;
 }

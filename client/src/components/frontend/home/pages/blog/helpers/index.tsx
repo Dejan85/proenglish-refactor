@@ -9,6 +9,7 @@ import { headingText } from "../messages";
 
 const RenderModal = (props: { children: object[] }): JSX.Element => {
   const { children: data } = props;
+
   return (
     <>
       {data.slice(0, 4).map(
@@ -36,6 +37,17 @@ const RenderModal = (props: { children: object[] }): JSX.Element => {
             <Text as="span" className="blog-modal-span">
               <FormatTime>{item.created}</FormatTime>
             </Text>
+            <ContentContainer className="justify-content-normal reset-margin-top">
+              <Text as="span" className="blog-modal-span poppins-sans-serif">
+                by
+              </Text>
+              <Text
+                as="span"
+                className="blog-modal-span text-orange poppins-sans-serif reset-padding-left"
+              >
+                {item.postedBy}
+              </Text>
+            </ContentContainer>
           </BlogModal>
         )
       )}

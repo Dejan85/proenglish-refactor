@@ -19,7 +19,9 @@ export const renderModal = (data: object[]): JSX.Element[] =>
         <Text as="p" className="blog-modal-text">
           {`${item.description.substr(0, 170)}...`}
         </Text>
-        <Line />
+        <Line className="align-item-flex-start">
+          <Line.SmallLine />
+        </Line>
       </BlogModal>
     )
   );

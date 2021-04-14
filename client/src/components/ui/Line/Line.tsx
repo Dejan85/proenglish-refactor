@@ -8,8 +8,16 @@ const Wrapper: WrapperType = "div";
 const className: string = "line";
 
 const Line = (props: LineProps): JSX.Element => {
-  const { children } = props;
-  return <Wrapper className={className}>{children}</Wrapper>;
+  const { children, className: customClassName } = props;
+  return (
+    <Wrapper
+      className={
+        customClassName ? `${className} ${customClassName}` : className
+      }
+    >
+      {children}
+    </Wrapper>
+  );
 };
 
 Line.SmallLine = SmallLine;

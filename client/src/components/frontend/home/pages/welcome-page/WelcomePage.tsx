@@ -9,24 +9,24 @@ import {
 } from "~/src/components/ui";
 import { firstMsg, secondMsg } from "./messages";
 
-const WelcomePage = (): JSX.Element => {
-  return (
-    <>
-      <WrapperWithBackground>
-        <WelcomeText>
-          <Heading as="h1" className="welcome-heading">
-            {firstMsg}
-          </Heading>
-          <Text as="p" className="welcome-paragraph">
-            {secondMsg}
-          </Text>
-        </WelcomeText>
-      </WrapperWithBackground>
-      <SubContainer>
-        <HomeIconsBoxes />
-      </SubContainer>
-    </>
-  );
-};
+const MemoizedUi: JSX.Element = (
+  <>
+    <WrapperWithBackground>
+      <WelcomeText>
+        <Heading as="h1" className="welcome-heading">
+          {firstMsg}
+        </Heading>
+        <Text as="p" className="welcome-paragraph">
+          {secondMsg}
+        </Text>
+      </WelcomeText>
+    </WrapperWithBackground>
+    <SubContainer>
+      <HomeIconsBoxes />
+    </SubContainer>
+  </>
+);
+
+const WelcomePage = (): JSX.Element => MemoizedUi;
 
 export default WelcomePage;

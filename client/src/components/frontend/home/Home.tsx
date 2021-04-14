@@ -5,8 +5,8 @@ const Home = (): JSX.Element => {
   return (
     <>
       {/* <WelcomePage /> */}
-      <About />
-      {/* <Course /> */}
+      {/* <About /> */}
+      <Course />
       {/* <Blog /> */}
     </>
   );

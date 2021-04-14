@@ -8,19 +8,19 @@ import {
 } from "~/src/components/ui";
 import { linksText, linksPath } from "./constants";
 
-const Header = (): JSX.Element => {
-  return (
-    <HeaderUi>
-      <SubContainer>
-        <Logo />
-        <Navigation
-          routerLink={NavLink}
-          linksText={linksText}
-          linksPath={linksPath}
-        />
-      </SubContainer>
-    </HeaderUi>
-  );
-};
+const MemoizedUi: JSX.Element = (
+  <HeaderUi>
+    <SubContainer>
+      <Logo />
+      <Navigation
+        routerLink={NavLink}
+        linksText={linksText}
+        linksPath={linksPath}
+      />
+    </SubContainer>
+  </HeaderUi>
+);
+
+const Header = (): JSX.Element => MemoizedUi;
 
 export default Header;

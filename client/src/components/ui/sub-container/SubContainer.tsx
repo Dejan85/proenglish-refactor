@@ -6,6 +6,8 @@ const Wrapper: WrapperType = "div";
 const className: string = "sub-container";
 
 const SubContainer = (props: SubContainerProps): JSX.Element => {
+  console.log("test sub container render", "render");
+
   const { children, className: customClassName } = props;
   return (
     <Wrapper

@@ -30,10 +30,10 @@ const RenderModal = (props: { children: object[] }): JSX.Element => {
             <Text as="p" className="blog-modal-text">
               <SubStr>{item.description}</SubStr>
             </Text>
-            <Line className="align-item-flex-start">
+            <Line className="align-item-flex-start reset-padding-bottom">
               <Line.SmallLine />
             </Line>
-            <Text as="span">
+            <Text as="span" className="blog-modal-span">
               <FormatTime>{item.created}</FormatTime>
             </Text>
           </BlogModal>

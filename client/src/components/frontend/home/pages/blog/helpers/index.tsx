@@ -6,6 +6,7 @@ import { FormatTime } from "~/src/utils/moment";
 import { SubStr } from "~/src/utils/SubStr";
 import { Heading, SubContainer, ContentContainer } from "~/src/components/ui";
 import { headingText } from "../messages";
+import { Loading } from "~/src/components/ui";
 
 const RenderModal = (props: { children: object[] }): JSX.Element => {
   const { children: data } = props;
@@ -75,7 +76,11 @@ export const RenderUi = (props: { children: object[] }): JSX.Element => {
           {RenderLine}
         </ContentContainer>
         <ContentContainer className="reset-margin-top">
-          <RenderModal>{children}</RenderModal>
+          {children.length ? (
+            <RenderModal>{children}</RenderModal>
+          ) : (
+            <Loading />
+          )}
         </ContentContainer>
       </SubContainer>
     </>

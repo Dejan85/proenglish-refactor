@@ -28,7 +28,7 @@ const MemoizedUi: JSX.Element = (
         alignItems="center"
         padding="3rem"
         marginLeft="-15rem"
-        className="box-shadow background-color-white"
+        className="box-shadow test-color"
         borderRadius="5px"
       >
         <ContentContainer

@@ -1,2 +1,17 @@
+@import "../../styles/variables/fonts";
+@import "../../styles/variables/colors";
+
 .button {
+  color: white;
+  background-color: $main-color;
+  transition: all 0.5s;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-family: $poppins-sans-serif;
+
+  &:hover {
+    background-color: darken($main-color, 10%);
+  }
 }

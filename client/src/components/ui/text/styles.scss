@@ -6,7 +6,6 @@
   line-height: 1.4;
   text-align: justify;
   font-size: 2rem;
-  // margin-top: 2rem;
 }
 
 .welcome-paragraph,
@@ -39,6 +38,13 @@
   font-weight: 700;
 }
 
+.newsletter-text {
+  color: white;
+  font-size: 2.2rem;
+}
+
+// HELPERS
+
 .poppins-sans-serif {
   font-family: $poppins-sans-serif;
 }
@@ -49,12 +55,4 @@
 
 .reset-padding-left {
   padding: 0 0 0 0.3rem;
-}
-
-.newsletter-format {
-  display: flex;
-  flex-direction: column;
-  background-color: $main-color;
-  color: white;
-  padding: 2rem;
 }

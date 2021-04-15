@@ -5,4 +5,7 @@ export interface InputProps {
     type?: string;
     name?: string;
     onChange?: () => {};
+    width?: string;
+    height?: string;
+    padding?: string;
 }

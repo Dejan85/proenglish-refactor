@@ -26,10 +26,10 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
     paddingRight,
     padding,
     outline,
+    borderRadius,
+    zIndex,
   } = props;
   const className: string = "content-container";
-
-  console.log("test", paddingLeft);
 
   const style = {
     width,
@@ -50,7 +50,11 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
     paddingRight,
     padding,
     outline,
+    borderRadius,
+    zIndex,
   };
+
+  console.log("test", "render");
 
   return (
     <WrapperTag

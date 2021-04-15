@@ -13,7 +13,12 @@ const Button = (props: ButtonProps) => {
     name,
     onClick,
     className: costomClassName,
+    width,
+    height,
+    padding,
   } = props;
+
+  const style = { width, height, padding };
   return (
     <Wrapper
       type={type}
@@ -23,6 +28,7 @@ const Button = (props: ButtonProps) => {
       }
       name={name}
       onClick={onClick}
+      style={style}
     >
       {children}
     </Wrapper>

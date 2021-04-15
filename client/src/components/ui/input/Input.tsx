@@ -12,8 +12,14 @@ const Input = (props: InputProps) => {
     value,
     type,
     name,
+    width,
+    height,
+    padding,
     onChange,
   } = props;
+
+  const style = { width, height, padding };
+
   return (
     <Wrapper
       placeholder={placeholder}
@@ -24,6 +30,7 @@ const Input = (props: InputProps) => {
       className={
         costomClassName ? `${costomClassName} ${className}` : className
       }
+      style={style}
     ></Wrapper>
   );
 };

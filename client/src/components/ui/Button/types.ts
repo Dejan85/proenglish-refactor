@@ -1,11 +1,9 @@
-import { JSXElementConstructor, ReactElement, RefAttributes } from 'react';
-import { LinkProps } from 'react-router-dom';
-
 export interface ButtonProps {
-    type?: string;
+    type?: "submit" | "reset" | "button";
     value?: string;
     name?: string;
-    as: "Link" | "button" | "span";
-    to?: string;
+    children?: JSX.Element | JSX.Element[] | string;
+    onClick?: () => {};
+    className?: string;
 }
 

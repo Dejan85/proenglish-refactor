@@ -1,5 +1,5 @@
 import React from "react";
-import { WelcomePage, About, Course, Blog } from "./pages";
+import { WelcomePage, About, Course, Blog, Newsletter } from "./pages";
 
 const MemoizedUi: JSX.Element = (
   <>
@@ -7,6 +7,7 @@ const MemoizedUi: JSX.Element = (
     <About />
     <Course />
     <Blog />
+    <Newsletter />
   </>
 );
 

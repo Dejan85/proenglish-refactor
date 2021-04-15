@@ -5,6 +5,7 @@ export const WelcomePage: (props: any) => JSX.Element = loadable(() => import('.
 export const About: (props: any) => JSX.Element = loadable(() => import('./about/About'));
 export const Course: (props: any) => JSX.Element = loadable(() => import('./course/Course'));
 export const Blog: (props: any) => JSX.Element = loadable(() => import('./blog/Blog'));
+export const Newsletter: (props: any) => JSX.Element = loadable(() => import('./newsletter/Newsletter'));
 
 
 

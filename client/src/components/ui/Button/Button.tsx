@@ -1,6 +1,6 @@
 import React from "react";
-import { ButtonProps } from "./types";
 import { WrapperType } from "~/src/global-types";
+import { ButtonProps } from "./types";
 
 const className: string = "button";
 const Wrapper: WrapperType = "button";

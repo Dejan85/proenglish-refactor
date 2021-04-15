@@ -1,8 +1,6 @@
 import React from "react";
 import { WrapperType } from "~/src/global-types";
 import { ContentContainerProps } from "./types";
-import TextSide from "./TextSide";
-import ImageSide from "./ImageSide";
 
 const WrapperTag: WrapperType = "div";
 

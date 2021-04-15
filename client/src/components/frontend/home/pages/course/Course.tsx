@@ -36,6 +36,7 @@ const MemoizedUi: JSX.Element = (
           maxWidth="60rem"
           height="100%"
           paddingLeft="5rem"
+          outline="1px solid red"
         >
           <Heading as="h2" className="default-heading">
             {headingText}

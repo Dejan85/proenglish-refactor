@@ -26,6 +26,8 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
     paddingBottom,
     paddingLeft,
     paddingRight,
+    padding,
+    outline,
   } = props;
   const className: string = "content-container";
 
@@ -46,6 +48,8 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
     paddingBottom,
     paddingLeft,
     paddingRight,
+    padding,
+    outline,
   };
 
   return (
@@ -61,8 +65,5 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
     </WrapperTag>
   );
 };
-
-ContentContainer.TextSide = TextSide;
-ContentContainer.ImageSide = ImageSide;
 
 export default ContentContainer;

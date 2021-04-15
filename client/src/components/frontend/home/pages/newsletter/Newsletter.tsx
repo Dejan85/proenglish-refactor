@@ -11,22 +11,30 @@ import { msg } from "./messages";
 
 const Newsletter = () => {
   return (
-    <ContentContainer className="box-shadow">
-      <ContentContainer.ImageSide className="height-40rem">
+    <ContentContainer marginTop="10rem" className="box-shadow">
+      <ContentContainer width="50%" height="40rem">
         <Image src={img} alt="img" />
-      </ContentContainer.ImageSide>
+      </ContentContainer>
 
-      <ContentContainer.TextSide className="justify-content-center align-items-center text-side-width-51-percent">
-        <ContentContainer className="newsletter-content-container reset-margin-top">
-          <Text className="newsletter-format" as="p">
-            {msg}
-          </Text>
+      <ContentContainer
+        width="50%"
+        justifyContent="center"
+        alignItems="center"
+        padding="2rem"
+      >
+        <ContentContainer
+          flexDirection="column"
+          width="100%"
+          height="100%"
+          className="background-color-main-color"
+        >
+          <Text as="p">{msg}</Text>
           <ContentContainer className="flex-direction-column">
             <Input />
             <Button>Click</Button>
           </ContentContainer>
         </ContentContainer>
-      </ContentContainer.TextSide>
+      </ContentContainer>
     </ContentContainer>
   );
 };

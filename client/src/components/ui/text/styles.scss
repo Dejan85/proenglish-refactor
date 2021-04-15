@@ -5,8 +5,8 @@
   font-family: $lato-sans-serif;
   line-height: 1.4;
   text-align: justify;
-  margin-top: 2rem;
   font-size: 2rem;
+  // margin-top: 2rem;
 }
 
 .welcome-paragraph,
@@ -63,8 +63,4 @@
   background-color: $main-color;
   color: white;
   padding: 2rem;
-  width: 90%;
-  height: 90%;
-
-  border-radius: 5px;
 }

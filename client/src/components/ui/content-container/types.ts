@@ -13,7 +13,10 @@ export interface ContentContainerProps {
     paddingBottom?: string;
     paddingLeft?: string;
     paddingRight?: string;
+    padding?: string;
+    outline?: string;
     flexDirection?: "row" | "row-reverse" | "column" | "column-reverse" | "initial" | "inherit";
     justifyContent?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly" | "initial" | "inherit";
     alignItems?: "stretch" | "center" | "flex-start" | "flex-end" | "baseline" | "initial" | "inherit";
-    alignSelf?: "auto" | "stretch" | "center" | "flex-start" | "flex-end" | "baseline" | "initial" | "inherit"
+    alignSelf?: "auto" | "stretch" | "center" | "flex-start" | "flex-end" | "baseline" | "initial" | "inherit";
+}

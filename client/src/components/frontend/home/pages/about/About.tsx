@@ -25,9 +25,11 @@ const MemoizedUi: JSX.Element = (
         </Heading>
         {aboutText.map(
           (text: string): JSX.Element => (
-            <Text key={uniqid()} as="p" className="default-paragraph">
-              {text}
-            </Text>
+            <ContentContainer marginTop="2rem" key={uniqid()}>
+              <Text as="p" className="default-paragraph">
+                {text}
+              </Text>
+            </ContentContainer>
           )
         )}
         <Link to="/onama" as={RouterLink}>

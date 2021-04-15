@@ -28,21 +28,15 @@
 }
 
 .blog-modal-text {
-  display: block;
+  text-align: justify;
   color: $modal-text-color;
   font-size: 1.7rem;
-  margin-top: 0;
-  padding: 0 1rem;
-  text-align: justify;
 }
 
 .blog-modal-span {
-  display: inline-block;
   color: $modal-span-color;
   font-size: 1.3rem;
   font-weight: 700;
-  margin-top: 1rem;
-  padding: 0 0 0 1rem;
 }
 
 .poppins-sans-serif {

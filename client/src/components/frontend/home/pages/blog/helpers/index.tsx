@@ -24,27 +24,35 @@ const RenderModal = (props: { children: object[] }): JSX.Element => {
             />
             <Link
               as={LinkRouter}
-              className="no-background-color modal-link"
+              className="no-background-color heading-link"
               to="/"
             >
               {item.title}
             </Link>
-            <Text as="p" className="blog-modal-text">
-              <SubStr>{item.description}</SubStr>
-            </Text>
+
+            <ContentContainer padding="0 1rem">
+              <Text as="p" className="blog-modal-text">
+                <SubStr>{item.description}</SubStr>
+              </Text>
+            </ContentContainer>
+
             <Line className="align-item-flex-start reset-padding-bottom">
               <Line.SmallLine />
             </Line>
-            <Text as="span" className="blog-modal-span">
-              <FormatTime>{item.created}</FormatTime>
-            </Text>
-            <ContentContainer className="justify-content-normal reset-margin-top">
+
+            <ContentContainer marginTop="1rem" padding="0 1rem">
+              <Text as="span" className="blog-modal-span">
+                <FormatTime>{item.created}</FormatTime>
+              </Text>
+            </ContentContainer>
+
+            <ContentContainer marginTop="1rem" padding="0 1rem">
               <Text as="span" className="blog-modal-span poppins-sans-serif">
                 by
               </Text>
               <Text
                 as="span"
-                className="blog-modal-span text-orange poppins-sans-serif reset-padding-left"
+                className="blog-modal-span text-orange poppins-sans-serif"
               >
                 {item.postedBy}
               </Text>

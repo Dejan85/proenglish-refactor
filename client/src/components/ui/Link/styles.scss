@@ -5,29 +5,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem 2rem;
+  margin-top: 8rem;
+
   text-decoration: none;
   color: white;
   background-color: $main-color;
   font-size: 1.7rem;
   font-family: $lato-sans-serif;
   transition: all 0.5s;
-  padding: 1rem 2rem;
-  margin-top: 8rem;
 
   &:hover {
     background-color: darken($color: $main-color, $amount: 20%);
   }
 }
 
-.modal-link {
+.heading-link {
   display: block;
   height: 9rem;
+  padding: 1.5rem 0;
+  margin-top: 0;
+
   font-size: 2rem;
   color: $heading-link-color;
   font-weight: 800;
   text-align: center;
-  padding: 1.5rem 0;
-  margin-top: 0;
 
   &:hover {
     color: $main-color;

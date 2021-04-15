@@ -32,6 +32,7 @@ const MemoizedUi: JSX.Element = (
             </ContentContainer>
           )
         )}
+
         <Link to="/onama" as={RouterLink}>
           {linkText}
         </Link>

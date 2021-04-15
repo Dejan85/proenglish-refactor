@@ -69,13 +69,17 @@ export const RenderUi = (props: { children: object[] }): JSX.Element => {
   return (
     <>
       <SubContainer className="flex-direction-column">
-        <ContentContainer className="justify-content-center flex-direction-column">
+        <ContentContainer
+          flexDirection="column"
+          justifyContent="center"
+          marginTop="10rem"
+        >
           <Heading as="h1" className="default-heading">
             {headingText}
           </Heading>
           {RenderLine}
         </ContentContainer>
-        <ContentContainer className="reset-margin-top">
+        <ContentContainer justifyContent="space-between">
           {children.length ? (
             <RenderModal>{children}</RenderModal>
           ) : (

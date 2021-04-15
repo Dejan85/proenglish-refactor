@@ -14,7 +14,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 const MemoizedUi: JSX.Element = (
   <SubContainer>
-    <ContentContainer marginTop="10rem">
+    <ContentContainer justifyContent="space-between" marginTop="10rem">
       <ContentContainer
         width="49%"
         alignItems="flex-start"

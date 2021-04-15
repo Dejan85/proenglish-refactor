@@ -2,78 +2,7 @@
 
 .content-container {
   display: flex;
-  justify-content: space-between;
   width: 100%;
-  // margin-top: 10rem;
-}
-
-// .flex-direction-column {
-//   flex-direction: column;
-// }
-
-// stari css
-
-// .wrap-content-left,
-// .wrap-content-right {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-end;
-//   justify-content: space-evenly;
-//   max-width: 60rem;
-//   width: 100%;
-//   padding-left: 5rem;
-//   height: 100%;
-// }
-
-// .wrap-content-left {
-//   align-self: flex-end;
-//   align-items: flex-start;
-//   padding-left: 0;
-//   padding-right: 5rem;
-// }
-
-.text-side {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 49%;
-}
-
-.image-side {
-  width: 49%;
-}
-
-// halpers
-.flex-direction-row {
-  flex-direction: row;
-}
-
-.flex-direction-column {
-  flex-direction: column;
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-
-.justify-content-normal {
-  justify-content: normal;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.reset-margin-top {
-  margin-top: 0;
-}
-
-.set-width-to-50-percent {
-  width: 50%;
-}
-
-.set-height-to-55-rem {
-  height: 55rem;
 }
 
 .box-shadow {

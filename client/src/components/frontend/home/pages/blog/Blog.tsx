@@ -7,6 +7,7 @@ import { BLOG_SCOPE } from "./constants";
 import { reducer, fetchBlogData } from "./slice";
 import saga from "./saga";
 import { RenderUi } from "./helpers";
+import { Loading } from "~/src/components/ui";
 
 const Blog = (): JSX.Element => {
   useInjectReducer({ key: BLOG_SCOPE, reducer });
@@ -14,8 +15,12 @@ const Blog = (): JSX.Element => {
   const dispatch = useDispatch();
   const { blogData } = useSelector(getBlogData);
 
+  const test = false;
+
   const MemoizedUi = useMemo(
-    () => blogData.length && <RenderUi>{blogData}</RenderUi>,
+    () =>
+      // blogData.length ? <RenderUi>{blogData}</RenderUi> : <div>Loading...</div>,
+      test ? <RenderUi>{blogData}</RenderUi> : <Loading />,
     [blogData]
   );
 

@@ -15,3 +15,4 @@ export { Button } from './Button';
 export { Link } from './Link';
 export { Line } from './Line';
 export { BlogModal } from './blog-modal';
+export { Loading } from './loader';

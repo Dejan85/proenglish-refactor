@@ -29,6 +29,8 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
   } = props;
   const className: string = "content-container";
 
+  console.log("test", paddingLeft);
+
   const style = {
     width,
     maxWidth,

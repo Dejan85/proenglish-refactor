@@ -35,8 +35,7 @@ const MemoizedUi: JSX.Element = (
           justifyContent="space-evenly"
           maxWidth="60rem"
           height="100%"
-          paddingLeft="5rem"
-          outline="1px solid red"
+          marginLeft="5rem"
         >
           <Heading as="h2" className="default-heading">
             {headingText}
@@ -59,7 +58,7 @@ const MemoizedUi: JSX.Element = (
           alignItems="flex-start"
           maxWidth="60rem"
           height="100%"
-          paddingRight="5rem"
+          marginRight="5rem"
         >
           <Heading as="h2" className="default-heading">
             {headingText2}

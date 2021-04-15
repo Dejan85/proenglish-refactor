@@ -10,7 +10,7 @@ const defaultOptions = {
 
 const useLazyLoad = (props: any) => {
   const { options = defaultOptions } = props;
-  const ref: React.MutableRefObject<any> = useRef();
+  const ref: any = useRef();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {

@@ -15,12 +15,8 @@ const Blog = (): JSX.Element => {
   const dispatch = useDispatch();
   const { blogData } = useSelector(getBlogData);
 
-  const test = false;
-
   const MemoizedUi = useMemo(
-    () =>
-      // blogData.length ? <RenderUi>{blogData}</RenderUi> : <div>Loading...</div>,
-      test ? <RenderUi>{blogData}</RenderUi> : <Loading />,
+    () => (blogData.length ? <RenderUi>{blogData}</RenderUi> : <Loading />),
     [blogData]
   );
 

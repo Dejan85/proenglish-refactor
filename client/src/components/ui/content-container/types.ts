@@ -3,4 +3,8 @@ export interface ContentContainerProps {
     className?: string;
     wrapContentToRight?: boolean;
     wrapContentToLeft?: boolean;
+    width?: string;
+    height?: string;
+    alignItems?: "stretch" | "center" | "flex-start" | "flex-end" | "baseline" | "initial" | "inherit";
+    flexDirection?: "row" | "row-reverse" | "column" | "column-reverse" | "initial" | "inherit";
 }

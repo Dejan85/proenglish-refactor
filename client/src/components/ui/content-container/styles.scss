@@ -1,9 +1,17 @@
+@import "../../styles/variables/colors";
+
 .content-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-top: 10rem;
 }
+
+// .flex-direction-column {
+//   flex-direction: column;
+// }
+
+// stari css
 
 .wrap-content-left,
 .wrap-content-right {
@@ -36,6 +44,10 @@
 }
 
 // halpers
+.flex-direction-row {
+  flex-direction: row;
+}
+
 .flex-direction-column {
   flex-direction: column;
 }
@@ -46,6 +58,10 @@
 
 .justify-content-normal {
   justify-content: normal;
+}
+
+.align-items-center {
+  align-items: center;
 }
 
 .reset-margin-top {
@@ -62,4 +78,18 @@
 
 .box-shadow {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+}
+
+.height-40rem {
+  height: 40rem;
+}
+
+.text-side-width-51-percent {
+  width: 51%;
+}
+
+.background-color-main {
+  background-color: $main-color;
+  width: 95%;
+  height: 90%;
 }

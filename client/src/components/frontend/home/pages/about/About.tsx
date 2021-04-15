@@ -13,9 +13,36 @@ import img from "./images/img.jpg";
 import { Link as RouterLink } from "react-router-dom";
 
 const MemoizedUi: JSX.Element = (
+  // <SubContainer>
+  //   <ContentContainer>
+  //     <ContentContainer.TextSide>
+  //       <Heading as="h2" className="default-heading">
+  //         {headingText}
+  //       </Heading>
+  //       {aboutText.map(
+  //         (text: string): JSX.Element => (
+  //           <Text key={uniqid()} as="p" className="default-paragraph">
+  //             {text}
+  //           </Text>
+  //         )
+  //       )}
+  //       <Link to="/onama" as={RouterLink}>
+  //         {linkText}
+  //       </Link>
+  //     </ContentContainer.TextSide>
+  //     <ContentContainer.ImageSide>
+  //       <Image alt="img" src={img} />
+  //     </ContentContainer.ImageSide>
+  //   </ContentContainer>
+  // </SubContainer>
+
   <SubContainer>
     <ContentContainer>
-      <ContentContainer.TextSide>
+      <ContentContainer
+        width="49%"
+        alignItems="flex-start"
+        flexDirection="column"
+      >
         <Heading as="h2" className="default-heading">
           {headingText}
         </Heading>
@@ -29,10 +56,14 @@ const MemoizedUi: JSX.Element = (
         <Link to="/onama" as={RouterLink}>
           {linkText}
         </Link>
-      </ContentContainer.TextSide>
-      <ContentContainer.ImageSide>
+      </ContentContainer>
+      <ContentContainer
+        alignItems="flex-start"
+        width="49%"
+        className="flex-direction-column"
+      >
         <Image alt="img" src={img} />
-      </ContentContainer.ImageSide>
+      </ContentContainer>
     </ContentContainer>
   </SubContainer>
 );

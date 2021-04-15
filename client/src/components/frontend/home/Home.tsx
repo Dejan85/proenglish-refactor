@@ -8,6 +8,7 @@ const MemoizedUi: JSX.Element = (
     <Course />
     <Blog />
     <Newsletter />
+    <div style={{ height: "50rem" }} />
   </>
 );
 

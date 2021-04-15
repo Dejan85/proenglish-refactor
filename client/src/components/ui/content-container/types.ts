@@ -1,10 +1,19 @@
 export interface ContentContainerProps {
     children?: JSX.Element | JSX.Element[] | any;
     className?: string;
-    wrapContentToRight?: boolean;
-    wrapContentToLeft?: boolean;
+    maxWidth?: string;
     width?: string;
+    maxHeight?: string;
     height?: string;
-    alignItems?: "stretch" | "center" | "flex-start" | "flex-end" | "baseline" | "initial" | "inherit";
+    marginTop?: string;
+    marginBottom?: string;
+    marginLeft?: string;
+    marginRight?: string;
+    paddingTop?: string;
+    paddingBottom?: string;
+    paddingLeft?: string;
+    paddingRight?: string;
     flexDirection?: "row" | "row-reverse" | "column" | "column-reverse" | "initial" | "inherit";
-}
+    justifyContent?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly" | "initial" | "inherit";
+    alignItems?: "stretch" | "center" | "flex-start" | "flex-end" | "baseline" | "initial" | "inherit";
+    alignSelf?: "auto" | "stretch" | "center" | "flex-start" | "flex-end" | "baseline" | "initial" | "inherit"

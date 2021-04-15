@@ -26,43 +26,52 @@ const imageUi2 = renderImage(img2);
 
 const MemoizedUi: JSX.Element = (
   <>
-    <ContentContainer className="set-height-to-55-rem box-shadow">
-      <ContentContainer.ImageSide className="set-width-to-50-percent">
-        {imageUi}
-      </ContentContainer.ImageSide>
-      <ContentContainer.TextSide
-        wrapContentToRight
-        className="set-width-to-50-percent"
-      >
-        <Heading as="h2" className="default-heading">
-          {headingText}
-        </Heading>
-        <Text as="p" className="default-paragraph">
-          {text}
-        </Text>
-        <Link to={linkPath} as={RouterLink}>
-          {linkText}
-        </Link>
-      </ContentContainer.TextSide>
+    <ContentContainer height="55rem" marginTop="10rem" className="box-shadow">
+      <ContentContainer width="50%">{imageUi}</ContentContainer>
+      <ContentContainer width="50%">
+        <ContentContainer
+          flexDirection="column"
+          alignItems="flex-end"
+          justifyContent="space-evenly"
+          maxWidth="60rem"
+          height="100%"
+          paddingLeft="5rem"
+        >
+          <Heading as="h2" className="default-heading">
+            {headingText}
+          </Heading>
+          <Text as="p" className="default-paragraph">
+            {text}
+          </Text>
+          <Link to={linkPath} as={RouterLink}>
+            {linkText}
+          </Link>
+        </ContentContainer>
+      </ContentContainer>
     </ContentContainer>
-    <ContentContainer className="reset-margin-top set-height-to-55-rem box-shadow">
-      <ContentContainer.TextSide
-        wrapContentToLeft
-        className="set-width-to-50-percent"
-      >
-        <Heading as="h2" className="default-heading">
-          {headingText2}
-        </Heading>
-        <Text as="p" className="default-paragraph">
-          {text2}
-        </Text>
-        <Link to={linkPath} as={RouterLink}>
-          {linkText2}
-        </Link>
-      </ContentContainer.TextSide>
-      <ContentContainer.ImageSide className="set-width-to-50-percent">
-        {imageUi2}
-      </ContentContainer.ImageSide>
+
+    <ContentContainer height="55rem" className="box-shadow">
+      <ContentContainer width="50%" justifyContent="flex-end">
+        <ContentContainer
+          flexDirection="column"
+          justifyContent="space-evenly"
+          alignItems="flex-start"
+          maxWidth="60rem"
+          height="100%"
+          paddingRight="5rem"
+        >
+          <Heading as="h2" className="default-heading">
+            {headingText2}
+          </Heading>
+          <Text as="p" className="default-paragraph">
+            {text2}
+          </Text>
+          <Link to={linkPath} as={RouterLink}>
+            {linkText2}
+          </Link>
+        </ContentContainer>
+      </ContentContainer>
+      <ContentContainer width="50%">{imageUi2}</ContentContainer>
     </ContentContainer>
   </>
 );

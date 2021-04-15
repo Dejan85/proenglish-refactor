@@ -11,13 +11,42 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
     children,
     className: customClassName,
     width,
+    maxWidth,
     height,
+    maxHeight,
     alignItems,
+    justifyContent,
     flexDirection,
+    alignSelf,
+    marginTop,
+    marginBottom,
+    marginLeft,
+    marginRight,
+    paddingTop,
+    paddingBottom,
+    paddingLeft,
+    paddingRight,
   } = props;
   const className: string = "content-container";
 
-  const style = { width, height, alignItems, flexDirection };
+  const style = {
+    width,
+    maxWidth,
+    height,
+    maxHeight,
+    alignItems,
+    justifyContent,
+    flexDirection,
+    alignSelf,
+    marginTop,
+    marginBottom,
+    marginLeft,
+    marginRight,
+    paddingTop,
+    paddingBottom,
+    paddingLeft,
+    paddingRight,
+  };
 
   return (
     <WrapperTag

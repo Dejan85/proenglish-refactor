@@ -7,7 +7,7 @@ const app = express();
 dontenv.config();
 const PORT = process.env.PORT || 5000;
 const mongoURI = process.env.MONGO_URI;
-import { blogRouts } from './routes';
+import { blogRouts, eventsRoutes } from './routes';
 
 
 app.use(bodyParser.json({ limit: "150kb" }));
@@ -16,6 +16,7 @@ app.use(cors());
 
 
 app.use("/blog", blogRouts);
+app.use("/events", eventsRoutes);
 
 
 mongoose

@@ -1,6 +1,8 @@
 import express from 'express';
-const router = express.Router();
+import { events } from '../controllers';
+const { getEvents } = events;
+const eventsRoutes = express.Router();
 
+eventsRoutes.get("/get", getEvents);
 
-
-router.get("/get", getAllEvents);
+export default eventsRoutes;

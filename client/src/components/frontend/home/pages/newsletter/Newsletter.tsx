@@ -6,7 +6,7 @@ import {
   Input,
   Button,
 } from "~/src/components/ui";
-import img from "./images/bckg.jpg";
+import img from "./images/bckg2.jpg";
 import { msg } from "./messages";
 
 const MemoizedUi: JSX.Element = (

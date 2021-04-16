@@ -8,8 +8,7 @@
   width: 100%;
   height: 6rem;
   color: white;
-
-  &__list {
+  outline: 1px solid red &__list {
     list-style-type: none;
   }
 

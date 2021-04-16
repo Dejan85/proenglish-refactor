@@ -54,7 +54,6 @@ export const UiRender = (): JSX.Element => {
         maxWidth="40rem"
         height="57rem"
         marginTop="10rem"
-        outline="1px solid red"
       >
         <Heading className="h2" as="h2">
           Događaji za današnji dan
@@ -64,8 +63,7 @@ export const UiRender = (): JSX.Element => {
           renderThumbVertical={() => <div style={{ background: "#474642" }} />}
         >
           <CalendarInfo>
-            <CalendarInfo.Card />
-            <CalendarInfo.Info />
+            <CalendarInfo.Description />
           </CalendarInfo>
         </Scrollbars>
       </ContentContainer>

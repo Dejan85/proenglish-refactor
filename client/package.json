@@ -53,6 +53,7 @@
     "@types/lodash": "^4.14.168",
     "axios": "^0.21.1",
     "history": "^5.0.0",
+    "moment": "^2.29.1",
     "react-calendar": "^3.3.1",
     "react-custom-scrollbars": "^4.2.1",
     "react-file-base64": "^1.0.3",

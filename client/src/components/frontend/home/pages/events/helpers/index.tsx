@@ -4,7 +4,7 @@ import {
   ContentContainer,
   Heading,
   CalendarUi,
-  CalendarCard,
+  CalendarInfo,
 } from "~/src/components/ui";
 import { Scrollbars } from "react-custom-scrollbars";
 
@@ -33,20 +33,24 @@ export const UiRender = (): JSX.Element => {
         maxWidth="30rem"
         height="57rem"
         marginTop="10rem"
-        outline="1px solid red"
         position="relative"
       >
         <Heading className="h2" as="h2">
           Mesečni događaji
         </Heading>
         <Scrollbars
+          style={{ marginTop: "6.2rem" }}
           renderThumbVertical={() => <div style={{ background: "#474642" }} />}
         >
-          <CalendarCard></CalendarCard>
+          <CalendarInfo>
+            <CalendarInfo.Card />
+            <CalendarInfo.Info />
+          </CalendarInfo>
         </Scrollbars>
       </ContentContainer>
 
       <ContentContainer
+        flexDirection="column"
         maxWidth="40rem"
         height="57rem"
         marginTop="10rem"
@@ -55,6 +59,15 @@ export const UiRender = (): JSX.Element => {
         <Heading className="h2" as="h2">
           Događaji za današnji dan
         </Heading>
+        <Scrollbars
+          style={{ marginTop: "6.2rem" }}
+          renderThumbVertical={() => <div style={{ background: "#474642" }} />}
+        >
+          <CalendarInfo>
+            <CalendarInfo.Card />
+            <CalendarInfo.Info />
+          </CalendarInfo>
+        </Scrollbars>
       </ContentContainer>
     </SubContainer>
   );

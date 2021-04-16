@@ -18,4 +18,4 @@ export { BlogModal } from './blog-modal';
 export { Loading } from './loader';
 export { Input } from './input';
 export { CalendarUi } from './calendar';
-export { CalendarCard } from './calendar-card';
+export { CalendarInfo } from './calendar-info';

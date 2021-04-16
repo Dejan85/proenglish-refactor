@@ -1,12 +1,10 @@
 import React from "react";
-import { CalendarCardProps } from "./types";
 import { WrapperType } from "~/src/global-types";
 
 const Wrapper: WrapperType = "div";
 const className: string = "calendar-card";
 
-const CalendarCard = (props: CalendarCardProps) => {
-  const { children } = props;
+const Card = (): JSX.Element => {
   return (
     <Wrapper className={className}>
       <Wrapper className="calendar-card__num">{2}</Wrapper>
@@ -15,4 +13,4 @@ const CalendarCard = (props: CalendarCardProps) => {
   );
 };
 
-export default CalendarCard;
+export default Card;

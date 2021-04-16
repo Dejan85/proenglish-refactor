@@ -62,8 +62,6 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
     right,
   };
 
-  console.log("test", "render");
-
   return (
     <WrapperTag
       style={style}

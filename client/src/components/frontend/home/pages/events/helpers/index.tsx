@@ -7,6 +7,7 @@ import {
   CalendarInfo,
 } from "~/src/components/ui";
 import { Scrollbars } from "react-custom-scrollbars";
+import { filterEventsForCurrentMonth } from "~/src/utils/calendar";
 
 const CalendarOfEvents = (): JSX.Element => {
   return (
@@ -84,6 +85,8 @@ const EventsForToday = (): JSX.Element => {
 
 export const UiRender = (props: any): JSX.Element => {
   const { eventsData } = props;
+  filterEventsForCurrentMonth(eventsData);
+
   return (
     <SubContainer>
       <CalendarOfEvents />

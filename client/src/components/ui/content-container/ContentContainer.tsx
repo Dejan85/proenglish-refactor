@@ -27,7 +27,11 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
     padding,
     outline,
     borderRadius,
-    zIndex,
+    position,
+    top,
+    bottom,
+    left,
+    right,
   } = props;
   const className: string = "content-container";
 
@@ -51,7 +55,11 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
     padding,
     outline,
     borderRadius,
-    zIndex,
+    position,
+    top,
+    bottom,
+    left,
+    right,
   };
 
   console.log("test", "render");

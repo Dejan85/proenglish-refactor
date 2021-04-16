@@ -17,3 +17,4 @@ export { Line } from './Line';
 export { BlogModal } from './blog-modal';
 export { Loading } from './loader';
 export { Input } from './input';
+export { CalendarUi } from './calendar';

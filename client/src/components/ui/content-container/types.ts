@@ -16,9 +16,13 @@ export interface ContentContainerProps {
     padding?: string;
     outline?: string;
     borderRadius?: string;
-    zIndex?: string;
+    top?: string;
+    bottom?: string;
+    left?: string;
+    right?: string;
     flexDirection?: "row" | "row-reverse" | "column" | "column-reverse" | "initial" | "inherit";
     justifyContent?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly" | "initial" | "inherit";
     alignItems?: "stretch" | "center" | "flex-start" | "flex-end" | "baseline" | "initial" | "inherit";
     alignSelf?: "auto" | "stretch" | "center" | "flex-start" | "flex-end" | "baseline" | "initial" | "inherit";
+    position?: "relative" | "absolute" | "fixed" | "static" | "sticky";
 }

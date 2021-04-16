@@ -58,6 +58,14 @@ export const UiRender = (): JSX.Element => {
             <CalendarInfo.Card />
             <CalendarInfo.Info />
           </CalendarInfo>
+          <CalendarInfo>
+            <CalendarInfo.Card />
+            <CalendarInfo.Info />
+          </CalendarInfo>
+          <CalendarInfo>
+            <CalendarInfo.Card />
+            <CalendarInfo.Info />
+          </CalendarInfo>
         </Scrollbars>
       </ContentContainer>
 

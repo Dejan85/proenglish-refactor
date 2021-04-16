@@ -8,8 +8,6 @@ import { reducer, fetchEventsData } from "./slice";
 import saga from "./saga";
 import { UiRender } from "./helpers";
 
-// const Render: JSX.Element = <UiRender />;
-
 const Events = (): JSX.Element => {
   useInjectReducer({ key: EVENTS_SCOPE, reducer });
   useInjectSaga({ key: EVENTS_SCOPE, saga });

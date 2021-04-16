@@ -3,7 +3,7 @@ import { blog } from '../controllers';
 const { getBlog } = blog;
 const blogRouts = express.Router();
 
-blogRouts.get('/', getBlog);
+blogRouts.get('/get', getBlog);
 
 export default blogRouts;
 

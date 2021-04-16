@@ -5,7 +5,7 @@ import { request } from '~/src/utils/requests';
 
 function* fetchBlogDataGenerator() {
     try {
-        const url: string = "blog";
+        const url: string = "blog/get";
         const response: object = yield call(request, url, "GET");
         yield put(setBlogData(response));
     } catch (error) {

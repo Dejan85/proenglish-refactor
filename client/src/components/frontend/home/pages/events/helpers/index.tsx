@@ -46,6 +46,18 @@ export const UiRender = (): JSX.Element => {
             <CalendarInfo.Card />
             <CalendarInfo.Info />
           </CalendarInfo>
+          <CalendarInfo>
+            <CalendarInfo.Card />
+            <CalendarInfo.Info />
+          </CalendarInfo>
+          <CalendarInfo>
+            <CalendarInfo.Card />
+            <CalendarInfo.Info />
+          </CalendarInfo>
+          <CalendarInfo>
+            <CalendarInfo.Card />
+            <CalendarInfo.Info />
+          </CalendarInfo>
         </Scrollbars>
       </ContentContainer>
 
@@ -62,6 +74,9 @@ export const UiRender = (): JSX.Element => {
           style={{ marginTop: "6.2rem" }}
           renderThumbVertical={() => <div style={{ background: "#474642" }} />}
         >
+          <CalendarInfo>
+            <CalendarInfo.Description />
+          </CalendarInfo>
           <CalendarInfo>
             <CalendarInfo.Description />
           </CalendarInfo>

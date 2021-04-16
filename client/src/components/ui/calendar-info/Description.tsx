@@ -1,6 +1,5 @@
 import React from "react";
 import { WrapperType } from "~/src/global-types";
-import { FontAwesomeIcon } from "~/src/components/ui";
 
 const Wrapper: WrapperType = "div";
 const Heading: WrapperType = "p";

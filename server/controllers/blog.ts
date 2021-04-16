@@ -1,6 +1,6 @@
-import BlogModel from '../models/blog';
+import { BlogModel } from '../models';
 
-export const getBlog = async (req: any, res: any) => {
+const getBlog = async (req: any, res: any) => {
     try {
         const blogs = await BlogModel.find();
         res.status(200).json(blogs);
@@ -10,7 +10,7 @@ export const getBlog = async (req: any, res: any) => {
     }
 };
 
-export const postBlog = async (req: any, res: any) => {
+const postBlog = async (req: any, res: any) => {
     const addBlog = req.body;
     const newBlog = new BlogModel(addBlog);
 
@@ -21,3 +21,6 @@ export const postBlog = async (req: any, res: any) => {
         res.status(409).json({ message: error.message });
     }
 };
+
+
+export const blog = { getBlog, postBlog };

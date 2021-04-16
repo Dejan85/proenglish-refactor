@@ -1,1 +1,4 @@
-export { blog } from './blog';
+import blogRouts from './blog';
+
+
+export { blogRouts };

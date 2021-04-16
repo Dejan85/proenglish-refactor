@@ -7,7 +7,7 @@ const app = express();
 dontenv.config();
 const PORT = process.env.PORT || 5000;
 const mongoURI = process.env.MONGO_URI;
-import { blog } from './routes';
+import { blogRouts } from './routes';
 
 
 app.use(bodyParser.json({ limit: "150kb" }));
@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ limit: "150kb", extended: true }));
 app.use(cors());
 
 
-app.use("/blog", blog);
+app.use("/blog", blogRouts);
 
 
 mongoose

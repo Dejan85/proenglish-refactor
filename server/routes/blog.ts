@@ -1,9 +1,12 @@
 import express from 'express';
-import { getBlog } from '../controllers/blog';
+import { blog } from '../controllers';
+const { getBlog } = blog;
+const blogRouts = express.Router();
 
-export const blog = express.Router();
+blogRouts.get('/', getBlog);
 
-blog.get('/', getBlog);
+export default blogRouts;
+
 
 
 

@@ -14,7 +14,9 @@ const Blog = (): JSX.Element => {
   const dispatch = useDispatch();
   const { blogData } = useSelector(getBlogData);
 
-  const MemoizedUi = useMemo(() => <RenderUi>{blogData}</RenderUi>, [blogData]);
+  const MemoizedUi = useMemo(() => <RenderUi blogData={blogData} />, [
+    blogData,
+  ]);
 
   useEffect(() => {
     dispatch(fetchBlogData());

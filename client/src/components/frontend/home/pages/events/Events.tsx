@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useInjectSaga } from "~/src/utils/injectSaga";
 import { useInjectReducer } from "~/src/utils/injectReducer";
 import { getEventsState } from "./selectos";
@@ -8,7 +8,7 @@ import { reducer, fetchEventsData } from "./slice";
 import saga from "./saga";
 import { UiRender } from "./helpers";
 
-const MemoizedUi: JSX.Element = <UiRender />;
+// const Render: JSX.Element = <UiRender />;
 
 const Events = (): JSX.Element => {
   useInjectReducer({ key: EVENTS_SCOPE, reducer });
@@ -16,11 +16,13 @@ const Events = (): JSX.Element => {
   const dispatch = useDispatch();
   const { eventsData } = useSelector(getEventsState);
 
+  const MemoizedUi = useMemo(() => <UiRender eventsData={eventsData} />, [
+    eventsData,
+  ]);
+
   useEffect(() => {
     dispatch(fetchEventsData());
   }, []);
-
-  console.log("test", eventsData);
 
   return MemoizedUi;
 };

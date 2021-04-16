@@ -10,7 +10,10 @@ const eventsSlice = createSlice({
     initialState,
     reducers: {
         setEventsData(state, action) {
-            state = action.payload;
+            const { data } = action.payload;
+            console.log('test', data);
+
+            state.eventsData = data;
         }
     },
 });

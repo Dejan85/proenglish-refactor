@@ -8,8 +8,8 @@ import { Heading, SubContainer, ContentContainer } from "~/src/components/ui";
 import { headingText } from "../messages";
 import { Loading } from "~/src/components/ui";
 
-const RenderModal = (props: { children: object[] }): JSX.Element => {
-  const { children: data } = props;
+const RenderModal = (props: { blogData: object[] }): JSX.Element => {
+  const { blogData: data } = props;
 
   return (
     <>
@@ -71,8 +71,8 @@ const RenderLine: JSX.Element = (
   </Line>
 );
 
-export const RenderUi = (props: { children: object[] }): JSX.Element => {
-  const { children } = props;
+export const RenderUi = (props: { blogData: object[] }): JSX.Element => {
+  const { blogData } = props;
 
   return (
     <>
@@ -88,11 +88,7 @@ export const RenderUi = (props: { children: object[] }): JSX.Element => {
           {RenderLine}
         </ContentContainer>
         <ContentContainer justifyContent="space-between">
-          {children.length ? (
-            <RenderModal>{children}</RenderModal>
-          ) : (
-            <Loading />
-          )}
+          {blogData.length ? <RenderModal blogData={blogData} /> : <Loading />}
         </ContentContainer>
       </SubContainer>
     </>

@@ -7,6 +7,7 @@ function* fetchEventsDataGenerator() {
     try {
         const url: string = 'events/get';
         const response: object = yield call(request, url, 'GET');
+
         yield put(setEventsData(response));
 
     } catch (error) {

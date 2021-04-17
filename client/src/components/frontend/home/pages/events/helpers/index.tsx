@@ -7,9 +7,11 @@ import {
   CalendarInfo,
 } from "~/src/components/ui";
 import { Scrollbars } from "react-custom-scrollbars";
-import { filterEventsForCurrentMonth } from "~/src/utils/calendar";
+import { filterEventsForCurrentMonth } from "~/src/utils/timeAndDateHandlers";
+import { UiRenderTypes } from "../types";
 
-const CalendarOfEvents = (): JSX.Element => {
+const CalendarOfEvents = (props: UiRenderTypes): JSX.Element => {
+  const { filterEventsHandler } = props;
   return (
     <ContentContainer
       maxWidth="39rem"
@@ -24,7 +26,7 @@ const CalendarOfEvents = (): JSX.Element => {
       </Heading>
 
       <ContentContainer position="absolute" top="10rem">
-        <CalendarUi />
+        <CalendarUi filterEventsHandler={filterEventsHandler} />
       </ContentContainer>
     </ContentContainer>
   );
@@ -83,13 +85,13 @@ const EventsForToday = (): JSX.Element => {
   );
 };
 
-export const UiRender = (props: any): JSX.Element => {
-  const { eventsData } = props;
+export const UiRender = (props: UiRenderTypes): JSX.Element => {
+  const { eventsData, filterEventsHandler } = props;
   filterEventsForCurrentMonth(eventsData);
 
   return (
     <SubContainer>
-      <CalendarOfEvents />
+      <CalendarOfEvents filterEventsHandler={filterEventsHandler} />
       <MonthlyEvents />
       <EventsForToday />
     </SubContainer>

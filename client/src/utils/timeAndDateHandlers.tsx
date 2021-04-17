@@ -22,7 +22,7 @@ export const FormatTime = (props: { children: Date }): JSX.Element => {
   return <>{time}</>;
 };
 
-export const filterEventsForCurrentMonth = (events = [{ date: "" }]) => {
+export const filterEventsForCurrentMonth = (events = [{ date: "" }]): void => {
   const getCurrentMonth = moment().month();
   const currentMonth = months[getCurrentMonth];
 
@@ -58,5 +58,5 @@ export const filterEventsForCurrentMonth = (events = [{ date: "" }]) => {
     }
   });
 
-  console.log("test", test);
+  // console.log("test", test);
 };

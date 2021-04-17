@@ -2,7 +2,7 @@ import React from "react";
 import uniqid from "uniqid";
 import { Link as LinkRouter } from "react-router-dom";
 import { Line, BlogModal, Image, Link, Text } from "~/src/components/ui";
-import { FormatTime } from "~/src/utils/calendar";
+import { FormatTime } from "~/src/utils/timeAndDateHandlers";
 import { SubStr } from "~/src/utils/SubStr";
 import { Heading, SubContainer, ContentContainer } from "~/src/components/ui";
 import { headingText } from "../messages";

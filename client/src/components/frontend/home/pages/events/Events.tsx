@@ -4,7 +4,7 @@ import { useInjectReducer } from "~/src/utils/injectReducer";
 import { getEventsState } from "./selectos";
 import { useDispatch, useSelector } from "react-redux";
 import { EVENTS_SCOPE } from "./constants";
-import { reducer, fetchEventsData } from "./slice";
+import { reducer, fetchEventsData, filterEventsAction } from "./slice";
 import saga from "./saga";
 import { UiRender } from "./helpers";
 
@@ -14,9 +14,17 @@ const Events = (): JSX.Element => {
   const dispatch = useDispatch();
   const { eventsData } = useSelector(getEventsState);
 
-  const MemoizedUi = useMemo(() => <UiRender eventsData={eventsData} />, [
-    eventsData,
-  ]);
+  const MemoizedUi = useMemo(() => {
+    const filterEventsHandler = (date: object) =>
+      dispatch(filterEventsAction(date));
+
+    return (
+      <UiRender
+        filterEventsHandler={filterEventsHandler}
+        eventsData={eventsData}
+      />
+    );
+  }, [eventsData]);
 
   useEffect(() => {
     dispatch(fetchEventsData());

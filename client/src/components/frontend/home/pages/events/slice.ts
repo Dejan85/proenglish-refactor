@@ -12,12 +12,16 @@ const eventsSlice = createSlice({
         setEventsData(state, action) {
             const { data } = action.payload;
             state.eventsData = data;
+        },
+        filterEvents(state, action) {
+            console.log('test', action.payload);
         }
     },
 });
 
 
 export const fetchEventsData = createAction("get_events_data");
+export const filterEventsAction = createAction<Record<string, any>>("filter_events");
 
-export const { setEventsData } = eventsSlice.actions;
+export const { setEventsData, filterEvents } = eventsSlice.actions;
 export const { reducer } = eventsSlice;

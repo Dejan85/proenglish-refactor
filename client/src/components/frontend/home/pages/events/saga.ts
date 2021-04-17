@@ -1,5 +1,5 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { fetchEventsData, setEventsData } from './slice';
+import { fetchEventsData, setEventsData, filterEventsAction, filterEvents } from './slice';
 import { request } from '~/src/utils/requests';
 
 
@@ -15,7 +15,13 @@ function* fetchEventsDataGenerator() {
     }
 };
 
+function* filterEventsGenerator(action: any) {
+    yield put(filterEvents(action.payload));
+
+}
+
 
 export default function* watchEvent() {
     yield takeLatest(fetchEventsData.type, fetchEventsDataGenerator);
+    yield takeLatest(filterEventsAction.type, filterEventsGenerator);
 };

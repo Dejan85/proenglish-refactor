@@ -7,11 +7,11 @@ const CalendarOfEvents = (props: UiRenderTypes): JSX.Element => {
   const { eventsData } = props;
   const [highlightDates, setHighlightDates] = useState<Date[]>();
 
-  const generateHighlhtDates = (value = new Date()) => {
+  const generateHighlhtDates = (value = new Date()): void => {
     const filteredEvents = filterEventsForCurrentMonth(eventsData, value);
-    const fullYear = value.getFullYear();
-    const month = value.getMonth();
-    const highlightDates = filteredEvents.map((item) => {
+    const fullYear: number = value.getFullYear();
+    const month: number = value.getMonth();
+    const highlightDates: Date[] = filteredEvents.map((item) => {
       const { date } = item;
       return new Date(Number(fullYear), month, Number(date.slice(0, 2)));
     });

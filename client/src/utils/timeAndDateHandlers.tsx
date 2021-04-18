@@ -22,14 +22,6 @@ export const FormatTime = (props: { children: Date }): JSX.Element => {
   return <>{time}</>;
 };
 
-export const formatDay = (date) => {
-  const currentDay = moment(date, "DD").format();
-
-  // console.log("test", typeof currentDay);
-
-  return currentDay;
-};
-
 export const filterEventsForCurrentMonth = (
   events = [{ date: "" }],
   currentDate = new Date()

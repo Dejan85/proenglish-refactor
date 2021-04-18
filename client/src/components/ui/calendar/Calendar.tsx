@@ -1,20 +1,20 @@
 import React from "react";
-import Calendar from "react-calendar";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 import { CalendarProps } from "./types";
 
-const test = <div>test</div>;
-
 const CalendarUi = (props: CalendarProps): JSX.Element => {
-  const { filterEventsHandler } = props;
+  const { highlightDates, generateHighlhtDates } = props;
 
-  const x = (s) => {
-    if (filterEventsHandler) {
-      filterEventsHandler(s);
-    }
-    return null;
-  };
-
-  return <Calendar tileContent={x} />;
+  return (
+    <DatePicker
+      onChange={() => {}}
+      onMonthChange={generateHighlhtDates}
+      inline
+      highlightDates={highlightDates}
+    />
+  );
 };
 
 export default CalendarUi;

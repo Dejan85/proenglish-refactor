@@ -14,7 +14,10 @@ const eventsSlice = createSlice({
             state.eventsData = data;
         },
         filterEvents(state, action) {
-            console.log('test', action.payload);
+            const eventsDate = action.payload;
+            // console.log('test', eventsDate);
+
+            // console.log('test', action.payload);
         }
     },
 });

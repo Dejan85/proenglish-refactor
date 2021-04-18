@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   SubContainer,
   ContentContainer,
@@ -11,7 +11,25 @@ import { filterEventsForCurrentMonth } from "~/src/utils/timeAndDateHandlers";
 import { UiRenderTypes } from "../types";
 
 const CalendarOfEvents = (props: UiRenderTypes): JSX.Element => {
-  const { filterEventsHandler } = props;
+  const { eventsData } = props;
+  const [highlightDates, setHighlightDates] = useState<Date[]>();
+
+  const generateHighlhtDates = (value = new Date()) => {
+    const filteredEvents = filterEventsForCurrentMonth(eventsData, value);
+    const fullYear = value.getFullYear();
+    const month = value.getMonth();
+    const highlightDates = filteredEvents.map((item) => {
+      const { date } = item;
+      return new Date(Number(fullYear), month, Number(date.slice(0, 2)));
+    });
+
+    setHighlightDates(highlightDates);
+  };
+
+  useEffect(() => {
+    generateHighlhtDates();
+  }, [eventsData]);
+
   return (
     <ContentContainer
       maxWidth="39rem"
@@ -26,7 +44,10 @@ const CalendarOfEvents = (props: UiRenderTypes): JSX.Element => {
       </Heading>
 
       <ContentContainer position="absolute" top="10rem">
-        <CalendarUi filterEventsHandler={filterEventsHandler} />
+        <CalendarUi
+          highlightDates={highlightDates}
+          generateHighlhtDates={generateHighlhtDates}
+        />
       </ContentContainer>
     </ContentContainer>
   );
@@ -85,13 +106,12 @@ const EventsForToday = (): JSX.Element => {
   );
 };
 
-export const UiRender = (props: UiRenderTypes): JSX.Element => {
+export const UiRender = (props: any): JSX.Element => {
   const { eventsData, filterEventsHandler } = props;
-  filterEventsForCurrentMonth(eventsData);
 
   return (
     <SubContainer>
-      <CalendarOfEvents filterEventsHandler={filterEventsHandler} />
+      <CalendarOfEvents eventsData={eventsData} />
       <MonthlyEvents />
       <EventsForToday />
     </SubContainer>

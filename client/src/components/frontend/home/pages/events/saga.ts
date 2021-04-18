@@ -1,6 +1,7 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { fetchEventsData, setEventsData, filterEventsAction, filterEvents } from './slice';
 import { request } from '~/src/utils/requests';
+const eventsDates = [];
 
 
 function* fetchEventsDataGenerator() {

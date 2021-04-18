@@ -22,41 +22,26 @@ export const FormatTime = (props: { children: Date }): JSX.Element => {
   return <>{time}</>;
 };
 
-export const filterEventsForCurrentMonth = (events = [{ date: "" }]): void => {
-  const getCurrentMonth = moment().month();
-  const currentMonth = months[getCurrentMonth];
+export const formatDay = (date) => {
+  const currentDay = moment(date, "DD").format();
 
-  // const events = [
-  //   {
-  //     created: "2019-08-29T02:19:08.186Z",
-  //     date: "30 avgust 2019",
-  //     description: "Pocinjemo pripreme za ispite IELST.",
-  //     time: "15:00 - 19:00",
-  //     title: "Priprema za ispite IELST",
-  //   },
-  //   {
-  //     created: "2021-01-09T18:03:00.079Z",
-  //     date: "27 april 2021",
-  //     description: "Computer based ↵Prijava: od 5. decembra↵Beograd",
-  //     time: "9:00",
-  //     title: "CPE (Cambridge English Proficiency)",
-  //   },
-  //   {
-  //     created: "2021-01-29T10:04:57.653Z",
-  //     date: "11 februar 2021",
-  //     description: "Speaking address↵Bulevar vojvode Bojovica 6-8",
-  //     time: "February 11, 2021, 09:00 - 09:20",
-  //     title: "IELTS Speaking Face to face ",
-  //   },
-  // ];
+  // console.log("test", typeof currentDay);
 
-  const test = events.filter((event) => {
+  return currentDay;
+};
+
+export const filterEventsForCurrentMonth = (
+  events = [{ date: "" }],
+  currentDate = new Date()
+): { date: string }[] => {
+  const currentMonth = currentDate.getMonth();
+  const filterEvents = events.filter((event) => {
     const { date } = event;
 
-    if (date.search(currentMonth) !== -1) {
+    const dateMatch = date.match(months[currentMonth]);
+    if (dateMatch && dateMatch[0]) {
       return event;
     }
   });
-
-  // console.log("test", test);
+  return filterEvents;
 };

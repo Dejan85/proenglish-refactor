@@ -15,12 +15,12 @@ const Events = (): JSX.Element => {
   const { eventsData } = useSelector(getEventsState);
 
   const MemoizedUi = useMemo(() => {
-    const filterEventsHandler = (date: object) =>
-      dispatch(filterEventsAction(date));
+    // const filterEventsHandler = (date: any) =>
+    //   dispatch(filterEventsAction(date));
 
     return (
       <UiRender
-        filterEventsHandler={filterEventsHandler}
+        // filterEventsHandler={filterEventsHandler}
         eventsData={eventsData}
       />
     );

@@ -3,8 +3,8 @@ export interface UiRenderTypes {
     filterEventsHandler?: (date: object) => { payload: Record<string, any>; type: string; };
 }
 
-
-export interface CalendarOfEventsProps {
-    generateHighlhtDates: () => (date: object) => { payload: Record<string, any>; type: string; };
+export interface UiRenderProps {
+    generateHighlhtDates: (value?: Date) => void;
     filteredActiveEventsDates: { highlightDates: Date[]; filteredEvents: object[]; };
 }
+

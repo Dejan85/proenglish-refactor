@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { ContentContainer, Heading, CalendarUi } from "~/src/components/ui";
 import { filterEventsForCurrentMonth } from "~/src/utils/timeAndDateHandlers";
-import { CalendarOfEventsProps } from "../types";
+import { UiRenderProps } from "../types";
 
-const CalendarOfEvents = (props: CalendarOfEventsProps): JSX.Element => {
+const CalendarOfEvents = (props: UiRenderProps): JSX.Element => {
   const { generateHighlhtDates, filteredActiveEventsDates } = props;
   const { highlightDates } = filteredActiveEventsDates;
-
-  console.log("test", filteredActiveEventsDates);
 
   return (
     <ContentContainer

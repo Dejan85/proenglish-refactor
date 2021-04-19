@@ -30,7 +30,6 @@ const Events = (): JSX.Element => {
   const MemoizedUi = useMemo(() => {
     return (
       <UiRender
-        eventsData={eventsData}
         generateHighlhtDates={generateHighlhtDates}
         filteredActiveEventsDates={filteredActiveEventsDates}
       />

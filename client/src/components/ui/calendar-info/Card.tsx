@@ -4,7 +4,7 @@ import { WrapperType } from "~/src/global-types";
 const Wrapper: WrapperType = "div";
 const className: string = "calendar-card";
 
-const Card = (): JSX.Element => {
+const Card = (props): JSX.Element => {
   return (
     <Wrapper className={className}>
       <Wrapper className="calendar-card__num">{2}</Wrapper>

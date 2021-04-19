@@ -7,9 +7,13 @@ import { CalendarProps } from "./types";
 const CalendarUi = (props: CalendarProps): JSX.Element => {
   const { highlightDates, generateHighlhtDates } = props;
 
+  const onChangeHandler = (e) => {
+    console.log("test", e);
+  };
+
   return (
     <DatePicker
-      onChange={() => {}}
+      onChange={onChangeHandler}
       onMonthChange={generateHighlhtDates}
       inline
       highlightDates={highlightDates}

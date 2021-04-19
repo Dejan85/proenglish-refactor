@@ -1,7 +1,7 @@
 import React from "react";
 import { CalendarCardProps } from "./types";
 import { WrapperType } from "~/src/global-types";
-import Info from "./info";
+import Info from "./Info";
 import Card from "./Card";
 import Description from "./Description";
 

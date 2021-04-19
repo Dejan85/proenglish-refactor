@@ -7,6 +7,7 @@ import {
 } from "~/src/components/ui";
 import { Scrollbars } from "react-custom-scrollbars";
 import uniqid from "uniqid";
+import { getStringMonth } from "~/src/utils/timeAndDateHandlers";
 
 const Render = (props: {
   filteredDailyEventsData: object[];

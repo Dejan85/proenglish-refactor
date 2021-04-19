@@ -16,13 +16,11 @@ const Render = (props: RenderProps): JSX.Element => {
       {filteredEvents?.length ? (
         filteredEvents.map(
           (event: EventTypes): JSX.Element => {
-            const { time, title } = event;
-
-            console.log("test", time);
+            const { time, title, date } = event;
 
             return (
               <CalendarInfo key={uniqid()}>
-                <CalendarInfo.Card />
+                <CalendarInfo.Card date={date} />
                 <CalendarInfo.Info time={time} title={title} />
               </CalendarInfo>
             );

@@ -1,5 +1,5 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { fetchEventsData, setEventsData, filterEventsAction, filterEvents } from './slice';
+import { fetchEventsData, setEventsData, filterEventsAction, filterEvents, filterDailyEvents, filterDailyEventsAction } from './slice';
 import { request } from '~/src/utils/requests';
 
 
@@ -20,8 +20,14 @@ function* filterEventsGenerator(action: any) {
 
 }
 
+function* filterDailyEventsGenerator(action: any) {
+    yield put(filterDailyEvents(action.payload));
+};
+
+
 
 export default function* watchEvent() {
     yield takeLatest(fetchEventsData.type, fetchEventsDataGenerator);
     yield takeLatest(filterEventsAction.type, filterEventsGenerator);
+    yield takeLatest(filterDailyEventsAction.type, filterDailyEventsGenerator);
 };

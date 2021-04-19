@@ -3,7 +3,8 @@ import { EVENTS_SCOPE } from './constants';
 
 export const initialState = {
     eventsData: [],
-    filteredActiveEventsDates: []
+    filteredActiveEventsDates: [],
+    filteredDailyEventsData: []
 };
 
 const eventsSlice = createSlice({
@@ -16,6 +17,9 @@ const eventsSlice = createSlice({
         },
         filterEvents(state, action) {
             state.filteredActiveEventsDates = action.payload;
+        },
+        filterDailyEvents(state, action) {
+            state.filteredDailyEventsData = action.payload;
         }
     },
 });
@@ -23,6 +27,7 @@ const eventsSlice = createSlice({
 
 export const fetchEventsData = createAction("get_events_data");
 export const filterEventsAction = createAction<Record<string, any>>("filter_events");
+export const filterDailyEventsAction = createAction<Record<string, any>>("filter_daily_events");
 
-export const { setEventsData, filterEvents } = eventsSlice.actions;
+export const { setEventsData, filterEvents, filterDailyEvents } = eventsSlice.actions;
 export const { reducer } = eventsSlice;

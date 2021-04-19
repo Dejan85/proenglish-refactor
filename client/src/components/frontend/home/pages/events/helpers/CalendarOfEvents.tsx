@@ -1,6 +1,5 @@
 import React from "react";
 import { ContentContainer, Heading, CalendarUi } from "~/src/components/ui";
-import { filterEventsForCurrentMonth } from "~/src/utils/timeAndDateHandlers";
 import { UiRenderProps } from "../types";
 
 const CalendarOfEvents = (props: UiRenderProps): JSX.Element => {

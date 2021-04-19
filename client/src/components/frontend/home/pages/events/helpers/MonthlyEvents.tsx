@@ -17,6 +17,9 @@ const Render = (props: RenderProps): JSX.Element => {
         filteredEvents.map(
           (event: EventTypes): JSX.Element => {
             const { time, title } = event;
+
+            console.log("test", time);
+
             return (
               <CalendarInfo key={uniqid()}>
                 <CalendarInfo.Card />

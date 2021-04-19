@@ -1,5 +1,10 @@
 import React from "react";
-import { ContentContainer, Heading, CalendarInfo } from "~/src/components/ui";
+import {
+  ContentContainer,
+  Heading,
+  CalendarInfo,
+  Text,
+} from "~/src/components/ui";
 import { Scrollbars } from "react-custom-scrollbars";
 import uniqid from "uniqid";
 
@@ -8,15 +13,23 @@ const Render = (props: {
 }): JSX.Element | JSX.Element[] => {
   const { filteredDailyEventsData } = props;
 
-  return filteredDailyEventsData.map((event: any) => {
-    const { date, time, title } = event;
+  return (
+    <>
+      {filteredDailyEventsData?.length ? (
+        filteredDailyEventsData.map((event: any) => {
+          const { date, time, title } = event;
 
-    return (
-      <CalendarInfo key={uniqid()}>
-        <CalendarInfo.Description date={date} time={time} title={title} />
-      </CalendarInfo>
-    );
-  });
+          return (
+            <CalendarInfo key={uniqid()}>
+              <CalendarInfo.Description date={date} time={time} title={title} />
+            </CalendarInfo>
+          );
+        })
+      ) : (
+        <Text as="p">Nema događaja danas.</Text>
+      )}
+    </>
+  );
 };
 
 const EventsForToday = (props: {

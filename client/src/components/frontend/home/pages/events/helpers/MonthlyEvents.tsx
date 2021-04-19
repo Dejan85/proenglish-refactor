@@ -1,5 +1,10 @@
 import React from "react";
-import { ContentContainer, Heading, CalendarInfo } from "~/src/components/ui";
+import {
+  ContentContainer,
+  Heading,
+  CalendarInfo,
+  Text,
+} from "~/src/components/ui";
 import { Scrollbars } from "react-custom-scrollbars";
 import uniqid from "uniqid";
 import { EventTypes, RenderProps, UiRenderProps } from "../types";
@@ -8,16 +13,20 @@ const Render = (props: RenderProps): JSX.Element => {
   const { filteredEvents } = props;
   return (
     <>
-      {filteredEvents?.map(
-        (event: EventTypes): JSX.Element => {
-          const { time, title } = event;
-          return (
-            <CalendarInfo key={uniqid()}>
-              <CalendarInfo.Card />
-              <CalendarInfo.Info time={time} title={title} />
-            </CalendarInfo>
-          );
-        }
+      {filteredEvents?.length ? (
+        filteredEvents.map(
+          (event: EventTypes): JSX.Element => {
+            const { time, title } = event;
+            return (
+              <CalendarInfo key={uniqid()}>
+                <CalendarInfo.Card />
+                <CalendarInfo.Info time={time} title={title} />
+              </CalendarInfo>
+            );
+          }
+        )
+      ) : (
+        <Text as="p">Nema događaja danas.</Text>
       )}
     </>
   );

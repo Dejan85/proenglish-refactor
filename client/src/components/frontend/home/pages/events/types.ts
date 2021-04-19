@@ -4,7 +4,7 @@ export interface UiRenderTypes {
 }
 
 export interface UiRenderProps {
-    generateHighlhtDates: (value?: Date) => void;
+    generateHighlhtDates?: (value?: Date) => void;
     filteredActiveEventsDates: { highlightDates: Date[]; filteredEvents: object[]; };
 }
 
@@ -14,5 +14,9 @@ export interface EventTypes {
     description: string;
     time: string;
     title: string;
+}
+
+export interface RenderProps {
+    filteredEvents: object[] | any;
 }
 

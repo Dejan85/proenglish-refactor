@@ -2,28 +2,28 @@ import React from "react";
 import { ContentContainer, Heading, CalendarInfo } from "~/src/components/ui";
 import { Scrollbars } from "react-custom-scrollbars";
 import uniqid from "uniqid";
-import { EventTypes } from "../types";
+import { EventTypes, RenderProps, UiRenderProps } from "../types";
 
-const Render = (props): JSX.Element => {
+const Render = (props: RenderProps): JSX.Element => {
   const { filteredEvents } = props;
-
   return (
     <>
-      {filteredEvents?.map((event: EventTypes) => {
-        const { time, title } = event;
-        console.log("test", event);
-        return (
-          <CalendarInfo key={uniqid()}>
-            <CalendarInfo.Card />
-            <CalendarInfo.Info time={time} title={title} />
-          </CalendarInfo>
-        );
-      })}
+      {filteredEvents?.map(
+        (event: EventTypes): JSX.Element => {
+          const { time, title } = event;
+          return (
+            <CalendarInfo key={uniqid()}>
+              <CalendarInfo.Card />
+              <CalendarInfo.Info time={time} title={title} />
+            </CalendarInfo>
+          );
+        }
+      )}
     </>
   );
 };
 
-const MonthlyEvents = (props): JSX.Element => {
+const MonthlyEvents = (props: UiRenderProps): JSX.Element => {
   const {
     filteredActiveEventsDates: { filteredEvents },
   } = props;

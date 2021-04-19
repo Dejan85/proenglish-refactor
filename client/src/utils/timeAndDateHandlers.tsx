@@ -49,11 +49,15 @@ export const filterEventsForCurrentDay = (
 ): { date: string }[] => {
   const day: number = currentDate.getDate();
 
-  const dailyEvents = events.filter((event): { date: string } | undefined => {
-    if (Number(event.date.slice(0, 2)) === day) {
-      return event;
-    }
-  });
+  const dailyEvents = events
+    .filter((event): { date: string } | undefined => {
+      if (Number(event.date.slice(0, 2)) === day) {
+        return event;
+      }
+    })
+    .sort((a: any, b: any): any => {
+      return a.date.slice(0, 2) - b.date.slice(0, 2);
+    });
 
   return dailyEvents;
 };

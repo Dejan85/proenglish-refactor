@@ -5,15 +5,11 @@ import DatePicker from "react-datepicker";
 import { CalendarProps } from "./types";
 
 const CalendarUi = (props: CalendarProps): JSX.Element => {
-  const { highlightDates, generateHighlhtDates } = props;
-
-  const onChangeHandler = (e) => {
-    console.log("test", e);
-  };
+  const { highlightDates, generateHighlhtDates, generateDailyEvents } = props;
 
   return (
     <DatePicker
-      onChange={onChangeHandler}
+      onChange={generateDailyEvents}
       onMonthChange={generateHighlhtDates}
       inline
       highlightDates={highlightDates}

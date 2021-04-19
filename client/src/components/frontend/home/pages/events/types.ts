@@ -6,6 +6,7 @@ export interface UiRenderTypes {
 export interface UiRenderProps {
     generateHighlhtDates?: (value?: Date) => void;
     filteredActiveEventsDates: { highlightDates: Date[]; filteredEvents: object[]; };
+    generateDailyEvents: (value?: Date) => void;
 }
 
 export interface EventTypes {

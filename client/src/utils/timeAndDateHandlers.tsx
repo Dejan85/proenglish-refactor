@@ -42,14 +42,24 @@ export const filterEventsForCurrentDay = (
   events = [{ date: "" }],
   currentDate = new Date()
 ): { date: string }[] => {
-  const currentMonth = currentDate.getMonth();
-  const filterEvents = events.filter((event) => {
-    const { date } = event;
+  const day: number = currentDate.getDate();
 
-    const dateMatch = date.match(months[currentMonth]);
-    if (dateMatch && dateMatch[0]) {
+  const dailyEvents = events.filter((event): { date: string } | undefined => {
+    if (event.date.match(String(day))) {
       return event;
     }
   });
-  return filterEvents;
+
+  return dailyEvents;
+
+  // const currentMonth = currentDate.getMonth();
+  // const filterEvents = events.filter((event) => {
+  //   const { date } = event;
+
+  //   const dateMatch = date.match(months[currentMonth]);
+  //   if (dateMatch && dateMatch[0]) {
+  //     return event;
+  //   }
+  // });
+  // return filterEvents;
 };

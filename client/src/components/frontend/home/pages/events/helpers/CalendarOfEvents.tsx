@@ -1,9 +1,14 @@
 import React from "react";
 import { ContentContainer, Heading, CalendarUi } from "~/src/components/ui";
+import { filterEventsForCurrentMonth } from "~/src/utils/timeAndDateHandlers";
 import { UiRenderProps } from "../types";
 
 const CalendarOfEvents = (props: UiRenderProps): JSX.Element => {
-  const { generateHighlhtDates, filteredActiveEventsDates } = props;
+  const {
+    generateHighlhtDates,
+    filteredActiveEventsDates,
+    generateDailyEvents,
+  } = props;
   const { highlightDates } = filteredActiveEventsDates;
 
   return (
@@ -23,6 +28,7 @@ const CalendarOfEvents = (props: UiRenderProps): JSX.Element => {
         <CalendarUi
           highlightDates={highlightDates}
           generateHighlhtDates={generateHighlhtDates}
+          generateDailyEvents={generateDailyEvents}
         />
       </ContentContainer>
     </ContentContainer>

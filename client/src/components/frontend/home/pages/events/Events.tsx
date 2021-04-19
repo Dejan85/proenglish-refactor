@@ -7,7 +7,10 @@ import { EVENTS_SCOPE } from "./constants";
 import { reducer, fetchEventsData, filterEventsAction } from "./slice";
 import saga from "./saga";
 import { UiRender } from "./helpers";
-import { filterEventsForCurrentMonth } from "~/src/utils/timeAndDateHandlers";
+import {
+  filterEventsForCurrentMonth,
+  filterEventsForCurrentDay,
+} from "~/src/utils/timeAndDateHandlers";
 
 const Events = (): JSX.Element => {
   useInjectReducer({ key: EVENTS_SCOPE, reducer });
@@ -27,11 +30,18 @@ const Events = (): JSX.Element => {
     dispatch(filterEventsAction(filteredMontlyEvents));
   };
 
+  const generateDailyEvents = (date) => {
+    const { filteredEvents } = filteredActiveEventsDates;
+    const dailyEvents = filterEventsForCurrentDay(filteredEvents, date);
+    console.log("test", dailyEvents);
+  };
+
   const MemoizedUi = useMemo(() => {
     return (
       <UiRender
         generateHighlhtDates={generateHighlhtDates}
         filteredActiveEventsDates={filteredActiveEventsDates}
+        generateDailyEvents={generateDailyEvents}
       />
     );
   }, [eventsData, filteredActiveEventsDates]);

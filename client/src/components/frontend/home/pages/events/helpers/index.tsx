@@ -10,6 +10,7 @@ export const UiRender = (props: UiRenderProps): JSX.Element => {
     generateHighlhtDates,
     filteredActiveEventsDates,
     generateDailyEvents,
+    filteredDailyEventsData,
   } = props;
 
   return (
@@ -20,7 +21,7 @@ export const UiRender = (props: UiRenderProps): JSX.Element => {
         generateDailyEvents={generateDailyEvents}
       />
       <MonthlyEvents filteredActiveEventsDates={filteredActiveEventsDates} />
-      <EventsForToday />
+      <EventsForToday filteredDailyEventsData={filteredDailyEventsData} />
     </SubContainer>
   );
 };

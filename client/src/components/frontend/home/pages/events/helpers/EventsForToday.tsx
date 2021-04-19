@@ -2,7 +2,11 @@ import React from "react";
 import { ContentContainer, Heading, CalendarInfo } from "~/src/components/ui";
 import { Scrollbars } from "react-custom-scrollbars";
 
-const EventsForToday = (): JSX.Element => {
+const EventsForToday = (props): JSX.Element => {
+  const { filteredDailyEventsData } = props;
+
+  console.log("test filteredDailyEventsData", filteredDailyEventsData);
+
   return (
     <ContentContainer
       flexDirection="column"

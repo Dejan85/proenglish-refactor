@@ -46,21 +46,19 @@ const Events = (): JSX.Element => {
   };
 
   const MemoizedUi = useMemo(() => {
-    generateDailyEvents();
     return (
       <UiRender
         generateHighlhtDates={generateHighlhtDates}
         filteredActiveEventsDates={filteredActiveEventsDates}
         generateDailyEvents={generateDailyEvents}
+        filteredDailyEventsData={filteredDailyEventsData}
       />
     );
-  }, [eventsData, filteredActiveEventsDates]);
+  }, [eventsData, filteredActiveEventsDates, filteredDailyEventsData]);
 
-  // useEffect(() => {
-  //   generateDailyEvents();
-  // }, [filteredActiveEventsDates]);
-
-  console.log("test", filteredDailyEventsData);
+  useEffect(() => {
+    generateDailyEvents();
+  }, [filteredActiveEventsDates]);
 
   useEffect(() => {
     generateHighlhtDates();

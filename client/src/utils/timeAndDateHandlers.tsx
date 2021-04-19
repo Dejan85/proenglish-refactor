@@ -27,14 +27,19 @@ export const filterEventsForCurrentMonth = (
   currentDate = new Date()
 ): { date: string }[] => {
   const currentMonth = currentDate.getMonth();
-  const filterEvents = events.filter((event) => {
-    const { date } = event;
+  const filterEvents = events
+    .filter((event) => {
+      const { date } = event;
 
-    const dateMatch = date.match(months[currentMonth]);
-    if (dateMatch && dateMatch[0]) {
-      return event;
-    }
-  });
+      const dateMatch = date.match(months[currentMonth]);
+      if (dateMatch && dateMatch[0]) {
+        return event;
+      }
+    })
+    .sort((a: any, b: any): any => {
+      return a.date.slice(0, 2) - b.date.slice(0, 2);
+    });
+
   return filterEvents;
 };
 

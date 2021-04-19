@@ -1,134 +1,175 @@
 @import "../../styles/variables/colors";
 @import "../../styles/variables/fonts";
+@import "./stylesheets/mixins.scss";
+@import "./stylesheets/variables.scss";
 
-.react-calendar {
-  width: 100%;
-  background: white;
-  border: 0.5px solid #e9e9e9;
-  font-family: $poppins-sans-serif;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
-}
-.react-calendar--doubleView {
-  width: 700px;
-}
-.react-calendar--doubleView .react-calendar__viewContainer {
-  display: flex;
-  margin: -0.5em;
-}
-.react-calendar--doubleView .react-calendar__viewContainer > * {
-  width: 50%;
-  margin: 0.5em;
-}
-.react-calendar,
-.react-calendar *,
-.react-calendar *:before,
-.react-calendar *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.react-calendar button {
-  margin: 0;
-  border: 0;
-  outline: none;
-}
-.react-calendar button:enabled:hover {
-  cursor: pointer;
-}
-.react-calendar__navigation {
-  height: 4rem;
-  background-color: #3d3d47;
-}
-.react-calendar__navigation button {
-  min-width: 44px;
-  background: none;
-  color: white;
-}
-.react-calendar__navigation button:enabled:hover,
-.react-calendar__navigation button:enabled:focus {
-  background-color: $main-color;
-}
-.react-calendar__navigation button[disabled] {
-  background-color: #f0f0f0;
-}
-.react-calendar__month-view__weekdays {
-  background-color: #00a2a6;
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: normal;
-  font-size: 1.4em;
-}
-.react-calendar__month-view__weekdays__weekday {
-  padding: 0.5em;
-  abbr {
-    text-decoration: none;
+.react-datepicker {
+  // display: flex;
+  // flex-direction: column;
+  width: 39rem;
+
+  &__navigation {
+    background: none;
+    line-height: $datepicker__item-size;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    width: 0;
+    padding: 0;
+    border: $datepicker__navigation-size solid transparent;
+    z-index: 1;
+    height: 1rem;
+    width: 1rem;
+    text-indent: -999em;
+    overflow: hidden;
+
+    &--previous {
+      left: 10px;
+      border-right-color: $datepicker__muted-color;
+
+      &:hover {
+        border-right-color: darken($datepicker__muted-color, 10%);
+      }
+
+      &--disabled,
+      &--disabled:hover {
+        border-right-color: $datepicker__navigation-disabled-color;
+        cursor: default;
+      }
+    }
+
+    &--next {
+      right: 10px;
+      border-left-color: $datepicker__muted-color;
+      &--with-time:not(&--with-today-button) {
+        right: 95px;
+      }
+
+      &:hover {
+        border-left-color: darken($datepicker__muted-color, 10%);
+      }
+
+      &--disabled,
+      &--disabled:hover {
+        border-left-color: $datepicker__navigation-disabled-color;
+        cursor: default;
+      }
+    }
+
+    &--years {
+      position: relative;
+      top: 0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+      &-previous {
+        top: 4px;
+        border-top-color: $datepicker__muted-color;
+
+        &:hover {
+          border-top-color: darken($datepicker__muted-color, 10%);
+        }
+      }
+
+      &-upcoming {
+        top: -4px;
+        border-bottom-color: $datepicker__muted-color;
+
+        &:hover {
+          border-bottom-color: darken($datepicker__muted-color, 10%);
+        }
+      }
+    }
   }
-}
-.react-calendar__month-view__weekNumbers {
-  font-weight: bold;
-}
-.react-calendar__month-view__weekNumbers .react-calendar__tile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75em;
-  padding: calc(0.75em / 0.75) calc(0.5em / 0.75);
-}
 
-.react-calendar__month-view__days__day--weekend {
-  color: #d10000;
-}
-.react-calendar__month-view__days__day--neighboringMonth {
-  color: #757575;
-}
-.react-calendar__year-view .react-calendar__tile,
-.react-calendar__decade-view .react-calendar__tile,
-.react-calendar__century-view .react-calendar__tile {
-  padding: 2em 0.5em;
-}
-.react-calendar__tile {
-  max-width: 100%;
-  text-align: center;
-  padding: 2rem;
-  background: none;
-  font-size: 1.4rem;
-}
-.react-calendar__tile:disabled {
-  background-color: #f0f0f0;
-}
-.react-calendar__tile:enabled:hover,
-.react-calendar__tile:enabled:focus {
-  background-color: $main-color;
-  color: white;
-}
-.react-calendar__tile--now {
-  background: $main-color;
-  color: white;
-}
-.react-calendar__tile--now:enabled:hover,
-.react-calendar__tile--now:enabled:focus {
-  background: #ffffa9;
-}
-.react-calendar__tile--hasActive {
-  background: #76baff;
-}
-.react-calendar__tile--hasActive:enabled:hover,
-.react-calendar__tile--hasActive:enabled:focus {
-  background: #a9d4ff;
-}
-.react-calendar__tile--active {
-  background: #006edc;
-  color: white;
-}
-.react-calendar__tile--active:enabled:hover,
-.react-calendar__tile--active:enabled:focus {
-  background: #1087ff;
-}
-.react-calendar--selectRange .react-calendar__tile--hover {
-  background-color: #e6e6e6;
-}
+  &__month-container {
+  }
 
-.test-color {
-  background-color: #006edc;
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background-color: red;
+  }
+
+  &__current-month {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3d3d47;
+    width: 100%;
+    height: 4rem;
+
+    color: white;
+    font-size: 1.6rem;
+    font-family: Lato, sans-serif;
+    text-transform: capitalize;
+  }
+
+  &__day-names {
+    display: flex;
+    background-color: #00a2a6;
+    width: 100%;
+    height: 3rem;
+
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+  }
+
+  &__day-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  &__month {
+    border: 0.5px solid #e9e9e9;
+  }
+
+  &__week {
+    display: flex;
+  }
+
+  &__day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 14.28%;
+    height: 6.2rem;
+    cursor: pointer;
+
+    font-size: 1.4rem;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    color: #d0d0d0;
+    transition: 0.5s all;
+
+    &:hover {
+      background-color: $main-color;
+      color: white;
+    }
+
+    &--highlighted {
+      border-radius: 20%;
+      // background-color: $datepicker__highlighted-color;
+      background-color: lighten($color: $main-color, $amount: 20%);
+      color: #fff;
+
+      &:hover {
+        background-color: darken($datepicker__highlighted-color, 5%);
+      }
+    }
+
+    &--today {
+      border-radius: 20%;
+      background-color: $main-color;
+      color: white;
+    }
+  }
 }

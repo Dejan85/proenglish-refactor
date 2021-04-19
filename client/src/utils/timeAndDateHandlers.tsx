@@ -39,27 +39,16 @@ export const filterEventsForCurrentMonth = (
 };
 
 export const filterEventsForCurrentDay = (
-  events = [{ date: "" }],
-  currentDate = new Date()
+  currentDate = new Date(),
+  events = [{ date: "" }]
 ): { date: string }[] => {
   const day: number = currentDate.getDate();
 
   const dailyEvents = events.filter((event): { date: string } | undefined => {
-    if (event.date.match(String(day))) {
+    if (Number(event.date.slice(0, 2)) === day) {
       return event;
     }
   });
 
   return dailyEvents;
-
-  // const currentMonth = currentDate.getMonth();
-  // const filterEvents = events.filter((event) => {
-  //   const { date } = event;
-
-  //   const dateMatch = date.match(months[currentMonth]);
-  //   if (dateMatch && dateMatch[0]) {
-  //     return event;
-  //   }
-  // });
-  // return filterEvents;
 };

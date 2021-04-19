@@ -4,7 +4,12 @@ import { useInjectReducer } from "~/src/utils/injectReducer";
 import { getEventsState } from "./selectos";
 import { useDispatch, useSelector } from "react-redux";
 import { EVENTS_SCOPE } from "./constants";
-import { reducer, fetchEventsData, filterEventsAction } from "./slice";
+import {
+  reducer,
+  fetchEventsData,
+  filterEventsAction,
+  filterDailyEventsAction,
+} from "./slice";
 import saga from "./saga";
 import { UiRender } from "./helpers";
 import {
@@ -16,7 +21,11 @@ const Events = (): JSX.Element => {
   useInjectReducer({ key: EVENTS_SCOPE, reducer });
   useInjectSaga({ key: EVENTS_SCOPE, saga });
   const dispatch = useDispatch();
-  const { eventsData, filteredActiveEventsDates } = useSelector(getEventsState);
+  const {
+    eventsData,
+    filteredActiveEventsDates,
+    filteredDailyEventsData,
+  } = useSelector(getEventsState);
 
   const generateHighlhtDates = (value = new Date()): void => {
     const filteredEvents = filterEventsForCurrentMonth(eventsData, value);
@@ -30,13 +39,14 @@ const Events = (): JSX.Element => {
     dispatch(filterEventsAction(filteredMontlyEvents));
   };
 
-  const generateDailyEvents = (date) => {
+  const generateDailyEvents = (date?: Date | undefined) => {
     const { filteredEvents } = filteredActiveEventsDates;
-    const dailyEvents = filterEventsForCurrentDay(filteredEvents, date);
-    console.log("test", dailyEvents);
+    const dailyEvents = filterEventsForCurrentDay(date, filteredEvents);
+    dispatch(filterDailyEventsAction(dailyEvents));
   };
 
   const MemoizedUi = useMemo(() => {
+    generateDailyEvents();
     return (
       <UiRender
         generateHighlhtDates={generateHighlhtDates}
@@ -45,6 +55,12 @@ const Events = (): JSX.Element => {
       />
     );
   }, [eventsData, filteredActiveEventsDates]);
+
+  // useEffect(() => {
+  //   generateDailyEvents();
+  // }, [filteredActiveEventsDates]);
+
+  console.log("test", filteredDailyEventsData);
 
   useEffect(() => {
     generateHighlhtDates();

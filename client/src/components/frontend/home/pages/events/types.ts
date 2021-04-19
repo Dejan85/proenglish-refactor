@@ -8,3 +8,11 @@ export interface UiRenderProps {
     filteredActiveEventsDates: { highlightDates: Date[]; filteredEvents: object[]; };
 }
 
+export interface EventTypes {
+    created: string;
+    date: string;
+    description: string;
+    time: string;
+    title: string;
+}
+

@@ -2,7 +2,8 @@ import { createSlice, createAction } from '@reduxjs/toolkit';
 import { EVENTS_SCOPE } from './constants';
 
 export const initialState = {
-    eventsData: []
+    eventsData: [],
+    filteredActiveEventsDates: []
 };
 
 const eventsSlice = createSlice({
@@ -14,10 +15,7 @@ const eventsSlice = createSlice({
             state.eventsData = data;
         },
         filterEvents(state, action) {
-            const eventsDate = action.payload;
-            // console.log('test', eventsDate);
-
-            // console.log('test', action.payload);
+            state.filteredActiveEventsDates = action.payload;
         }
     },
 });

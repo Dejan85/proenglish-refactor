@@ -1,27 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { ContentContainer, Heading, CalendarUi } from "~/src/components/ui";
 import { filterEventsForCurrentMonth } from "~/src/utils/timeAndDateHandlers";
-import { UiRenderTypes } from "../types";
+import { CalendarOfEventsProps } from "../types";
 
-const CalendarOfEvents = (props: UiRenderTypes): JSX.Element => {
-  const { eventsData } = props;
-  const [highlightDates, setHighlightDates] = useState<Date[]>();
+const CalendarOfEvents = (props: CalendarOfEventsProps): JSX.Element => {
+  const { generateHighlhtDates, filteredActiveEventsDates } = props;
+  const { highlightDates } = filteredActiveEventsDates;
 
-  const generateHighlhtDates = (value = new Date()): void => {
-    const filteredEvents = filterEventsForCurrentMonth(eventsData, value);
-    const fullYear: number = value.getFullYear();
-    const month: number = value.getMonth();
-    const highlightDates: Date[] = filteredEvents.map((item) => {
-      const { date } = item;
-      return new Date(Number(fullYear), month, Number(date.slice(0, 2)));
-    });
-
-    setHighlightDates(highlightDates);
-  };
-
-  useEffect(() => {
-    generateHighlhtDates();
-  }, [eventsData]);
+  console.log("test", filteredActiveEventsDates);
 
   return (
     <ContentContainer

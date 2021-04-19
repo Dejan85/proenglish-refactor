@@ -62,11 +62,14 @@ const EventsForToday = (): JSX.Element => {
 };
 
 export const UiRender = (props: any): JSX.Element => {
-  const { eventsData, filterEventsHandler } = props;
+  const { eventsData, generateHighlhtDates, filteredActiveEventsDates } = props;
 
   return (
     <SubContainer>
-      <CalendarOfEvents eventsData={eventsData} />
+      <CalendarOfEvents
+        generateHighlhtDates={generateHighlhtDates}
+        filteredActiveEventsDates={filteredActiveEventsDates}
+      />
       <MonthlyEvents />
       <EventsForToday />
     </SubContainer>

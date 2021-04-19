@@ -1,11 +1,28 @@
 import React from "react";
 import { ContentContainer, Heading, CalendarInfo } from "~/src/components/ui";
 import { Scrollbars } from "react-custom-scrollbars";
+import uniqid from "uniqid";
 
-const EventsForToday = (props): JSX.Element => {
+const Render = (props: {
+  filteredDailyEventsData: object[];
+}): JSX.Element | JSX.Element[] => {
   const { filteredDailyEventsData } = props;
 
-  console.log("test filteredDailyEventsData", filteredDailyEventsData);
+  return filteredDailyEventsData.map((event: any) => {
+    const { date, time, title } = event;
+
+    return (
+      <CalendarInfo key={uniqid()}>
+        <CalendarInfo.Description date={date} time={time} title={title} />
+      </CalendarInfo>
+    );
+  });
+};
+
+const EventsForToday = (props: {
+  filteredDailyEventsData: object[];
+}): JSX.Element => {
+  const { filteredDailyEventsData } = props;
 
   return (
     <ContentContainer
@@ -22,12 +39,7 @@ const EventsForToday = (props): JSX.Element => {
         style={{ marginTop: "6.2rem" }}
         renderThumbVertical={() => <div style={{ background: "#474642" }} />}
       >
-        <CalendarInfo>
-          <CalendarInfo.Description />
-        </CalendarInfo>
-        <CalendarInfo>
-          <CalendarInfo.Description />
-        </CalendarInfo>
+        <Render filteredDailyEventsData={filteredDailyEventsData} />
       </Scrollbars>
     </ContentContainer>
   );

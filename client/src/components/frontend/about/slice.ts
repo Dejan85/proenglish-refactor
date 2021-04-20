@@ -11,7 +11,8 @@ const aboutSlice = createSlice({
     initialState,
     reducers: {
         setAboutData(state, action) {
-            state = action.payload;
+            const { data } = action.payload;
+            state.aboutData = data;
         }
     }
 });

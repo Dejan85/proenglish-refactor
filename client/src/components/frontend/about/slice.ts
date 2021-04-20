@@ -16,6 +16,6 @@ const aboutSlice = createSlice({
     }
 });
 
-export const aboutDataAction = createAction("get_about_data");
+export const fetchAboutDataAction = createAction("get_about_data");
 export const { setAboutData } = aboutSlice.actions;
 export const { reducer } = aboutSlice;

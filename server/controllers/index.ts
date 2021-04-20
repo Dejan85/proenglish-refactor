@@ -1,4 +1,5 @@
 import { blog } from './blog';
 import { events } from './events';
+import { about } from './about';
 
-export { blog, events };
+export { blog, events, about };

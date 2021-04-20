@@ -23,7 +23,7 @@ const App = (): JSX.Element => {
           <Route path="/blog">{/* home */}</Route>
           <Route path="/kontakt">{/* home */}</Route>
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </Container>
   );

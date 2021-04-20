@@ -1,0 +1,12 @@
+.about {
+  display: flex;
+  flex-direction: column;
+
+  &__background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    height: 55rem;
+  }
+}

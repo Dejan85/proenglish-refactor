@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Container } from "~/src/components/ui";
-import { Header, Home } from "~/src/components/frontend";
+import { Header, Home, About } from "~/src/components/frontend";
 import { Footer } from "./deprecate";
 
 const App = (): JSX.Element => {
@@ -10,10 +10,12 @@ const App = (): JSX.Element => {
       <Router>
         <Header />
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/onama">{/* home */}</Route>
+          <Route exact path="/onama">
+            <About />
+          </Route>
           <Route path="/kursevi">{/* home */}</Route>
           <Route path="/ispiti">{/* home */}</Route>
           <Route path="/cenovnik">{/* home */}</Route>
@@ -21,7 +23,7 @@ const App = (): JSX.Element => {
           <Route path="/blog">{/* home */}</Route>
           <Route path="/kontakt">{/* home */}</Route>
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </Container>
   );

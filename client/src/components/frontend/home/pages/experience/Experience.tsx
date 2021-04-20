@@ -44,6 +44,7 @@ const Render = (): JSX.Element => {
                 flexDirection="column"
                 height="40rem"
                 justifyContent="space-between"
+                key={uniqid()}
               >
                 <ContentContainer
                   marginTop="5rem"
@@ -63,7 +64,6 @@ const Render = (): JSX.Element => {
                   justifyContent="space-between"
                   alignItems="center"
                   height="18rem"
-                  key={uniqid()}
                 >
                   <ContentContainer width="10rem">
                     <Image className="experience-img" alt="img" src={img} />

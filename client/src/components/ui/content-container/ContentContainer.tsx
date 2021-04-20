@@ -32,8 +32,13 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
     bottom,
     left,
     right,
+    backgroundImage,
   } = props;
   const className: string = "content-container";
+
+  // const [background] = useState(() => {
+  //   return { backgroundImage: `url(${bckg})` };
+  // });
 
   const style = {
     width,
@@ -60,6 +65,7 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
     bottom,
     left,
     right,
+    backgroundImage: `url(${backgroundImage})`,
   };
 
   return (

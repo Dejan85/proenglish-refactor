@@ -19,3 +19,4 @@ export { Loading } from './loader';
 export { Input } from './input';
 export { CalendarUi } from './calendar';
 export { CalendarInfo } from './calendar-info';
+export { ExperienceModal } from './experience-modal';

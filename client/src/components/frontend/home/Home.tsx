@@ -1,5 +1,13 @@
 import React from "react";
-import { WelcomePage, About, Course, Blog, Newsletter, Events } from "./pages";
+import {
+  WelcomePage,
+  About,
+  Course,
+  Blog,
+  Newsletter,
+  Events,
+  Experience,
+} from "./pages";
 
 const MemoizedUi: JSX.Element = (
   <>
@@ -9,6 +17,7 @@ const MemoizedUi: JSX.Element = (
     <Blog />
     <Newsletter />
     <Events />
+    <Experience />
     <div style={{ height: "50rem" }} />
   </>
 );

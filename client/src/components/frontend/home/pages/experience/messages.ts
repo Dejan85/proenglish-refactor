@@ -69,3 +69,7 @@ export const studentsExperiance = [
         img: bojanaObradovic,
     },
 ];
+
+
+export const headingText = "Sta nasi ucenici kazu u nama?";
+export const modalText = "Engleski sam počela da učim jer sam želela da idem na kruzer, a za to mi je na prvom mestu bio potreban engleski jezik. Za školu sam saznala preko instagrama, preko preporuke jedne devojke. Počela sam od samog početka – A1 nivoa – a sada sam B1 nivo i učim kako bih bila B2. Uz podršku i pomoć profesora sam uspela da se oslobodim stega i da konačno progovorim. Usvojeno znanje je primenljivo u svakodnevnom životu i jasno predstavljeno na času. Školu bih preporučila svakome ko želi da na potpuno nov i drugačiji način uči i savlada jezik";

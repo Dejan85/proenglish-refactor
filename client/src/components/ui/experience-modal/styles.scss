@@ -1,0 +1,12 @@
+@import "../../styles/variables/colors";
+.experience-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2af4f;
+  padding: 2rem;
+  max-width: 120rem;
+  width: 100%;
+  height: 15rem;
+  border-radius: 20px;
+}

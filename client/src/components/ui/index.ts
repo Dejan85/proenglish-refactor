@@ -21,3 +21,4 @@ export { CalendarUi } from './calendar';
 export { CalendarInfo } from './calendar-info';
 export { ExperienceModal } from './experience-modal';
 export { CarouselUi } from './carousel';
+export { FooterContainer } from './footer-container';

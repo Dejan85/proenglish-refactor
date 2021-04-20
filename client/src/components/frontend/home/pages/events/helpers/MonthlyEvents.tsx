@@ -4,6 +4,7 @@ import {
   Heading,
   CalendarInfo,
   Text,
+  Link,
 } from "~/src/components/ui";
 import { Scrollbars } from "react-custom-scrollbars";
 import uniqid from "uniqid";
@@ -56,6 +57,7 @@ const MonthlyEvents = (props: UiRenderProps): JSX.Element => {
       >
         <Render filteredEvents={filteredEvents} />
       </Scrollbars>
+      <Link as="a">Vidi Detaljno</Link>
     </ContentContainer>
   );
 };

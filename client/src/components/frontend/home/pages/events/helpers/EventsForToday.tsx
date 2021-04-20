@@ -4,6 +4,7 @@ import {
   Heading,
   CalendarInfo,
   Text,
+  Link,
 } from "~/src/components/ui";
 import { Scrollbars } from "react-custom-scrollbars";
 import uniqid from "uniqid";
@@ -54,6 +55,7 @@ const EventsForToday = (props: {
       >
         <Render filteredDailyEventsData={filteredDailyEventsData} />
       </Scrollbars>
+      <Link as="a">Vidi Detaljno</Link>
     </ContentContainer>
   );
 };

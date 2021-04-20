@@ -42,12 +42,22 @@
   color: white;
 }
 
-.experience-text {
+.experience-modal-text {
   font-size: 1.7rem;
   text-align: center;
-  font-family: Lato, sans-serif;
+  font-family: $lato-sans-serif;
   font-style: italic;
   color: white;
+  max-width: 115rem;
+  width: 100%;
+}
+
+.experience-modal-name {
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: Lato, sans-serif;
+  color: white;
+  margin-top: 5rem;
 }
 
 // HELPERS

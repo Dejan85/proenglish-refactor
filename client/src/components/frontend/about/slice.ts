@@ -1,7 +1,7 @@
 import { createAction, createSlice } from '@reduxjs/toolkit';
 import { ABOUT_SCOPE } from './constants';
 
-const initialState = {
+export const initialState = {
     aboutData: []
 };
 

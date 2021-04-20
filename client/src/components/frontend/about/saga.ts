@@ -14,7 +14,6 @@ function* fetchAboutDataGenerator() {
     }
 };
 
-
 export default function* watchAbout() {
     yield takeLatest(fetchAboutDataAction.type, fetchAboutDataGenerator);
 };

@@ -18,7 +18,6 @@ const MemoizedUi: JSX.Element = (
     <Newsletter />
     <Events />
     <Experience />
-    <div style={{ height: "50rem" }} />
   </>
 );
 

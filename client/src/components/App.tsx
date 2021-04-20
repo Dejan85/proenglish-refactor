@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Container } from "~/src/components/ui";
-import { Header, Home } from "~/src/components/frontend";
+import { Header, Home, Footer } from "~/src/components/frontend";
 
 const App = (): JSX.Element => {
   return (
@@ -20,6 +20,7 @@ const App = (): JSX.Element => {
           <Route path="/blog">{/* home */}</Route>
           <Route path="/kontakt">{/* home */}</Route>
         </Switch>
+        <Footer />
       </Router>
     </Container>
   );

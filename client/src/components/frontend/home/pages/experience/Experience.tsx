@@ -12,7 +12,6 @@ import {
 import background from "./images/background.jpg";
 import { headingText, studentsExperiance } from "./messages";
 import uniqid from "uniqid";
-import { SubStr } from "~/src/utils/SubStr";
 
 const Render = (): JSX.Element => {
   return (

@@ -1,0 +1,21 @@
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a24;
+  width: 100%;
+  padding: 5rem 0;
+
+  &__section {
+    width: 35rem;
+  }
+
+  &__heading {
+    display: inline-block;
+    border-bottom: 1px solid #0896ea;
+    padding-bottom: 1.5rem;
+  }
+
+  &__list {
+  }
+}

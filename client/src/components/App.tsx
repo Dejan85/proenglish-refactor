@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Container } from "~/src/components/ui";
-import { Header, Home, Footer } from "~/src/components/frontend";
+import { Header, Home } from "~/src/components/frontend";
+import { Footer } from "./deprecate";
 
 const App = (): JSX.Element => {
   return (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   ContentContainer,
   SubContainer,
@@ -16,65 +16,65 @@ import uniqid from "uniqid";
 
 const UiRender = (props: UiRenderProps) => {
   const { aboutData } = props;
-  const firstSection = (aboutData && aboutData[0]) || {
-    title: "",
-    description: "",
-    body: "",
-  };
 
-  const { title, body } = (aboutData && aboutData[0]) || {
-    title: "",
-    body: "",
-  };
-
-  const { title: title2, body: body2 } = (aboutData && aboutData[1]) || {
-    title: "",
-    body: "",
-  };
-
-  return aboutData?.length ? (
-    <ContentContainer className="about">
+  return (
+    <>
       <ContentContainer
         className="about__background"
         backgroundImage={background}
       />
 
-      <SubContainer key={uniqid()} className="about__sub-container">
-        <Heading className="about__heading" as="h1">
-          {title}
-        </Heading>
-        <ContentContainer className="about__content">
-          <ContentContainer className="about__text">
-            {parse(body)}
-          </ContentContainer>
-          <Image
-            disablelazyLoad
-            className="about__image"
-            alt="img"
-            src={image}
-          />
-        </ContentContainer>
-      </SubContainer>
+      {aboutData?.length ? (
+        aboutData.map((data: any, index: number) => {
+          const { title, body } = data;
+          return (
+            <ContentContainer key={uniqid()} className="about">
+              {index === 0 ? (
+                <>
+                  <SubContainer className="about__sub-container">
+                    <Heading className="about__heading" as="h1">
+                      {title}
+                    </Heading>
+                    <ContentContainer className="about__content">
+                      <ContentContainer className="about__text">
+                        {parse(body)}
+                      </ContentContainer>
+                      <Image
+                        disablelazyLoad
+                        className="about__image"
+                        alt="img"
+                        src={image}
+                      />
+                    </ContentContainer>
+                  </SubContainer>
+                </>
+              ) : (
+                <>
+                  <ContentContainer
+                    className="about__background"
+                    backgroundImage={background2}
+                  />
 
-      <ContentContainer
-        className="about__background"
-        backgroundImage={background2}
-      />
-
-      <SubContainer key={uniqid()} className="about__sub-container">
-        <Heading className="about__heading" as="h1">
-          {title2}
-        </Heading>
-        <ContentContainer className="about__content">
-          <Image className="about__image" alt="img" src={image2} />
-          <ContentContainer className="about__text-left">
-            {parse(body2)}
-          </ContentContainer>
-        </ContentContainer>
-      </SubContainer>
-    </ContentContainer>
-  ) : (
-    <Loading height="100vh" />
+                  <SubContainer className="about__sub-container">
+                    <Heading className="about__heading" as="h1">
+                      {title}
+                    </Heading>
+                    <ContentContainer className="about__content">
+                      <Image className="about__image" alt="img" src={image2} />
+                      <ContentContainer className="about__text-left">
+                        {parse(body)}
+                      </ContentContainer>
+                    </ContentContainer>
+                  </SubContainer>
+                </>
+              )}
+            </ContentContainer>
+          );
+        })
+      ) : (
+        <Loading height="40vh" />
+      )}
+    </>
   );
 };
 

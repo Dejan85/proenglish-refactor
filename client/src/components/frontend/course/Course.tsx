@@ -1,6 +1,7 @@
 import React from "react";
 import { ContentContainer, Link, Heading } from "~/src/components/ui";
 import background from "./images/background.jpg";
+import { heading, text, textInSpan } from "./messages";
 
 const Course = () => {
   return (
@@ -11,9 +12,7 @@ const Course = () => {
       >
         <ContentContainer className="course__right-content">
           <Heading as="h1" className="course__heading">
-            <Link as="a" to="/">
-              Utvrdite nivo znanja
-            </Link>
+            Utvrdite nivo znanja
           </Heading>
         </ContentContainer>
       </ContentContainer>

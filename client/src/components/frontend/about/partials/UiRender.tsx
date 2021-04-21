@@ -32,8 +32,6 @@ const UiRender = (props: UiRenderProps) => {
     body: "",
   };
 
-  console.log("test", aboutData);
-
   return aboutData?.length ? (
     <ContentContainer className="about">
       <ContentContainer

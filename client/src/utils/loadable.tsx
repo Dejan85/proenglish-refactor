@@ -1,8 +1,12 @@
+import { fromPairs } from "lodash";
 import React, { lazy, Suspense } from "react";
+import { Loading } from "~/src/components/ui";
 
 const loadable = (
   importFunc: any,
-  { fallback = null } = { fallback: null }
+  { fallback = <Loading height="100vh" /> } = {
+    fallback: <Loading height="100vh" />,
+  }
 ) => {
   const LazyComponent = lazy(importFunc);
 

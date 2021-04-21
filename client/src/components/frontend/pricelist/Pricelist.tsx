@@ -24,11 +24,11 @@ const RenderUi = (): JSX.Element => {
           ))}
         </>
 
-        <div className="pricelist__table">
+        <ContentContainer className="pricelist__table">
           {tableData.map(({ heading, rows }, index) => {
             return <TableRow heading={heading} rows={rows} key={index} />;
           })}
-        </div>
+        </ContentContainer>
 
         <>
           {anotherThreePar.map((text) => (

@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.scss";
 import {
   ContentContainer,
   SubContainer,
@@ -13,36 +14,30 @@ import img from "./images/img.jpg";
 import { Link as RouterLink } from "react-router-dom";
 
 const MemoizedUi: JSX.Element = (
-  <SubContainer>
-    <ContentContainer justifyContent="space-between" marginTop="10rem">
-      <ContentContainer
-        width="49%"
-        alignItems="flex-start"
-        flexDirection="column"
-      >
-        <Heading as="h2" className="default-heading">
+  <SubContainer className="home-about">
+    <ContentContainer className="home-about__content">
+      <ContentContainer className="home-about__text">
+        <Heading as="h2" className="home-about__heading">
           {headingText}
         </Heading>
         {aboutText.map(
           (text: string): JSX.Element => (
-            <ContentContainer marginTop="2rem" key={uniqid()}>
+            <ContentContainer
+              className="home-about__text--container"
+              key={uniqid()}
+            >
               <Text as="p" className="default-paragraph">
                 {text}
               </Text>
             </ContentContainer>
           )
         )}
-
         <Link to="/onama" as={RouterLink}>
           {linkText}
         </Link>
       </ContentContainer>
-      <ContentContainer
-        alignItems="flex-start"
-        width="49%"
-        className="flex-direction-column"
-      >
-        <Image alt="img" src={img} />
+      <ContentContainer className="home-about__image-container">
+        <Image className="home-about__image" alt="img" src={img} />
       </ContentContainer>
     </ContentContainer>
   </SubContainer>

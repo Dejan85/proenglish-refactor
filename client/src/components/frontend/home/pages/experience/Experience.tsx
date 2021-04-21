@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.scss";
 import {
   ContentContainer,
   SubContainer,
@@ -15,19 +16,10 @@ import uniqid from "uniqid";
 
 const Render = (): JSX.Element => {
   return (
-    <ContentContainer
-      marginTop="10rem"
-      height="87vh"
-      justifyContent="center"
-      backgroundImage={background}
-    >
-      <SubContainer className="flex-direction-column justify-content-flex-start">
-        <ContentContainer
-          marginTop="10rem"
-          flexDirection="column"
-          alignItems="center"
-        >
-          <Heading className="experience-heading" as="h1">
+    <ContentContainer backgroundImage={background} className="home-experience">
+      <SubContainer className="home-experience__container">
+        <ContentContainer className="home-experience__heading-container">
+          <Heading className="home-experience__heading" as="h1">
             {headingText}
           </Heading>
           <Line>

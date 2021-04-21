@@ -5,21 +5,25 @@
   flex-direction: column;
 
   &__top-container {
+    position: relative;
     justify-content: flex-end;
-    height: 100vh;
   }
 
   &__right-content {
     width: 55%;
     height: 100%;
     background-color: white;
+    padding: 10rem 0 10rem 27rem;
   }
 
   &__heading {
-    // padding: 1.5rem 2.5rem;
+    position: absolute;
+    padding: 1.5rem 2.5rem;
     clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%);
-    width: 40rem;
-    // margin-left: -20rem;
+    left: 43%;
+    top: 50%;
+    transform: translate(-43%, -50%);
+    background-color: $main-color;
 
     font-size: 3rem;
     font-family: $poppins-sans-serif;
@@ -27,5 +31,24 @@
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
+  }
+
+  &__text-container {
+    flex-direction: column;
+    justify-content: center;
+    width: 62rem;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-family: Poppins, sans-serif;
+    color: #000;
+    text-align: justify;
+    padding-bottom: 2rem;
+  }
+
+  &__text-span {
+    color: $main-color;
+    font-weight: 600;
   }
 }

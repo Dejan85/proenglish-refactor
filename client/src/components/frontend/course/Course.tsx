@@ -4,11 +4,7 @@ import background from "./images/background.jpg";
 import { heading, text, textInSpan } from "./messages";
 import uniqid from "uniqid";
 
-const Course = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
+const RenderUi = (): JSX.Element => {
   return (
     <ContentContainer className="course">
       <ContentContainer className="course__top-container">
@@ -34,6 +30,14 @@ const Course = () => {
       <ContentContainer></ContentContainer>
     </ContentContainer>
   );
+};
+
+const Course = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return <RenderUi />;
 };
 
 export default Course;

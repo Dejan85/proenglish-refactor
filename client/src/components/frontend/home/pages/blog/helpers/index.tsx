@@ -24,7 +24,7 @@ const RenderModal = (props: { blogData: object[] }): JSX.Element => {
             />
             <Link
               as={LinkRouter}
-              className="no-background-color heading-link"
+              className="no-background-color heading-link home-blog__modal-link"
               to="/"
             >
               {item.title}

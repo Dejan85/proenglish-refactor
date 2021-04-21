@@ -18,6 +18,25 @@
     height: 30rem;
   }
 
+  &__modal-link {
+    display: block;
+    height: 9rem;
+    padding: 1.5rem 0;
+    margin-top: 0;
+
+    font-size: 2rem;
+    color: $heading-link-color;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    font-family: $lato-sans-serif;
+
+    &:hover {
+      color: $main-color;
+      background-color: transparent;
+    }
+  }
+
   &__modal-text-container {
     padding: 0 1rem;
   }

@@ -1,0 +1,46 @@
+@import "../../../../styles/variables/fonts";
+@import "../../../../styles/variables/colors";
+
+.home-newsletter {
+  margin-top: 10rem;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+
+  &__image {
+    width: 50%;
+    height: 40rem;
+  }
+
+  &__modal-container {
+    flex-direction: column;
+    width: 53%;
+    height: 35rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    margin-left: -15rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+    background-color: lighten($main-color, 35%);
+  }
+
+  &__text {
+    color: white;
+  }
+
+  &__input-container {
+    justify-content: space-between;
+    max-width: 65rem;
+    width: 100%;
+    align-self: flex-end;
+  }
+
+  &__input {
+    padding: 1.5rem;
+    width: 80%;
+  }
+
+  &__button {
+    padding: 0 3rem;
+  }
+}

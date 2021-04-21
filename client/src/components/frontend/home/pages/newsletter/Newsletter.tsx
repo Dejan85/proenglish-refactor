@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.scss";
 import {
   ContentContainer,
   Image,
@@ -11,26 +12,12 @@ import { msg } from "./messages";
 
 const MemoizedUi: JSX.Element = (
   <>
-    <ContentContainer
-      marginTop="10rem"
-      alignItems="center"
-      className="box-shadow "
-    >
-      <ContentContainer width="50%" height="40rem">
+    <ContentContainer className="home-newsletter">
+      <ContentContainer className="home-newsletter__image">
         <Image src={img} alt="img" />
       </ContentContainer>
 
-      <ContentContainer
-        flexDirection="column"
-        width="53%"
-        height="35rem"
-        justifyContent="space-between"
-        alignItems="center"
-        padding="3rem"
-        marginLeft="-15rem"
-        className="box-shadow test-color"
-        borderRadius="5px"
-      >
+      <ContentContainer className="home-newsletter__modal-container">
         <ContentContainer
           justifyContent="center"
           alignItems="center"
@@ -40,21 +27,16 @@ const MemoizedUi: JSX.Element = (
           borderRadius="5px"
           className="background-color-main-color"
         >
-          <Text className="newsletter-text" as="p">
+          <Text className="home-newsletter__text" as="p">
             {msg}
           </Text>
         </ContentContainer>
-        <ContentContainer
-          justifyContent="space-between"
-          maxWidth="65rem"
-          alignSelf="flex-end"
-        >
+        <ContentContainer className="home-newsletter__input-container">
           <Input
-            padding="1.5rem"
-            width="80%"
+            className="home-newsletter__input"
             placeholder="Uzmite svoju dozu znanja..."
           />
-          <Button padding="0 3rem">Prijavi se</Button>
+          <Button className="home-newsletter__button">Prijavi se</Button>
         </ContentContainer>
       </ContentContainer>
     </ContentContainer>

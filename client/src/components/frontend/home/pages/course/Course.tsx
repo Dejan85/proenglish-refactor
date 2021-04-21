@@ -39,7 +39,7 @@ const MemoizedUi: JSX.Element = (
           <Text as="p" className="default-paragraph">
             {text}
           </Text>
-          <Link to={linkPath} as={RouterLink}>
+          <Link className="home-about__link" to={linkPath} as={RouterLink}>
             {linkText}
           </Link>
         </ContentContainer>
@@ -55,7 +55,7 @@ const MemoizedUi: JSX.Element = (
           <Text as="p" className="default-paragraph">
             {text2}
           </Text>
-          <Link to={linkPath} as={RouterLink}>
+          <Link className="home-about__link" to={linkPath} as={RouterLink}>
             {linkText2}
           </Link>
         </ContentContainer>

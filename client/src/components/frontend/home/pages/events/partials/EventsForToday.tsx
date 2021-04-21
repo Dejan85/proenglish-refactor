@@ -50,7 +50,9 @@ const EventsForToday = (props: {
       >
         <Render filteredDailyEventsData={filteredDailyEventsData} />
       </Scrollbars>
-      <Link as="a">Vidi Detaljno</Link>
+      <Link className="home-events__link" as="a">
+        Vidi Detaljno
+      </Link>
     </ContentContainer>
   );
 };

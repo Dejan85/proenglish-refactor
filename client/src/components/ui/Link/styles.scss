@@ -1,24 +1,24 @@
 @import "../../styles/variables/colors.scss";
 @import "../../styles/variables/fonts.scss";
 
-.link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 2rem;
-  margin-top: 8rem;
+// .link {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 1rem 2rem;
+//   margin-top: 8rem;
 
-  text-decoration: none;
-  color: white;
-  background-color: $main-color;
-  font-size: 1.7rem;
-  font-family: $lato-sans-serif;
-  transition: all 0.5s;
+//   text-decoration: none;
+//   color: white;
+//   background-color: $main-color;
+//   font-size: 1.7rem;
+//   font-family: $lato-sans-serif;
+//   transition: all 0.5s;
 
-  &:hover {
-    background-color: darken($color: $main-color, $amount: 20%);
-  }
-}
+//   &:hover {
+//     background-color: darken($color: $main-color, $amount: 20%);
+//   }
+// }
 
 .heading-link {
   display: block;

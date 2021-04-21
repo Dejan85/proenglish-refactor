@@ -51,7 +51,9 @@ const MonthlyEvents = (props: UiRenderProps): JSX.Element => {
       >
         <Render filteredEvents={filteredEvents} />
       </Scrollbars>
-      <Link as="a">Vidi Detaljno</Link>
+      <Link className="home-events__link" as="a">
+        Vidi Detaljno
+      </Link>
     </ContentContainer>
   );
 };

@@ -1,0 +1,57 @@
+@import "../../../../styles/variables/fonts";
+@import "../../../../styles/variables/colors";
+
+.home-blog {
+  flex-direction: column;
+
+  &__heading-container {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10rem;
+  }
+
+  &__modal-container {
+    justify-content: space-between;
+  }
+
+  &__modal {
+  }
+
+  &__modal-image {
+    height: 30rem;
+  }
+
+  &__modal-text-container {
+    padding: 0 1rem;
+  }
+
+  &__modal-text {
+    text-align: justify;
+    color: $modal-text-color;
+    font-size: 1.7rem;
+  }
+
+  &__modal-date-container {
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+
+  &__blog-modal-span {
+    color: $modal-span-color;
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    &--text-orange {
+      color: $main-color;
+    }
+
+    &--popin-sans-serif {
+      font-family: $poppins-sans-serif;
+    }
+  }
+
+  &__modal-signature-container {
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+}

@@ -20,7 +20,7 @@ const RenderModal = (props: { blogData: object[] }): JSX.Element => {
               alt="img"
               src={item.photo}
               type="base64"
-              className="height--30rem"
+              className="home-blog__modal-image"
             />
             <Link
               as={LinkRouter}
@@ -30,8 +30,8 @@ const RenderModal = (props: { blogData: object[] }): JSX.Element => {
               {item.title}
             </Link>
 
-            <ContentContainer padding="0 1rem">
-              <Text as="p" className="blog-modal-text">
+            <ContentContainer className="home-blog__modal-text-container">
+              <Text as="p" className="home-blog__modal-text">
                 <SubStr>{item.description}</SubStr>
               </Text>
             </ContentContainer>
@@ -40,19 +40,22 @@ const RenderModal = (props: { blogData: object[] }): JSX.Element => {
               <Line.SmallLine />
             </Line>
 
-            <ContentContainer marginTop="1rem" padding="0 1rem">
-              <Text as="span" className="blog-modal-span">
+            <ContentContainer className="home-blog__modal-date-container">
+              <Text as="span" className="home-blog__blog-modal-span">
                 <FormatTime>{item.created}</FormatTime>
               </Text>
             </ContentContainer>
 
-            <ContentContainer marginTop="1rem" padding="0 1rem">
-              <Text as="span" className="blog-modal-span poppins-sans-serif">
+            <ContentContainer className="home-blog__modal-signature-container">
+              <Text
+                as="span"
+                className="home-blog__blog-modal-span poppins-sans-serif"
+              >
                 by
               </Text>
               <Text
                 as="span"
-                className="blog-modal-span text-orange poppins-sans-serif"
+                className="home-blog__blog-modal-span home-blog__blog-modal-span--text-orange home-blog__blog-modal-span--popin-sans-serif"
               >
                 {item.postedBy}
               </Text>
@@ -76,18 +79,14 @@ export const RenderUi = (props: { blogData: object[] }): JSX.Element => {
 
   return (
     <>
-      <SubContainer className="flex-direction-column">
-        <ContentContainer
-          flexDirection="column"
-          justifyContent="center"
-          marginTop="10rem"
-        >
+      <SubContainer className="home-blog">
+        <ContentContainer className="home-blog__heading-container">
           <Heading as="h1" className="default-heading">
             {headingText}
           </Heading>
           {RenderLine}
         </ContentContainer>
-        <ContentContainer justifyContent="space-between">
+        <ContentContainer className="home-blog__modal-container">
           {blogData.length ? <RenderModal blogData={blogData} /> : <Loading />}
         </ContentContainer>
       </SubContainer>

@@ -32,9 +32,9 @@ const UiRender = (props: UiRenderProps) => {
     body: "",
   };
 
-  console.log("test", firstSection);
+  console.log("test", aboutData);
 
-  return (
+  return aboutData?.length ? (
     <ContentContainer className="about">
       <ContentContainer
         className="about__background"
@@ -49,7 +49,12 @@ const UiRender = (props: UiRenderProps) => {
           <ContentContainer className="about__text">
             {parse(body)}
           </ContentContainer>
-          <Image className="about__image" alt="img" src={image} />
+          <Image
+            disablelazyLoad
+            className="about__image"
+            alt="img"
+            src={image}
+          />
         </ContentContainer>
       </SubContainer>
 
@@ -70,6 +75,8 @@ const UiRender = (props: UiRenderProps) => {
         </ContentContainer>
       </SubContainer>
     </ContentContainer>
+  ) : (
+    <Loading height="100vh" />
   );
 };
 

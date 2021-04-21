@@ -3,4 +3,5 @@ export interface ImageProps {
     src: string;
     type?: string;
     className?: string;
+    disablelazyLoad?: boolean;
 }

@@ -1,7 +1,25 @@
 import React from "react";
+import { ContentContainer, Link, Heading } from "~/src/components/ui";
+import background from "./images/background.jpg";
 
 const Course = () => {
-  return <div>xad</div>;
+  return (
+    <ContentContainer className="course">
+      <ContentContainer
+        className="course__top-container"
+        backgroundImage={background}
+      >
+        <ContentContainer className="course__right-content">
+          <Heading as="h1" className="course__heading">
+            <Link as="a" to="/">
+              Utvrdite nivo znanja
+            </Link>
+          </Heading>
+        </ContentContainer>
+      </ContentContainer>
+      <ContentContainer></ContentContainer>
+    </ContentContainer>
+  );
 };
 
 export default Course;

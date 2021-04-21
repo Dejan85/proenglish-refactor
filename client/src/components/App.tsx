@@ -20,9 +20,7 @@ const App = (): JSX.Element => {
           <Route exact path="/kursevi">
             <Course />
           </Route>
-          <Route path="/ispiti">
-            <Exams />
-          </Route>
+          <Route path="/ispiti">{/* <Exams /> */}</Route>
           <Route path="/cenovnik">{/* home */}</Route>
           <Route path="/dogadjaji">{/* home */}</Route>
           <Route path="/blog">{/* home */}</Route>

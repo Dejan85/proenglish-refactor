@@ -12,7 +12,7 @@ import {
   filterDailyEventsAction,
 } from "./slice";
 import saga from "./saga";
-import { UiRender } from "./helpers";
+import { UiRender } from "./partials";
 import {
   filterEventsForCurrentMonth,
   filterEventsForCurrentDay,

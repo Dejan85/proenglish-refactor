@@ -1,2 +1,25 @@
 @import "../../../../styles/variables/fonts";
 @import "../../../../styles/variables/colors";
+
+.home-events {
+  &__calendar {
+    max-width: 39rem;
+    height: 57rem;
+    margin-top: 10rem;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__calendar-heading {
+    font-family: Poppins, sans-serif;
+    font-size: 2.6rem;
+    color: #1a1a24;
+    font-weight: 600;
+  }
+
+  &__content-container {
+    position: absolute;
+    top: 10rem;
+  }
+}

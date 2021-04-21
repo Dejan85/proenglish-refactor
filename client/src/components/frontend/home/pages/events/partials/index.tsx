@@ -14,7 +14,7 @@ export const UiRender = (props: UiRenderProps): JSX.Element => {
   } = props;
 
   return (
-    <SubContainer>
+    <SubContainer className="home-events">
       <CalendarOfEvents
         generateHighlhtDates={generateHighlhtDates}
         filteredActiveEventsDates={filteredActiveEventsDates}

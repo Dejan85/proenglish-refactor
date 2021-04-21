@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo } from "react";
+import "./styles.scss";
 import { useInjectSaga } from "~/src/utils/injectSaga";
 import { useInjectReducer } from "~/src/utils/injectReducer";
 import { getEventsState } from "./selectos";

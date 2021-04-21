@@ -1,6 +1,10 @@
+@import "../../styles/variables/colors";
+@import "../../styles/variables/fonts";
+
 .about {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   &__background {
     background-size: cover;
@@ -8,5 +12,57 @@
     background-attachment: fixed;
     background-position: top;
     height: 55rem;
+  }
+
+  &__sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__heading {
+    background: $main-color;
+    clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%);
+    padding: 0 2.5rem;
+    margin: -4rem 0 0 0;
+
+    color: #fff;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: Poppins, sans-serif;
+  }
+
+  &__content {
+    display: flex;
+    margin: 10rem 0;
+    outline: 1px solid red;
+  }
+
+  &__text,
+  &__text-left {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-right: 3rem;
+
+    p {
+      padding: 0rem 0 3rem 0;
+      text-align: justify;
+    }
+
+    p > span {
+      color: #000 !important;
+      font-size: 2rem;
+      font-family: $lato-sans-serif;
+    }
+  }
+
+  &__text-left {
+    padding-right: 0rem;
+    padding-left: 3rem;
+  }
+
+  &__image {
+    width: 40%;
   }
 }

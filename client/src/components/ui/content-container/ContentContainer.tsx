@@ -36,11 +36,7 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
   } = props;
   const className: string = "content-container";
 
-  // const [background] = useState(() => {
-  //   return { backgroundImage: `url(${bckg})` };
-  // });
-
-  const style = {
+  const style: ContentContainerProps = {
     width,
     maxWidth,
     height,
@@ -65,8 +61,11 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
     bottom,
     left,
     right,
-    backgroundImage: `url(${backgroundImage})`,
   };
+
+  if (backgroundImage) {
+    style.backgroundImage = `url(${backgroundImage})`;
+  }
 
   return (
     <WrapperTag

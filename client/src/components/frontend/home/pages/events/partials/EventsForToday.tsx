@@ -39,13 +39,8 @@ const EventsForToday = (props: {
   const { filteredDailyEventsData } = props;
 
   return (
-    <ContentContainer
-      flexDirection="column"
-      maxWidth="40rem"
-      height="57rem"
-      marginTop="10rem"
-    >
-      <Heading className="h2" as="h2">
+    <ContentContainer className="home-events__events-for-today">
+      <Heading className="home-events__calendar-heading" as="h2">
         Događaji za današnji dan
       </Heading>
 

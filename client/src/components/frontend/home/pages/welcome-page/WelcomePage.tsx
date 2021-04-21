@@ -1,26 +1,26 @@
 import React from "react";
 import {
-  WrapperWithBackground,
-  WelcomeText,
   Text,
   Heading,
   HomeIconsBoxes,
   SubContainer,
+  ContentContainer,
 } from "~/src/components/ui";
 import { firstMsg, secondMsg } from "./messages";
+import "./styles.scss";
 
 const MemoizedUi: JSX.Element = (
   <>
-    <WrapperWithBackground>
-      <WelcomeText>
-        <Heading as="h1" className="welcome-heading">
+    <ContentContainer className="welcome-page">
+      <ContentContainer className="welcome-page__text">
+        <Heading as="h1" className="welcome-page__heading">
           {firstMsg}
         </Heading>
-        <Text as="p" className="welcome-paragraph">
+        <Text as="p" className="welcome-page__paragraph">
           {secondMsg}
         </Text>
-      </WelcomeText>
-    </WrapperWithBackground>
+      </ContentContainer>
+    </ContentContainer>
     <SubContainer>
       <HomeIconsBoxes />
     </SubContainer>

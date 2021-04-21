@@ -1,0 +1,39 @@
+@import "../../../../styles/variables/fonts";
+@import "../../../../styles/variables/colors";
+
+.home-course {
+  height: 55rem;
+  margin-top: 10rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+
+  &--no-margin-top {
+    margin-top: 0rem;
+  }
+
+  &__left-image-container,
+  &__right-image-container,
+  &__right-text-container,
+  &__left-text-container {
+    width: 50%;
+  }
+
+  &__left-text-container {
+    justify-content: flex-end;
+  }
+
+  &__left-text,
+  &__right-text {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    max-width: 60rem;
+    width: 100%;
+    margin-left: 5rem;
+  }
+
+  &__left-text {
+    align-items: flex-start;
+    margin-left: 0rem;
+    margin-right: 5rem;
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.scss";
 import {
   ContentContainer,
   Text,
@@ -26,17 +27,12 @@ const imageUi2 = renderImage(img2);
 
 const MemoizedUi: JSX.Element = (
   <>
-    <ContentContainer height="55rem" marginTop="10rem" className="box-shadow">
-      <ContentContainer width="50%">{imageUi}</ContentContainer>
-      <ContentContainer width="50%">
-        <ContentContainer
-          flexDirection="column"
-          alignItems="flex-end"
-          justifyContent="space-evenly"
-          maxWidth="60rem"
-          height="100%"
-          marginLeft="5rem"
-        >
+    <ContentContainer className="home-course">
+      <ContentContainer className="home-course__left-image-container">
+        {imageUi}
+      </ContentContainer>
+      <ContentContainer className="home-course__right-text-container">
+        <ContentContainer className="home-course__right-text">
           <Heading as="h2" className="default-heading">
             {headingText}
           </Heading>
@@ -50,16 +46,9 @@ const MemoizedUi: JSX.Element = (
       </ContentContainer>
     </ContentContainer>
 
-    <ContentContainer height="55rem" className="box-shadow">
-      <ContentContainer width="50%" justifyContent="flex-end">
-        <ContentContainer
-          flexDirection="column"
-          justifyContent="space-evenly"
-          alignItems="flex-start"
-          maxWidth="60rem"
-          height="100%"
-          marginRight="5rem"
-        >
+    <ContentContainer className="home-course--no-margin-top">
+      <ContentContainer className="home-course__left-text-container">
+        <ContentContainer className="home-course__left-text">
           <Heading as="h2" className="default-heading">
             {headingText2}
           </Heading>
@@ -71,7 +60,9 @@ const MemoizedUi: JSX.Element = (
           </Link>
         </ContentContainer>
       </ContentContainer>
-      <ContentContainer width="50%">{imageUi2}</ContentContainer>
+      <ContentContainer className="home-course__right-image-container">
+        {imageUi2}
+      </ContentContainer>
     </ContentContainer>
   </>
 );

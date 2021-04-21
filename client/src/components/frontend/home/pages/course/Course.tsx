@@ -46,7 +46,7 @@ const MemoizedUi: JSX.Element = (
       </ContentContainer>
     </ContentContainer>
 
-    <ContentContainer className="home-course--no-margin-top">
+    <ContentContainer className="home-course home-course--no-margin-top">
       <ContentContainer className="home-course__left-text-container">
         <ContentContainer className="home-course__left-text">
           <Heading as="h2" className="default-heading">

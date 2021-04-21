@@ -5,7 +5,8 @@ import {
   Text,
   ContentContainer,
 } from "~/src/components/ui";
-import { heading, firstTwoPar, anotherThreePar } from "./messages";
+import TableRow from "../../deprecate/table-row/TableRow";
+import { heading, firstTwoPar, anotherThreePar, tableData } from "./messages";
 import uniqid from "uniqid";
 
 const RenderUi = (): JSX.Element => {
@@ -15,13 +16,27 @@ const RenderUi = (): JSX.Element => {
         <Heading className="pricelist__heading" as="h1">
           {heading}
         </Heading>
-        {firstTwoPar.map((text): any => {
-          return (
+        <>
+          {firstTwoPar.map((text) => (
             <Text key={uniqid()} className="pricelist__text" as="p">
               {text}
             </Text>
-          );
-        })}
+          ))}
+        </>
+
+        <div className="pricelist__table">
+          {tableData.map(({ heading, rows }, index) => {
+            return <TableRow heading={heading} rows={rows} key={index} />;
+          })}
+        </div>
+
+        <>
+          {anotherThreePar.map((text) => (
+            <Text key={uniqid()} className="pricelist__text" as="p">
+              {text}
+            </Text>
+          ))}
+        </>
       </SubContainer>
     </ContentContainer>
   );

@@ -6,8 +6,6 @@ import {
   Image,
   Loading,
 } from "~/src/components/ui";
-import background from "../images/background.jpg";
-import background2 from "../images/background2.jpg";
 import image from "../images/image.jpg";
 import image2 from "../images/image2.jpg";
 import { UiRenderProps } from "../types";
@@ -19,10 +17,7 @@ const UiRender = (props: UiRenderProps) => {
 
   return (
     <>
-      <ContentContainer
-        className="about__background"
-        backgroundImage={background}
-      />
+      <ContentContainer className="about__background" />
 
       {aboutData?.length ? (
         aboutData.map((data: any, index: number) => {
@@ -50,10 +45,7 @@ const UiRender = (props: UiRenderProps) => {
                 </>
               ) : (
                 <>
-                  <ContentContainer
-                    className="about__background"
-                    backgroundImage={background2}
-                  />
+                  <ContentContainer className="about__background-2" />
 
                   <SubContainer className="about__sub-container">
                     <Heading className="about__heading" as="h1">

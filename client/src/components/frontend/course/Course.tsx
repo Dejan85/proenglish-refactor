@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ContentContainer, Link, Heading, Text } from "~/src/components/ui";
 import background from "./images/background.jpg";
 import { heading, text, textInSpan } from "./messages";
 import uniqid from "uniqid";
 
 const Course = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <ContentContainer className="course">
-      <ContentContainer
-        className="course__top-container"
-        backgroundImage={background}
-      >
+      <ContentContainer className="course__top-container">
         <ContentContainer className="course__right-content">
           <Link as="a" href="/" className="course__heading">
             Utvrdite nivo znanja

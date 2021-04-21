@@ -2,7 +2,15 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Container } from "~/src/components/ui";
 import Home from "./frontend/home/Home";
-import { Header, About, Course, Exams } from "~/src/components/frontend";
+import About from "./frontend/about/About";
+import Course from "./frontend/course/Course";
+import {
+  Header,
+  // About,
+  // Course,
+  Exams,
+  Pricelist,
+} from "~/src/components/frontend";
 import { Footer } from "./deprecate";
 
 const App = (): JSX.Element => {
@@ -20,8 +28,12 @@ const App = (): JSX.Element => {
           <Route exact path="/kursevi">
             <Course />
           </Route>
-          <Route path="/ispiti">{/* <Exams /> */}</Route>
-          <Route path="/cenovnik">{/* home */}</Route>
+          <Route exact path="/ispiti">
+            {/* <Exams /> */}
+          </Route>
+          <Route exact path="/cenovnik">
+            <Pricelist />
+          </Route>
           <Route path="/dogadjaji">{/* home */}</Route>
           <Route path="/blog">{/* home */}</Route>
           <Route path="/kontakt">{/* home */}</Route>

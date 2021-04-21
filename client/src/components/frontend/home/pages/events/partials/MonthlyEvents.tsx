@@ -40,14 +40,8 @@ const MonthlyEvents = (props: UiRenderProps): JSX.Element => {
   } = props;
 
   return (
-    <ContentContainer
-      flexDirection="column"
-      maxWidth="30rem"
-      height="57rem"
-      marginTop="10rem"
-      position="relative"
-    >
-      <Heading className="h2" as="h2">
+    <ContentContainer className="home-events__monthly-events">
+      <Heading className="home-events__calendar-heading" as="h2">
         Mesečni događaji
       </Heading>
 

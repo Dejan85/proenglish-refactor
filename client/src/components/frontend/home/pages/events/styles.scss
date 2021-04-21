@@ -22,4 +22,13 @@
     position: absolute;
     top: 10rem;
   }
+
+  &__monthly-events {
+    position: relative;
+    flex-direction: column;
+    max-width: 30rem;
+    width: 100%;
+    height: 57rem;
+    margin-top: 10rem;
+  }
 }

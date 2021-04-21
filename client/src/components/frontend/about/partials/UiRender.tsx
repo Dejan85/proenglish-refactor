@@ -4,6 +4,7 @@ import {
   SubContainer,
   Heading,
   Image,
+  Loading,
 } from "~/src/components/ui";
 import background from "../images/background.jpg";
 import background2 from "../images/background2.jpg";

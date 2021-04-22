@@ -1,0 +1,97 @@
+@import "../../styles/variables/fonts";
+@import "../../styles/variables/colors";
+
+.contact {
+  &__map {
+    width: 50%;
+    flex-direction: column;
+  }
+
+  &__form-content {
+    flex-direction: column;
+    width: 50%;
+    padding: 2rem 10rem 0rem 10rem;
+    justify-content: space-around;
+  }
+
+  &__heading-container {
+    flex-direction: column;
+  }
+
+  &__heading {
+    font-size: 3.5rem;
+    font-family: $poppins-sans-serif;
+  }
+
+  &__heading-span {
+    font-family: $lato-sans-serif;
+    font-size: 1.8rem;
+    color: #666;
+    font-weight: 500;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__input-holder {
+    flex-direction: column;
+  }
+
+  &__input-holder:not(:first-child) {
+    margin-top: 5rem;
+  }
+
+  &__form-label {
+    font-size: 1.8rem;
+    font-family: $lato-sans-serif;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    height: 4rem;
+    border: none;
+    border-bottom: 1px solid $main-color;
+  }
+
+  &__textarea {
+    border: none;
+    border-bottom: 1px solid $main-color;
+    padding: 1rem;
+  }
+
+  &__input:focus,
+  &__textarea:focus {
+    outline: none;
+  }
+
+  &__submit-button {
+    color: #fff;
+    font-size: 1.8rem;
+    background: #ee9a20;
+    border: none;
+    padding: 1rem;
+    margin-top: 5rem;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  &__contact-info-text-container {
+    flex-direction: column;
+  }
+
+  &__contact-info-text {
+    font-family: $lato-sans-serif;
+    font-size: 1.8rem;
+    color: #666;
+    font-weight: 500;
+
+    &--margin-top {
+      margin-top: 1rem;
+    }
+  }
+}

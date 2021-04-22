@@ -22,3 +22,4 @@ export { CalendarInfo } from './calendar-info';
 export { ExperienceModal } from './experience-modal';
 export { CarouselUi } from './carousel';
 export { FooterContainer } from './footer-container';
+export { Label } from './label';

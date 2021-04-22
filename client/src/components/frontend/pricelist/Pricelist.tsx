@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   SubContainer,
   Heading,
@@ -43,6 +43,9 @@ const RenderUi = (): JSX.Element => {
 };
 
 const Pricelist = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return <RenderUi />;
 };
 

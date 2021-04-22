@@ -8,9 +8,7 @@ function Text(props: TextProps): JSX.Element {
   return (
     <Wrapper
       className={
-        customClassName
-          ? `${className} ${className} ${customClassName}`
-          : className
+        customClassName ? `${className} ${customClassName}` : className
       }
     >
       {children}

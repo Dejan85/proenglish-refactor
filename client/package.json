@@ -59,6 +59,7 @@
     "react-custom-scrollbars": "^4.2.1",
     "react-datepicker": "^3.7.0",
     "react-file-base64": "^1.0.3",
+    "react-hook-form": "^7.2.3",
     "react-loader-spinner": "^4.0.0",
     "react-loader-spinner-svg": "^1.0.2",
     "react-responsive-carousel": "^3.2.18",

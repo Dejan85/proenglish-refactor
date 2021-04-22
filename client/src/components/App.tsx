@@ -10,6 +10,7 @@ import {
   // Course,
   Exams,
   Pricelist,
+  Contact,
 } from "~/src/components/frontend";
 import { Footer } from "./deprecate";
 
@@ -36,7 +37,9 @@ const App = (): JSX.Element => {
           </Route>
           <Route path="/dogadjaji">{/* home */}</Route>
           <Route path="/blog">{/* home */}</Route>
-          <Route path="/kontakt">{/* home */}</Route>
+          <Route path="/kontakt">
+            <Contact />
+          </Route>
         </Switch>
         <Footer />
       </Router>

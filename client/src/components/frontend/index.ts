@@ -6,4 +6,5 @@ export const About: (props: any) => JSX.Element = loadable(() => import('./about
 export const Course: (props: any) => JSX.Element = loadable(() => import('./course'));
 export const Exams: (props: any) => JSX.Element = loadable(() => import('./exams'));
 export const Pricelist: (props: any) => JSX.Element = loadable(() => import('./pricelist'));
+export const Contact: (props: any) => JSX.Element = loadable(() => import('./contact'));
 export const Footer: (props: any) => JSX.Element = loadable(() => import('./footer/Footer'));

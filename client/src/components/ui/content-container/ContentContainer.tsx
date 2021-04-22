@@ -71,9 +71,7 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
     <WrapperTag
       style={style}
       className={
-        customClassName
-          ? `${className} ${className} ${customClassName}`
-          : className
+        customClassName ? `${className} ${customClassName}` : className
       }
     >
       {children}

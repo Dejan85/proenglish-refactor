@@ -76,7 +76,6 @@ const RenderLine: JSX.Element = (
 
 export const RenderUi = (props: { blogData: object[] }): JSX.Element => {
   const { blogData } = props;
-
   return (
     <>
       <SubContainer className="home-blog">

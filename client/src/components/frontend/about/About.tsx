@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import "./styles.scss";
 import { useInjectSaga } from "~/src/utils/injectSaga";
 import { useInjectReducer } from "~/src/utils/injectReducer";
@@ -15,16 +15,12 @@ const About = () => {
   const dispatch = useDispatch();
   const { aboutData } = useSelector(getAboutData);
 
-  const MemoizedUi = useMemo(() => <RenderUi aboutData={aboutData} />, [
-    aboutData,
-  ]);
-
   useEffect(() => {
     window.scrollTo(0, 0);
     dispatch(fetchAboutDataAction());
   }, []);
 
-  return MemoizedUi;
+  return <RenderUi aboutData={aboutData} />;
 };
 
 export default About;

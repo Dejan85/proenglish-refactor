@@ -46,17 +46,6 @@ const Events = (): JSX.Element => {
     dispatch(filterDailyEventsAction(dailyEvents));
   };
 
-  const MemoizedUi = useMemo(() => {
-    return (
-      <UiRender
-        generateHighlhtDates={generateHighlhtDates}
-        filteredActiveEventsDates={filteredActiveEventsDates}
-        generateDailyEvents={generateDailyEvents}
-        filteredDailyEventsData={filteredDailyEventsData}
-      />
-    );
-  }, [eventsData, filteredActiveEventsDates, filteredDailyEventsData]);
-
   useEffect(() => {
     generateDailyEvents();
   }, [filteredActiveEventsDates]);
@@ -70,7 +59,14 @@ const Events = (): JSX.Element => {
     generateHighlhtDates();
   }, []);
 
-  return MemoizedUi;
+  return (
+    <UiRender
+      generateHighlhtDates={generateHighlhtDates}
+      filteredActiveEventsDates={filteredActiveEventsDates}
+      generateDailyEvents={generateDailyEvents}
+      filteredDailyEventsData={filteredDailyEventsData}
+    />
+  );
 };
 
 export default Events;

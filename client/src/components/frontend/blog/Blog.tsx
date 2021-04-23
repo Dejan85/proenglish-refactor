@@ -16,6 +16,7 @@ const Blog = () => {
   const { blogData } = useSelector(getBlogData);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (!blogData.length) {
       dispatch(fetchBlogData());
     }

@@ -10,4 +10,5 @@ export interface DataType {
 
 export interface InitialStateType {
     blogData: object[];
+    oneBlogData: any;
 }

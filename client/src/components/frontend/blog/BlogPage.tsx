@@ -1,29 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useInjectReducer } from "~/src/utils/injectReducer";
 import { useInjectSaga } from "~/src/utils/injectSaga";
 import { useSelector, useDispatch } from "react-redux";
 import { getBlogData } from "../home/pages/blog/selectors";
-import { ONE_BLOG_DATA_SCOPE } from "./constants";
-import { reducer, getOneBlogAction } from "../home/pages/blog/slice";
+import { BLOG_SCOPE } from "./constants";
+import {
+  reducer,
+  getOneBlogAction,
+  fetchBlogData,
+} from "../home/pages/blog/slice";
 import saga from "../home/pages/blog/saga";
-
 import { withRouter } from "react-router-dom";
-import parse from "html-react-parser";
+import RenderOneBlogPage from "./partials/RenderOneBlogPage";
 
-const BlogPage = (props) => {
-  useInjectReducer({ key: ONE_BLOG_DATA_SCOPE, reducer });
-  useInjectSaga({ key: ONE_BLOG_DATA_SCOPE, saga });
+const BlogPage = (props: any): JSX.Element => {
+  useInjectReducer({ key: BLOG_SCOPE, reducer });
+  useInjectSaga({ key: BLOG_SCOPE, saga });
   const dispatch = useDispatch();
   const { match } = props;
-  const { oneBlogData } = useSelector((state) =>
-    getBlogData(state, ONE_BLOG_DATA_SCOPE)
+  const { blogData, oneBlogData } = useSelector(getBlogData);
+
+  useEffect(() => {
+    if (!blogData.length) {
+      dispatch(fetchBlogData());
+    }
+  }, []);
+
+  useEffect(() => {
+    dispatch(getOneBlogAction(match.params.blogId));
+  }, [blogData]);
+
+  return oneBlogData?.length ? (
+    <RenderOneBlogPage oneBlogData={oneBlogData} />
+  ) : (
+    <></>
   );
-
-  console.log("test", match.params.blogId);
-
-  console.log("test", oneBlogData);
-
-  return <div className="text">xad</div>;
 };
 
 export default withRouter(BlogPage);

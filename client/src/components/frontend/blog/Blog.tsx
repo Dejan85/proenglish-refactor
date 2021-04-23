@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import "./styles.scss";
 import RenderUi from "./partials/RenderUi";
 import { useInjectReducer } from "~/src/utils/injectReducer";
@@ -13,11 +13,7 @@ const Blog = () => {
   useInjectReducer({ key: BLOG_SCOPE, reducer });
   useInjectSaga({ key: BLOG_SCOPE, saga });
   const dispatch = useDispatch();
-  const { blogData } = useSelector((state) => getBlogData(state, BLOG_SCOPE));
-
-  const MemoizedUi = useMemo(() => <RenderUi blogData={blogData} />, [
-    blogData,
-  ]);
+  const { blogData } = useSelector(getBlogData);
 
   useEffect(() => {
     if (!blogData.length) {
@@ -25,7 +21,7 @@ const Blog = () => {
     }
   }, []);
 
-  return MemoizedUi;
+  return <RenderUi blogData={blogData} />;
 };
 
 export default Blog;

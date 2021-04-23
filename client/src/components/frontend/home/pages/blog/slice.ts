@@ -24,7 +24,12 @@ const blogSlice = createSlice({
             state.blogData = data;
         },
         getOneBlog(state, action) {
-            console.log('test', action.payload.id);
+            state.oneBlogData = state.blogData.filter((blog: any) => {
+                if (blog._id === action.payload) {
+                    return blog;
+                }
+            });
+            // console.log('test action.payload', action.payload);
 
         }
     }

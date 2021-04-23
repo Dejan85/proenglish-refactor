@@ -1,12 +1,14 @@
 import { put, call, takeLatest } from 'redux-saga/effects';
 import { setBlogData, fetchBlogData, getOneBlogAction, getOneBlog } from './slice';
 import { request } from '~/src/utils/requests';
+import { initialState } from './slice';
 
 
 function* fetchBlogDataGenerator() {
     try {
         const url: string = "blog/get";
         const response: object = yield call(request, url, "GET");
+
         yield put(setBlogData(response));
     } catch (error) {
         yield console.log('test', error);

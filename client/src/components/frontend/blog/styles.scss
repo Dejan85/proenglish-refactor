@@ -6,7 +6,7 @@
   justify-content: center;
 
   &__sub-container {
-    padding-top: 5rem;
+    padding: 5rem 2rem 0 2rem;
     flex-direction: column;
     justify-content: center;
     background-color: white;
@@ -16,5 +16,53 @@
     font-size: 3.5rem;
     font-family: Lato, sans-serif;
     font-weight: 800;
+  }
+
+  &__modal-container {
+    justify-content: space-between;
+    border-bottom: 2px solid $main-color;
+    margin-bottom: 5rem;
+  }
+
+  &__modal-image-container {
+    flex-direction: column;
+    padding: 0 5rem 5rem 0rem;
+  }
+
+  &__modal-content {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 5rem 5rem 0rem;
+  }
+
+  &__modal-date {
+    font-size: 1.6rem;
+    font-family: $poppins-sans-serif;
+    color: $main-color;
+  }
+
+  &__modal-heading {
+    font-size: 2.3rem;
+    font-family: $poppins-sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__modal-text {
+    font-size: 1.9rem;
+    font-family: $lato-sans-serif;
+    line-height: 1.5;
+  }
+
+  &__modal-link {
+    background: $main-color;
+    padding: 1rem 1.2rem;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: #fff;
+    font-family: $poppins-sans-serif;
   }
 }

@@ -1,0 +1,20 @@
+@import "../../styles/variables/fonts";
+@import "../../styles/variables/colors";
+
+.blog {
+  background-color: darken(white, 5%);
+  justify-content: center;
+
+  &__sub-container {
+    padding-top: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+  }
+
+  &__heading {
+    font-size: 3.5rem;
+    font-family: Lato, sans-serif;
+    font-weight: 800;
+  }
+}

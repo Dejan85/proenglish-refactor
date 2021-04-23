@@ -10,6 +10,7 @@ import {
   // Course,
   Exams,
   Pricelist,
+  Blog,
   Contact,
 } from "~/src/components/frontend";
 import { Footer } from "./deprecate";
@@ -35,8 +36,12 @@ const App = (): JSX.Element => {
           <Route exact path="/cenovnik">
             <Pricelist />
           </Route>
-          <Route path="/dogadjaji">{/* home */}</Route>
-          <Route path="/blog">{/* home */}</Route>
+          <Route exact path="/dogadjaji">
+            {/* home */}
+          </Route>
+          <Route exact path="/blog">
+            <Blog />
+          </Route>
           <Route path="/kontakt">
             <Contact />
           </Route>

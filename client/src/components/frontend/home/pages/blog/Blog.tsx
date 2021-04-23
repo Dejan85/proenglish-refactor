@@ -13,7 +13,9 @@ const Blog = (): JSX.Element => {
   useInjectReducer({ key: BLOG_SCOPE, reducer });
   useInjectSaga({ key: BLOG_SCOPE, saga });
   const dispatch = useDispatch();
-  const { blogData } = useSelector(getBlogData);
+  const { blogData } = useSelector((state): any =>
+    getBlogData(state, BLOG_SCOPE)
+  );
 
   const MemoizedUi = useMemo(() => <RenderUi blogData={blogData} />, [
     blogData,

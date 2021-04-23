@@ -11,6 +11,7 @@ import {
   Exams,
   Pricelist,
   Blog,
+  BlogPage,
   Contact,
 } from "~/src/components/frontend";
 import { Footer } from "./deprecate";
@@ -42,6 +43,7 @@ const App = (): JSX.Element => {
           <Route exact path="/blog">
             <Blog />
           </Route>
+          <Route exact path="/blog/:blogId" component={BlogPage} />
           <Route path="/kontakt">
             <Contact />
           </Route>

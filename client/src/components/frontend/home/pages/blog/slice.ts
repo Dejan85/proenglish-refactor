@@ -6,7 +6,8 @@ import { base64 } from '~/src/utils/base64';
 
 
 export const initialState: InitialStateType = {
-    blogData: []
+    blogData: [],
+    oneBlogData: null
 };
 
 const blogSlice = createSlice({
@@ -21,11 +22,16 @@ const blogSlice = createSlice({
                 };
             });
             state.blogData = data;
+        },
+        getOneBlog(state, action) {
+            console.log('test', action.payload.id);
+
         }
     }
 });
 
 export const fetchBlogData = createAction("get_blog_data");
+export const getOneBlogAction = createAction<Record<string, any>>("get_one_data");
 
-export const { setBlogData } = blogSlice.actions;
+export const { setBlogData, getOneBlog } = blogSlice.actions;
 export const { reducer } = blogSlice;

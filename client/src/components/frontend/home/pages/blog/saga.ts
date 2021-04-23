@@ -1,5 +1,5 @@
 import { put, call, takeLatest } from 'redux-saga/effects';
-import { setBlogData, fetchBlogData } from './slice';
+import { setBlogData, fetchBlogData, getOneBlogAction, getOneBlog } from './slice';
 import { request } from '~/src/utils/requests';
 
 
@@ -13,7 +13,18 @@ function* fetchBlogDataGenerator() {
     }
 };
 
+function* getOneBlogDataGenerator(action: any) {
+    try {
+        const id = action.payload;
+        yield put(getOneBlog(id));
+    } catch (error) {
+        yield console.log('test', error);
+    }
+};
+
+
 
 export default function* watchBlog() {
     yield takeLatest(fetchBlogData.type, fetchBlogDataGenerator);
+    yield takeLatest(getOneBlogAction.type, getOneBlogDataGenerator);
 }

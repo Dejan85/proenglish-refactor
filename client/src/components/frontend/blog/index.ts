@@ -1,3 +1,5 @@
 import Blog from './Blog';
+import BlogPage from './BlogPage';
 import "./styles.scss";
-export default Blog;
+
+export default { Blog, BlogPage };

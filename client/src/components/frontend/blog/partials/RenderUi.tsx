@@ -6,19 +6,25 @@ import {
   Line,
   Image,
   Text,
-  Link,
+  Link as LinkUi,
   Loading,
 } from "~/src/components/ui";
 import { RenderUiProps } from "../types";
 import uniqid from "uniqid";
+import { Link } from "react-router-dom";
 
 const BlogModal = (props: {
   blog:
-    | { photo: string; created: Date; title: string; description: string }
+    | {
+        photo: string;
+        created: Date;
+        title: string;
+        description: string;
+        _id: string;
+      }
     | any;
 }): JSX.Element => {
   const { blog } = props;
-  console.log("test", blog);
 
   return (
     <ContentContainer className="blog__modal-container">
@@ -28,6 +34,7 @@ const BlogModal = (props: {
           src={blog.photo}
           type="base64"
           className="blog__modal-image"
+          disablelazyLoad
         />
       </ContentContainer>
       <ContentContainer className="blog__modal-content">
@@ -41,9 +48,13 @@ const BlogModal = (props: {
           {blog.description.substr(0, 400)}...
         </Text>
         <ContentContainer>
-          <Link className="blog__modal-link" as="a" href="/">
+          <LinkUi
+            className="blog__modal-link"
+            as={Link}
+            to={`/blog/${blog._id}`}
+          >
             Procitaj sve
-          </Link>
+          </LinkUi>
         </ContentContainer>
       </ContentContainer>
     </ContentContainer>

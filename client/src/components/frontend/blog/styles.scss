@@ -64,5 +64,9 @@
     text-decoration: none;
     color: #fff;
     font-family: $poppins-sans-serif;
+
+    &:hover {
+      background: darken($main-color, 20%);
+    }
   }
 }

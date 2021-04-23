@@ -5,8 +5,12 @@ import { LabelProps } from "./types";
 const Wrapper: WrapperType = "label";
 
 const Label = (props: LabelProps) => {
-  const { children, className } = props;
-  return <Wrapper className={className}>{children}</Wrapper>;
+  const { children, className, htmlFor } = props;
+  return (
+    <Wrapper htmlFor={htmlFor} className={className}>
+      {children}
+    </Wrapper>
+  );
 };
 
 export default Label;

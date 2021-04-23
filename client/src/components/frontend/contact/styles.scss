@@ -2,6 +2,7 @@
 @import "../../styles/variables/colors";
 
 .contact {
+  min-height: 98rem;
   &__map {
     width: 50%;
     flex-direction: column;
@@ -37,7 +38,16 @@
   }
 
   &__input-holder {
+    position: relative;
     flex-direction: column;
+  }
+
+  &__form-error-validation {
+    position: absolute;
+    bottom: -3rem;
+    color: lighten(red, 20%);
+    font-size: 1.6rem;
+    font-weight: 600;
   }
 
   &__input-holder:not(:first-child) {

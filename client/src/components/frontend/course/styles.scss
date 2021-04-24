@@ -52,4 +52,58 @@
     color: $main-color;
     font-weight: 600;
   }
+
+  &__bottom-container {
+    background-image: url(./images/background2.jpg);
+    height: 80vh;
+  }
+
+  &__left-content {
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
+    background-color: white;
+    padding: 0 7rem;
+  }
+
+  &__diagram {
+    background-color: white;
+    width: 10%;
+    transition: 0.5s all;
+    background: linear-gradient(180deg, #ee9a20, #6d4408);
+  }
+
+  &__diagram-nav-container {
+    justify-content: space-between;
+    margin-top: 5rem;
+  }
+
+  &__diagram-nav-icon-container {
+    justify-content: center;
+    align-items: center;
+    background-color: $main-color;
+    padding: 2rem;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: 0.5s all;
+
+    &:hover {
+      background: darken($main-color, 20%);
+    }
+  }
+
+  &__diagram-nav-icon {
+    font-size: 2rem;
+    // padding: 1.2rem;
+    // height: 3rem;
+    // width: 3rem;
+    // cursor: pointer;
+    // // webkit-font-smoothing: antialiased;
+    // font-style: normal;
+    // font-variant: normal;
+    // text-rendering: auto;
+    // // line-height: 1;
+    // font-size: 2rem;
+  }
 }

@@ -33,6 +33,7 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
     left,
     right,
     backgroundImage,
+    onClick,
   } = props;
   const className: string = "content-container";
 
@@ -69,6 +70,7 @@ const ContentContainer = (props: ContentContainerProps): JSX.Element => {
 
   return (
     <WrapperTag
+      onClick={onClick}
       style={style}
       className={
         customClassName ? `${className} ${customClassName}` : className

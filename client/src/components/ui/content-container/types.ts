@@ -26,4 +26,5 @@ export interface ContentContainerProps {
     alignItems?: "stretch" | "center" | "flex-start" | "flex-end" | "baseline" | "initial" | "inherit";
     alignSelf?: "auto" | "stretch" | "center" | "flex-start" | "flex-end" | "baseline" | "initial" | "inherit";
     position?: "relative" | "absolute" | "fixed" | "static" | "sticky";
+    onClick?: any;
 }

@@ -5,7 +5,7 @@ import { request } from '~/src/utils/requests';
 
 function* fetchExamsDataGenerator() {
     try {
-        const url: string = "/exams/get";
+        const url: string = "exams/get";
         const response: object = yield call(request, url, "GET");
 
         yield put(setExamsData(response));

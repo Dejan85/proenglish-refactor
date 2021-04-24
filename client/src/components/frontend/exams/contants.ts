@@ -1,1 +1,1 @@
-export const EXAMS__SCOPE = "EXAMS__SCOPE"
+export const EXAMS_SCOPE = "EXAMS_SCOPE"

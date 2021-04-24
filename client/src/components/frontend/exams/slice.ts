@@ -1,5 +1,5 @@
 import { createAction, createSlice } from '@reduxjs/toolkit';
-import { EXAMS__SCOPE } from './contants';
+import { EXAMS_SCOPE } from './contants';
 import { InitialStateType } from './types';
 
 export const initialState: InitialStateType = {
@@ -7,11 +7,11 @@ export const initialState: InitialStateType = {
 };
 
 const examsSlice = createSlice({
-    name: EXAMS__SCOPE,
+    name: EXAMS_SCOPE,
     initialState,
     reducers: {
         setExamsData(state, action) {
-            state = action.payload;
+            state.examsData = action.payload.data;
         }
     }
 });

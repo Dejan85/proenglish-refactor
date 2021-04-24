@@ -29,8 +29,6 @@ const blogSlice = createSlice({
                     return blog;
                 }
             });
-            // console.log('test action.payload', action.payload);
-
         }
     }
 });

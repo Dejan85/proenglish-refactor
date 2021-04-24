@@ -10,7 +10,7 @@ import { EXAMS_SCOPE } from "./contants";
 import { fetchExamsData, reducer } from "./slice";
 import saga from "./saga";
 
-const Exams = () => {
+const Exams = (): JSX.Element => {
   useInjectReducer({ key: EXAMS_SCOPE, reducer });
   useInjectSaga({ key: EXAMS_SCOPE, saga });
   const dispatch = useDispatch();

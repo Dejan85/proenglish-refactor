@@ -32,7 +32,7 @@ const App = (): JSX.Element => {
             <Course />
           </Route>
           <Route exact path="/ispiti">
-            {/* <Exams /> */}
+            <Exams />
           </Route>
           <Route exact path="/cenovnik">
             <Pricelist />

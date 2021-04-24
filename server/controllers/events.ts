@@ -6,7 +6,7 @@ const getEvents = async (req: any, res: any) => {
         res.status(200).json(events);
 
     } catch (error) {
-        res.status(404).json({ error: error });
+        res.status(404).json({ error });
     }
 
 };

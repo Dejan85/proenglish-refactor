@@ -1,5 +1,5 @@
-const useTabs = (toefl, sat, ielts, gre, bocconi, gmat) => {
-    const tabs = (e) => {
+const useTabs = (toefl: any, sat: any, ielts: any, gre: any, bocconi: any, gmat: any) => {
+    const tabs = (e: any) => {
         if (e.target.getAttribute("data-name") === "toefl") {
             toefl.current.style.setProperty("--width", "82%");
             sat.current.style.setProperty("--width", "84%");

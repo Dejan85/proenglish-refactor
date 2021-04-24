@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./styles.scss";
-import { ContentContainer } from "~/src/components/ui";
-import parse from "html-react-parser";
+import { Loading } from "~/src/components/ui";
 import { useInjectReducer } from "~/src/utils/injectReducer";
 import { useInjectSaga } from "~/src/utils/injectSaga";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,6 +8,7 @@ import { getExamsData } from "./selectors";
 import { EXAMS_SCOPE } from "./contants";
 import { fetchExamsData, reducer } from "./slice";
 import saga from "./saga";
+import RenderUI from "./patials/RenderUI";
 
 const Exams = (): JSX.Element => {
   useInjectReducer({ key: EXAMS_SCOPE, reducer });
@@ -16,13 +16,15 @@ const Exams = (): JSX.Element => {
   const dispatch = useDispatch();
   const { examsData } = useSelector(getExamsData);
 
-  console.log("test", examsData);
-
   useEffect(() => {
     window.scrollTo(0, 0);
     dispatch(fetchExamsData());
   }, []);
-  return <ContentContainer>exams</ContentContainer>;
+  return examsData.length ? (
+    <RenderUI examsData={examsData} />
+  ) : (
+    <Loading height="100vh" />
+  );
 };
 
 export default Exams;

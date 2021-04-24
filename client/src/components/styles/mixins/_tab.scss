@@ -1,0 +1,50 @@
+@import "../variables/fonts";
+
+@mixin tab($color, $margin, $zindex, $top, $width) {
+  position: absolute;
+  width: $width;
+  height: 100%;
+  z-index: $zindex;
+  display: flex;
+  background: white;
+  transition: all 0.5s ease-in-out;
+
+  -webkit-box-shadow: 5px 0px 26px -16px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 0px 26px -16px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 0px 26px -16px rgba(0, 0, 0, 0.75);
+
+  img {
+    max-width: 100%;
+    width: auto;
+  }
+
+  &--tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: $color;
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+    right: -5rem;
+    padding-top: $top;
+    border-radius: 0px 10px 10px 0px;
+    -moz-border-radius: 0px 10px 10px 0px;
+    -webkit-border-radius: 0px 10px 10px 0px;
+    border: 0px solid #000000;
+    cursor: pointer;
+    user-select: none;
+
+    -webkit-box-shadow: 26px 0px 19px -20px rgba(89, 89, 89, 1);
+    -moz-box-shadow: 26px 0px 19px -20px rgba(89, 89, 89, 1);
+    box-shadow: 26px 0px 19px -20px rgba(89, 89, 89, 1);
+
+    //font
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    font-family: $lato-sans-serif;
+    text-orientation: upright;
+  }
+}

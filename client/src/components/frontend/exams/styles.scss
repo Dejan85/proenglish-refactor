@@ -1,0 +1,132 @@
+@import "../../styles/mixins/respond";
+@import "../../styles/mixins/tab";
+@import "../../styles/variables/colors";
+@import "../../styles/variables/fonts";
+
+.exams {
+  &__container {
+    width: 100%;
+    background-color: darken(white, 5%);
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0rem 2rem 0rem 2rem;
+  height: 100vh;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__list0 {
+    --width: 82%;
+
+    @include tab($main-color, 0rem, 10, 10rem, var(--width));
+
+    @include respond(600) {
+      @include tab($main-color, 0rem, 10, 10rem, var(--width));
+    }
+  }
+
+  &__list1 {
+    --width: 84%;
+
+    @include tab(#5cb432, 17rem, 9, 20rem, var(--width));
+
+    @include respond(600) {
+      @include tab(#5cb432, 17rem, 9, 20rem, var(--width));
+    }
+  }
+
+  &__list2 {
+    --width: 86%;
+    @include tab(#63b5f6, 34rem, 8, 30rem, var(--width));
+
+    @include respond(600) {
+      @include tab(#63b5f6, 34rem, 8, 30rem, var(--width));
+    }
+  }
+
+  &__list3 {
+    --width: 88%;
+
+    @include tab(#9475cd, 51rem, 7, 40rem, var(--width));
+
+    @include respond(600) {
+      @include tab(#9475cd, 51rem, 7, 40rem, var(--width));
+    }
+  }
+
+  &__list4 {
+    --width: 90%;
+
+    @include tab(#75b8cd, 71rem, 6, 50rem, var(--width));
+
+    @include respond(600) {
+      @include tab(#75b8cd, 51rem, 6, 50rem, var(--width));
+    }
+  }
+
+  &__list5 {
+    --width: 92%;
+
+    @include tab(#dcdf2b, 51rem, 5, 60rem, var(--width));
+
+    @include respond(600) {
+      @include tab(#dcdf2b, 51rem, 5, 60rem, var(--width));
+    }
+  }
+
+  &__body {
+    padding: 10rem 0;
+    overflow-y: auto;
+
+    a,
+    u {
+      color: $main-color !important;
+      text-decoration: none !important;
+      font-weight: bold !important;
+    }
+  }
+
+  &__h1,
+  &__h2,
+  &__h3,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 0rem 8rem 1.5rem;
+    font-family: $lato-sans-serif;
+    font-size: 2.6rem;
+  }
+
+  &__p,
+  p {
+    padding: 1.5rem 8rem 0;
+    font-size: 1.8rem;
+    font-family: $lato-sans-serif;
+  }
+
+  &__list,
+  ul {
+    padding: 0rem 10rem;
+  }
+
+  &__item,
+  li {
+    padding: 0.7rem;
+    font-size: 2rem;
+    font-family: $lato-sans-serif;
+  }
+}

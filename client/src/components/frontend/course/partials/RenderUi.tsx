@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import {
   ContentContainer,
   Link,
@@ -9,6 +9,9 @@ import {
 } from "~/src/components/ui";
 import { heading, text, textInSpan } from "../messages";
 import uniqid from "uniqid";
+import { courseData } from "../messages";
+import { useStringSplit } from "~/src/hooks/index";
+const initCourse = ["a1", "a2", "b1", "b2", "c1", "c2"];
 
 const counterHandlerDecrese = (
   setCounter: React.Dispatch<React.SetStateAction<number>>,
@@ -56,9 +59,46 @@ const counterHandlerIncrese = (
   }
 };
 
+// const contentHandler = (counter, stringSplit) => {
+//   return courseData.map((item: any) => {
+//     return (
+//       item[initCourse[counter]] &&
+//       item[initCourse[counter]].map((item: any, index: number) => {
+//         if (index === 0) {
+//           stringSplit(item[0]);
+//         }
+//         return (
+//           <Text as="p" className="course__text-paragraph" key={uniqid()}>
+//             {item[0]}
+//           </Text>
+//         );
+//       })
+//     );
+//   });
+// };
+
 const RenderUi = () => {
   const [counter, setCounter] = useState(0);
   const [diagram, setDiagram] = useState<number>(16.67);
+  const { stringSplit, firstWord, secondWord } = useStringSplit();
+
+  const contentUi = useMemo(() => {
+    return courseData.map((item: any) => {
+      return (
+        item[initCourse[counter]] &&
+        item[initCourse[counter]].map((item: any, index: number) => {
+          if (index === 0) {
+            stringSplit(item[0]);
+          }
+          return (
+            <Text as="p" className="course__text-paragraph" key={uniqid()}>
+              {item[0]}
+            </Text>
+          );
+        })
+      );
+    });
+  }, [counter]);
 
   return (
     <ContentContainer className="course">
@@ -108,6 +148,7 @@ const RenderUi = () => {
           height={`${diagram}%`}
           className="course__diagram"
         ></ContentContainer>
+        {contentUi}
       </ContentContainer>
     </ContentContainer>
   );

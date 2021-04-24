@@ -1,2 +1,3 @@
 import useLazyLoad from './useLazyLoad';
-export { useLazyLoad };
+import useStringSplit from './useStringSplit';
+export { useLazyLoad, useStringSplit };

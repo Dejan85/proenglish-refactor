@@ -1,7 +1,6 @@
 import { put, call, takeLatest } from 'redux-saga/effects';
 import { setBlogData, fetchBlogData, getOneBlogAction, getOneBlog } from './slice';
 import { request } from '~/src/utils/requests';
-import { initialState } from './slice';
 
 
 function* fetchBlogDataGenerator() {

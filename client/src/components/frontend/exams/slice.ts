@@ -10,7 +10,7 @@ const examsSlice = createSlice({
     name: EXAMS__SCOPE,
     initialState,
     reducers: {
-        getExamsData(state, action) {
+        setExamsData(state, action) {
             state = action.payload;
         }
     }
@@ -18,5 +18,5 @@ const examsSlice = createSlice({
 
 export const fetchExamsData = createAction("fetch_exams_data");
 
-export const { getExamsData } = examsSlice.actions;
+export const { setExamsData } = examsSlice.actions;
 export const { reducer } = examsSlice;

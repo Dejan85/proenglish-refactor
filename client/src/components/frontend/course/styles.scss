@@ -55,7 +55,7 @@
 
   &__bottom-container {
     background-image: url(./images/background2.jpg);
-    height: 80vh;
+    height: 95vh;
   }
 
   &__left-content {
@@ -67,10 +67,20 @@
   }
 
   &__diagram {
+    flex-direction: column;
+    align-items: center;
     background-color: white;
     width: 10%;
     transition: 0.5s all;
     background: linear-gradient(180deg, #ee9a20, #6d4408);
+    padding: 3rem 2rem;
+  }
+
+  &__diagram-text {
+    color: white;
+    font-size: 2rem;
+    font-family: $poppins-sans-serif;
+    text-align: center;
   }
 
   &__diagram-nav-container {
@@ -95,15 +105,14 @@
 
   &__diagram-nav-icon {
     font-size: 2rem;
-    // padding: 1.2rem;
-    // height: 3rem;
-    // width: 3rem;
-    // cursor: pointer;
-    // // webkit-font-smoothing: antialiased;
-    // font-style: normal;
-    // font-variant: normal;
-    // text-rendering: auto;
-    // // line-height: 1;
-    // font-size: 2rem;
+  }
+
+  &__paragraph-container {
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+
+  &__text-paragraph {
+    margin-top: 2rem;
   }
 }

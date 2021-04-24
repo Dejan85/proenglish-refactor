@@ -59,36 +59,22 @@ const counterHandlerIncrese = (
   }
 };
 
-// const contentHandler = (counter, stringSplit) => {
-//   return courseData.map((item: any) => {
-//     return (
-//       item[initCourse[counter]] &&
-//       item[initCourse[counter]].map((item: any, index: number) => {
-//         if (index === 0) {
-//           stringSplit(item[0]);
-//         }
-//         return (
-//           <Text as="p" className="course__text-paragraph" key={uniqid()}>
-//             {item[0]}
-//           </Text>
-//         );
-//       })
-//     );
-//   });
-// };
-
-const RenderUi = () => {
+const RenderUi = (): JSX.Element => {
   const [counter, setCounter] = useState(0);
   const [diagram, setDiagram] = useState<number>(16.67);
-  const { stringSplit, firstWord, secondWord } = useStringSplit();
+  const { stringSplit } = useStringSplit();
+  let diagramText: { firstWord: string; secondWord: string } = {
+    firstWord: "",
+    secondWord: "",
+  };
 
-  const contentUi = useMemo(() => {
+  const contentUi = useMemo((): JSX.Element[] => {
     return courseData.map((item: any) => {
       return (
         item[initCourse[counter]] &&
         item[initCourse[counter]].map((item: any, index: number) => {
           if (index === 0) {
-            stringSplit(item[0]);
+            diagramText = stringSplit(item[0]);
           }
           return (
             <Text as="p" className="course__text-paragraph" key={uniqid()}>
@@ -98,7 +84,7 @@ const RenderUi = () => {
         })
       );
     });
-  }, [counter]);
+  }, [counter, stringSplit]);
 
   return (
     <ContentContainer className="course">
@@ -143,12 +129,18 @@ const RenderUi = () => {
               <FontAwesomeIcon className="fas fa-chevron-right course__diagram-nav-icon" />
             </ContentContainer>
           </ContentContainer>
+          <ContentContainer className="course__paragraph-container">
+            {contentUi}
+          </ContentContainer>
         </ContentContainer>
-        <ContentContainer
-          height={`${diagram}%`}
-          className="course__diagram"
-        ></ContentContainer>
-        {contentUi}
+        <ContentContainer height={`${diagram}%`} className="course__diagram">
+          <Text className="course__diagram-text" as="p">
+            {diagramText.firstWord}
+          </Text>
+          <Text className="course__diagram-text" as="p">
+            {diagramText.secondWord}
+          </Text>
+        </ContentContainer>
       </ContentContainer>
     </ContentContainer>
   );

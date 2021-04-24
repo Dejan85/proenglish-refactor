@@ -2,9 +2,7 @@ import React, { useState, useMemo } from "react";
 import {
   ContentContainer,
   Link,
-  Heading,
   Text,
-  Button,
   FontAwesomeIcon,
 } from "~/src/components/ui";
 import { heading, text, textInSpan } from "../messages";

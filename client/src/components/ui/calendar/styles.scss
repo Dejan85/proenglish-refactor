@@ -4,9 +4,29 @@
 @import "./stylesheets/variables.scss";
 
 .react-datepicker {
-  // display: flex;
-  // flex-direction: column;
   width: 39rem;
+
+  &__input-container {
+    margin: 2rem 0;
+    input {
+      text-align: center;
+      width: 20rem;
+      border: 1px solid #d0d0d0;
+      border-radius: 20rem;
+
+      padding: 1rem 0;
+      cursor: pointer;
+
+      font-size: 1.5rem;
+      font-family: $lato-sans-serif;
+      font-weight: 400;
+      color: #666;
+    }
+
+    input:focus {
+      outline: none;
+    }
+  }
 
   &__navigation {
     background: none;
@@ -14,7 +34,7 @@
     text-align: center;
     cursor: pointer;
     position: absolute;
-    top: 10px;
+    top: 14px;
     width: 0;
     padding: 0;
     border: $datepicker__navigation-size solid transparent;
@@ -84,7 +104,8 @@
     }
   }
 
-  &__month-container {
+  &__navigation:focus {
+    outline: none;
   }
 
   &__header {

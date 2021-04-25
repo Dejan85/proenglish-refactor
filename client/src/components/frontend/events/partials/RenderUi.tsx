@@ -4,6 +4,7 @@ import {
   SubContainer,
   Heading,
   CalendarUi,
+  Text,
 } from "~/src/components/ui";
 
 const RenderUi = (): JSX.Element => {
@@ -14,7 +15,9 @@ const RenderUi = (): JSX.Element => {
           Budite u toku nasih i vasih desavanja.
         </Heading>
         <ContentContainer className="events__date-picker">
-          date picker
+          <Text className="events__date-picker-heading" as="p">
+            Izaberi daatum
+          </Text>
           <CalendarUi />
         </ContentContainer>
       </SubContainer>

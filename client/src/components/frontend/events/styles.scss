@@ -21,5 +21,13 @@
   &__date-picker {
     margin-top: 5rem;
     flex-direction: column;
+    height: 100vh;
+  }
+
+  &__date-picker-heading {
+    font-size: 1.6rem;
+    font-family: $lato-sans-serif;
+    font-weight: 300;
+    color: #999;
   }
 }

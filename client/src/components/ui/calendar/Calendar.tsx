@@ -18,6 +18,7 @@ const CalendarUi = (props: CalendarProps): JSX.Element => {
       onMonthChange={generateHighlhtDates}
       inline={inline}
       highlightDates={highlightDates}
+      selected={new Date()}
     />
   );
 };

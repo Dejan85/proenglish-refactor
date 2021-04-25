@@ -14,8 +14,6 @@ const className: string = "calendar-content";
 const Content = (props: ContentProps) => {
   const { title, date, description, icon } = props;
 
-  console.log("test", icon);
-
   return (
     <Wrapper className={className}>
       <Heading className="calendar-content__heading" as="h1">

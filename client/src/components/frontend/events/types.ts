@@ -5,3 +5,7 @@ export interface UiRenderProps {
     filteredDailyEventsData?: object[];
     eventsData?: object[];
 }
+
+export interface EventsContentProps {
+    events?: object[];
+}

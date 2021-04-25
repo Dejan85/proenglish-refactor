@@ -5,11 +5,12 @@ import {
   Heading,
   Text,
   Button,
-  CalendarInfo,
 } from "~/src/components/ui";
 import { CalendarOfEventsWidget } from "~/src/widgets/index";
 import { UiRenderProps } from "../types";
-import uniqid from "uniqid";
+import EventsContent from "./EventsContent";
+import { filterEventsForCurrentMonth } from "~/src/utils/timeAndDateHandlers";
+import { months } from "../constants";
 
 const RenderUi = (props: UiRenderProps): JSX.Element => {
   const {
@@ -20,6 +21,7 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
     eventsData,
   } = props;
   const [active, setActive] = useState<string>("daily");
+  const [searchedEvents, setSearchedEvents] = useState<object[]>();
 
   const { highlightDates } = filteredActiveEventsDates;
 
@@ -28,13 +30,17 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
 
     const searchedEvents =
       eventsData &&
-      eventsData.filter((item: any) => {
-        if (item.title.toLowerCase().includes(searchTerm)) {
-          return item;
-        }
-      });
+      eventsData
+        .filter((item: any) => {
+          if (item.title.toLowerCase().includes(searchTerm)) {
+            return item;
+          }
+        })
+        .sort((a: any, b: any): any => {
+          return a.date.slice(0, 2) - b.date.slice(0, 2);
+        });
 
-    console.log("test", searchedEvents);
+    setSearchedEvents(searchTerm ? searchedEvents : []);
   };
 
   const navHandler = (e: {
@@ -93,35 +99,21 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
           </Button>
         </ContentContainer>
 
-        <ContentContainer className="events__search">
-          <input
-            className="events__search-input"
-            onChange={onChange}
-            placeholder="Pretraga"
-          />
-        </ContentContainer>
+        {active === "daily" ? (
+          <ContentContainer className="events__search">
+            <input
+              className="events__search-input"
+              onChange={onChange}
+              placeholder="Pretraži sve događaje"
+            />
+          </ContentContainer>
+        ) : (
+          <></>
+        )}
         <Heading className="events__heading-h2" as="h2">
           Dešavanja koja su trenutno aktuelna
         </Heading>
-        <ContentContainer className="events__content">
-          {filteredDailyEventsData?.map((event: any) => {
-            const { date, title, description, time } = event;
-            return (
-              <CalendarInfo
-                className="events__content-calendar-info"
-                key={uniqid()}
-              >
-                <CalendarInfo.Card date={date} />
-                <CalendarInfo.Content
-                  date={`${date}. ${time}`}
-                  title={title}
-                  description={description}
-                  icon="far fa-clock"
-                />
-              </CalendarInfo>
-            );
-          })}
-        </ContentContainer>
+        <EventsContent events={searchedEvents || filteredDailyEventsData} />
       </SubContainer>
     </ContentContainer>
   );

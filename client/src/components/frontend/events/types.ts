@@ -3,4 +3,5 @@ export interface UiRenderProps {
     filteredActiveEventsDates: { highlightDates: Date[]; filteredEvents: object[]; };
     generateDailyEvents?: (value?: Date) => void;
     filteredDailyEventsData?: object[];
+    eventsData?: object[];
 }

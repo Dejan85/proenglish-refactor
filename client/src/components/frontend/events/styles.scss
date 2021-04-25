@@ -7,7 +7,9 @@
 
   &__sub-container {
     flex-direction: column;
+    justify-content: flex-start;
     background-color: white;
+    height: 100vh;
   }
 
   &__heading {
@@ -21,7 +23,6 @@
   &__date-picker {
     margin-top: 5rem;
     flex-direction: column;
-    height: 100vh;
   }
 
   &__date-picker-heading {
@@ -29,5 +30,63 @@
     font-family: $lato-sans-serif;
     font-weight: 300;
     color: #999;
+  }
+
+  &__search-input {
+    padding: 7px;
+    border: 1px solid #d0d0d0;
+    border-left: 1px solid #ee9a20;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__heading-h2 {
+    width: 100%;
+    margin-top: 2rem;
+    border: 1px solid #d0d0d0;
+    border-left: 1.5px solid $main-color;
+    padding: 0.8rem;
+
+    font-size: 2.2rem;
+    font-family: $poppins-sans-serif;
+    font-weight: 300;
+    color: #999;
+  }
+
+  &__nav {
+    padding: 2rem 0 3rem 0;
+  }
+
+  &__nav-button {
+    font-size: 1.5rem;
+    color: #666;
+    font-family: $poppins-sans-serif;
+    font-weight: 400;
+    padding: 1rem 2rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 20rem;
+    cursor: pointer;
+    background: none;
+    transition: all 0.5s;
+
+    &:hover {
+      border: 1px solid $main-color;
+      background: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:not(:first-child) {
+      margin-left: 1rem;
+    }
+  }
+
+  &__nav-button-active {
+    border: 1px solid $main-color;
+    color: $main-color;
   }
 }

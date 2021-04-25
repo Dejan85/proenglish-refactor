@@ -8,6 +8,7 @@ const Events = (): JSX.Element => {
     filteredDailyEventsData,
     generateHighlhtDates,
     generateDailyEvents,
+    eventsData,
   } = useEventsDataHook();
 
   useEffect(() => {
@@ -16,6 +17,7 @@ const Events = (): JSX.Element => {
 
   return (
     <RenderUi
+      eventsData={eventsData}
       generateHighlhtDates={generateHighlhtDates}
       filteredActiveEventsDates={filteredActiveEventsDates}
       generateDailyEvents={generateDailyEvents}

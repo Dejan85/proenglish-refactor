@@ -53,8 +53,10 @@ const useEventsDataHook = () => {
   }, [eventsData]);
 
   useEffect(() => {
-    dispatch(fetchEventsData());
-    generateHighlhtDates();
+    if (!eventsData.length) {
+      dispatch(fetchEventsData());
+      generateHighlhtDates();
+    }
   }, []);
 
   return {

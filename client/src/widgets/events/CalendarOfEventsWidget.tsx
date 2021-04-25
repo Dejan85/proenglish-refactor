@@ -3,19 +3,20 @@ import { ContentContainer, CalendarUi } from "~/src/components/ui";
 import { UiRenderProps } from "./types";
 
 const CalendarOfEventsWidget = (props: UiRenderProps): JSX.Element => {
-  const { generateHighlhtDates, generateDailyEvents, highlightDates } = props;
+  const {
+    generateHighlhtDates,
+    generateDailyEvents,
+    highlightDates,
+    inline,
+  } = props;
 
   return (
-    <>
-      <ContentContainer className="home-events__content-container">
-        <CalendarUi
-          highlightDates={highlightDates}
-          generateHighlhtDates={generateHighlhtDates}
-          generateDailyEvents={generateDailyEvents}
-          inline
-        />
-      </ContentContainer>
-    </>
+    <CalendarUi
+      highlightDates={highlightDates}
+      generateHighlhtDates={generateHighlhtDates}
+      generateDailyEvents={generateDailyEvents}
+      inline={inline}
+    />
   );
 };
 

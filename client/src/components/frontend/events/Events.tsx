@@ -10,12 +10,18 @@ const Events = (): JSX.Element => {
     generateDailyEvents,
   } = useEventsDataHook();
 
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  return <RenderUi />;
+  return (
+    <RenderUi
+      generateHighlhtDates={generateHighlhtDates}
+      filteredActiveEventsDates={filteredActiveEventsDates}
+      generateDailyEvents={generateDailyEvents}
+      filteredDailyEventsData={filteredDailyEventsData}
+    />
+  );
 };
 
 export default Events;

@@ -6,8 +6,19 @@ import {
   CalendarUi,
   Text,
 } from "~/src/components/ui";
+import { CalendarOfEventsWidget } from "~/src/widgets/index";
+import { UiRenderProps } from "../types";
 
-const RenderUi = (): JSX.Element => {
+const RenderUi = (props: UiRenderProps): JSX.Element => {
+  const {
+    generateHighlhtDates,
+    filteredActiveEventsDates,
+    generateDailyEvents,
+    filteredDailyEventsData,
+  } = props;
+
+  const { highlightDates } = filteredActiveEventsDates;
+
   return (
     <ContentContainer className="events">
       <SubContainer className="events__sub-container">
@@ -18,7 +29,12 @@ const RenderUi = (): JSX.Element => {
           <Text className="events__date-picker-heading" as="p">
             Izaberi daatum
           </Text>
-          <CalendarUi />
+          {/* <CalendarUi /> */}
+          <CalendarOfEventsWidget
+            highlightDates={highlightDates}
+            generateHighlhtDates={generateHighlhtDates}
+            generateDailyEvents={generateDailyEvents}
+          />
         </ContentContainer>
       </SubContainer>
     </ContentContainer>

@@ -17,12 +17,14 @@ const CalendarOfEvents = (props: UiRenderProps): JSX.Element => {
       <Heading className="home-events__calendar-heading" as="h2">
         Kalendar događaja
       </Heading>
-      <CalendarOfEventsWidget
-        highlightDates={highlightDates}
-        generateHighlhtDates={generateHighlhtDates}
-        generateDailyEvents={generateDailyEvents}
-        inline
-      />
+      <ContentContainer className="home-events__content-container">
+        <CalendarOfEventsWidget
+          highlightDates={highlightDates}
+          generateHighlhtDates={generateHighlhtDates}
+          generateDailyEvents={generateDailyEvents}
+          inline
+        />
+      </ContentContainer>
     </ContentContainer>
   );
 };

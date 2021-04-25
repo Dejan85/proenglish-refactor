@@ -10,6 +10,7 @@ import {
   // Course,
   Exams,
   Pricelist,
+  Events,
   Blog,
   BlogPage,
   Contact,
@@ -38,7 +39,7 @@ const App = (): JSX.Element => {
             <Pricelist />
           </Route>
           <Route exact path="/dogadjaji">
-            {/* home */}
+            <Events />
           </Route>
           <Route exact path="/blog">
             <Blog />

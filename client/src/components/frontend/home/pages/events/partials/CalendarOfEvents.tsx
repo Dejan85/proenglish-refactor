@@ -21,6 +21,7 @@ const CalendarOfEvents = (props: UiRenderProps): JSX.Element => {
           highlightDates={highlightDates}
           generateHighlhtDates={generateHighlhtDates}
           generateDailyEvents={generateDailyEvents}
+          inline
         />
       </ContentContainer>
     </ContentContainer>

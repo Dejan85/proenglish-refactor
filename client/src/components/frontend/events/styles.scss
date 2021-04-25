@@ -1,0 +1,25 @@
+@import "../../styles/variables/fonts";
+@import "../../styles/variables/colors";
+
+.events {
+  justify-content: center;
+  background-color: darken(white, 5%);
+
+  &__sub-container {
+    flex-direction: column;
+    background-color: white;
+  }
+
+  &__heading {
+    margin-top: 8rem;
+    font-size: 3.4rem;
+    font-family: $poppins-sans-serif;
+    font-weight: 300;
+    color: #999;
+  }
+
+  &__date-picker {
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+}

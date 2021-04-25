@@ -3,7 +3,7 @@ export interface ButtonProps {
     value?: string;
     name?: string;
     children?: JSX.Element | JSX.Element[] | string;
-    onClick?: () => {};
+    onClick?: any;
     className?: string;
     width?: string;
     height?: string;

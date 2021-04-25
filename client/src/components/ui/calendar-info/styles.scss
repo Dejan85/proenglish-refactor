@@ -120,4 +120,40 @@
       }
     }
   }
+
+  .calendar-content {
+    margin-left: 2rem;
+
+    &__heading {
+      font-family: $poppins-sans-serif;
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: #1a1a24;
+      line-height: 1;
+    }
+
+    &__date-container {
+      display: flex;
+      align-items: baseline;
+      margin: 1rem 0;
+    }
+
+    &__date {
+      color: #adadad;
+      font-size: 1.3rem;
+      font-family: $poppins-sans-serif;
+      margin-left: 1rem;
+    }
+
+    &__icon {
+      color: $main-color;
+      font-size: 1.3rem;
+    }
+
+    &__description {
+      font-family: $poppins-sans-serif;
+      color: #666;
+      font-size: 1.8rem;
+    }
+  }
 }

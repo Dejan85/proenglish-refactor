@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: flex-start;
     background-color: white;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   &__heading {
@@ -85,8 +85,18 @@
     }
   }
 
+  &__content-calendar-info {
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+  }
+
   &__nav-button-active {
     border: 1px solid $main-color;
     color: $main-color;
+  }
+
+  &__content {
+    flex-direction: column;
+    margin-top: 5rem;
   }
 }

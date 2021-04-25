@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ContentContainer,
   SubContainer,
   Heading,
-  CalendarUi,
   Text,
   Button,
+  CalendarInfo,
 } from "~/src/components/ui";
 import { CalendarOfEventsWidget } from "~/src/widgets/index";
 import { UiRenderProps } from "../types";
+import uniqid from "uniqid";
 
 const RenderUi = (props: UiRenderProps): JSX.Element => {
   const {
@@ -18,12 +19,11 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
     filteredDailyEventsData,
     eventsData,
   } = props;
+  const [active, setActive] = useState<string>("daily");
 
   const { highlightDates } = filteredActiveEventsDates;
 
-  console.log("test", filteredDailyEventsData);
-
-  const onChange = (e) => {
+  const onChange = (e: { target: { value: string } }) => {
     const searchTerm = e.target.value.toLowerCase();
 
     const searchedEvents =
@@ -35,8 +35,12 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
       });
 
     console.log("test", searchedEvents);
+  };
 
-    // setTest(!searchTerm ? null : x);
+  const navHandler = (e: {
+    target: { name: React.SetStateAction<string> };
+  }) => {
+    setActive(e.target.name);
   };
 
   return (
@@ -57,13 +61,34 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
         </ContentContainer>
 
         <ContentContainer className="events__nav">
-          <Button className="events__nav-button" type="button">
+          <Button
+            onClick={navHandler}
+            className={`events__nav-button ${
+              active === "daily" && "events__nav-button-active"
+            }`}
+            type="button"
+            name="daily"
+          >
             Dnevni
           </Button>
-          <Button className="events__nav-button" type="button">
+          <Button
+            onClick={navHandler}
+            className={`events__nav-button ${
+              active === "weekly" && "events__nav-button-active"
+            }`}
+            type="button"
+            name="weekly"
+          >
             Nedeljni
           </Button>
-          <Button className="events__nav-button" type="button">
+          <Button
+            onClick={navHandler}
+            className={`events__nav-button ${
+              active === "monthly" && "events__nav-button-active"
+            }`}
+            type="button"
+            name="monthly"
+          >
             Mesečni
           </Button>
         </ContentContainer>
@@ -78,6 +103,25 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
         <Heading className="events__heading-h2" as="h2">
           Dešavanja koja su trenutno aktuelna
         </Heading>
+        <ContentContainer className="events__content">
+          {filteredDailyEventsData?.map((event: any) => {
+            const { date, title, description, time } = event;
+            return (
+              <CalendarInfo
+                className="events__content-calendar-info"
+                key={uniqid()}
+              >
+                <CalendarInfo.Card date={date} />
+                <CalendarInfo.Content
+                  date={`${date}. ${time}`}
+                  title={title}
+                  description={description}
+                  icon="far fa-clock"
+                />
+              </CalendarInfo>
+            );
+          })}
+        </ContentContainer>
       </SubContainer>
     </ContentContainer>
   );

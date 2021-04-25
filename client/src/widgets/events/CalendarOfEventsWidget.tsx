@@ -1,5 +1,5 @@
 import React from "react";
-import { ContentContainer, CalendarUi } from "~/src/components/ui";
+import { CalendarUi } from "~/src/components/ui";
 import { UiRenderProps } from "./types";
 
 const CalendarOfEventsWidget = (props: UiRenderProps): JSX.Element => {

@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { ContentContainer, CalendarInfo, Text } from "~/src/components/ui";
 import uniqid from "uniqid";
 import { MonthlyEventsProps } from "../types";
 
 const MonthlyEvents = (props: MonthlyEventsProps) => {
-  const { filteredActiveEventsDates } = props;
-  console.log("test", filteredActiveEventsDates);
+  let [currentMonth, setCurrentMonth] = useState<Date>(new Date());
+
+  const {
+    filteredActiveEventsDates: { filteredEvents, highlightDates },
+  } = props;
+  console.log("test", filteredEvents);
 
   return (
-    <ContentContainer className="events__monthly-content">xad</ContentContainer>
+    <ContentContainer className="events__monthly-content"></ContentContainer>
   );
 };
 

@@ -11,5 +11,5 @@ export interface DailyEventsProps {
 }
 
 export interface MonthlyEventsProps {
-    filteredActiveEventsDates: object[];
+    filteredActiveEventsDates: { highlightDates: Date[]; filteredEvents: object[]; };
 }

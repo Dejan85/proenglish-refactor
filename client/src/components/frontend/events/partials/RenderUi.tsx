@@ -114,20 +114,19 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
         <Heading className="events__heading-h2" as="h2">
           Dešavanja koja su trenutno aktuelna
         </Heading>
-        {active === "daily" ? (
-          <DailyEventsProps
-            events={searchedEvents || filteredDailyEventsData}
-          />
-        ) : (
-          <></>
-        )}
-        {active === "monthly" ? (
-          <MonthlyEvents
-            filteredActiveEventsDates={filteredActiveEventsDates}
-          />
-        ) : (
-          <></>
-        )}
+        <>
+          {active === "daily" && (
+            <DailyEventsProps
+              events={searchedEvents || filteredDailyEventsData}
+            />
+          )}
+          {active === "monthly" &&
+            filteredActiveEventsDates?.filteredEvents?.length && (
+              <MonthlyEvents
+                filteredActiveEventsDates={filteredActiveEventsDates}
+              />
+            )}
+        </>
       </SubContainer>
     </ContentContainer>
   );

@@ -1,5 +1,42 @@
+@import "../../components/styles/variables/colors";
+@import "../../components/styles/variables/fonts";
+
 .scheduler {
   width: 100%;
   flex-wrap: wrap;
-  outline: 1px solid green;
+
+  &__weekdays {
+    background-color: #00a2a6;
+  }
+
+  &__weekdays-day {
+    padding: 1.6rem 0;
+    // flex: 1 1;
+    width: 14.28%;
+    border-left: 0.1px solid #00acb0;
+
+    font-size: 1.6rem;
+    font-family: $poppins-sans-serif;
+    color: white;
+    text-align: center;
+  }
+
+  &__calendar {
+    flex-wrap: wrap;
+  }
+
+  &__day-square {
+    flex-direction: column;
+    width: 14.28%;
+    height: 30rem;
+    border: 0.1px solid #eee;
+    overflow-y: auto;
+  }
+
+  &__day-square-text {
+    padding: 2rem 0 0 2rem;
+    font-size: 1.6rem;
+    font-family: $poppins-sans-serif;
+    color: #b6b6b6;
+  }
 }

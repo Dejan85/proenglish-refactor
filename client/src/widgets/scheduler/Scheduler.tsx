@@ -4,6 +4,7 @@ import { ContentContainer, Text } from "~/src/components/ui";
 import { weeksDays } from "./constants";
 import uniqid from "uniqid";
 import { SchedulerProps } from "./types";
+import DaySquare from "./DaySquare";
 
 let nav: number = 0;
 const date: Date = new Date();
@@ -23,13 +24,25 @@ const dateString: string = firstDayOfMonth.toLocaleDateString("en-us", {
 
 const paddingDays = weeksDays.indexOf(dateString.split(",")[0]);
 
-console.log("test", paddingDays);
+const test: JSX.Element[] = [];
 
-const Wd = weeksDays.map((day) => (
-  <Text className="scheduler__weekdays-day" key={uniqid()} as="p">
-    {day}
-  </Text>
-));
+for (let i = 1; i <= paddingDays + daysInMonth; i++) {
+  if (i > paddingDays) {
+    test.push(<DaySquare key={uniqid()} day={i - paddingDays} />);
+  } else {
+    test.push(
+      <DaySquare key={uniqid()} className="scheduler__day-square-padding" />
+    );
+  }
+}
+
+const Wd = weeksDays.map(
+  (day): JSX.Element => (
+    <Text className="scheduler__weekdays-day" key={uniqid()} as="p">
+      {day}
+    </Text>
+  )
+);
 
 const Scheduler = (props: SchedulerProps) => {
   const { events } = props;
@@ -37,9 +50,10 @@ const Scheduler = (props: SchedulerProps) => {
 
   return (
     <ContentContainer className="scheduler">
-      <ContentContainer className="scheduler__header"></ContentContainer>
       <ContentContainer className="scheduler__weekdays">{Wd}</ContentContainer>
-      <ContentContainer className="scheduler__calendar"></ContentContainer>
+      <ContentContainer className="scheduler__calendar">
+        {...test}
+      </ContentContainer>
     </ContentContainer>
   );
 };

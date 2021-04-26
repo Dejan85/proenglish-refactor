@@ -6,6 +6,10 @@ export interface UiRenderProps {
     eventsData?: object[];
 }
 
-export interface EventsContentProps {
+export interface DailyEventsProps {
     events?: object[];
+}
+
+export interface MonthlyEventsProps {
+    filteredActiveEventsDates: object[];
 }

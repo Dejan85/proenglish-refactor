@@ -1,19 +1,19 @@
 import React from "react";
 import { ContentContainer, CalendarInfo, Text } from "~/src/components/ui";
 import uniqid from "uniqid";
-import { EventsContentProps } from "../types";
+import { DailyEventsProps } from "../types";
 
-const EventsContent = (props: EventsContentProps): JSX.Element => {
+const DailyEvents = (props: DailyEventsProps): JSX.Element => {
   const { events } = props;
 
   return (
-    <ContentContainer className="events__content">
+    <ContentContainer className="events__daily-events">
       {events?.length ? (
         events?.map((event: any) => {
           const { date, title, description, time } = event;
           return (
             <CalendarInfo
-              className="events__content-calendar-info"
+              className="events__daily-events-calendar-info"
               key={uniqid()}
             >
               <CalendarInfo.Card date={date} />
@@ -33,4 +33,4 @@ const EventsContent = (props: EventsContentProps): JSX.Element => {
   );
 };
 
-export default EventsContent;
+export default DailyEvents;

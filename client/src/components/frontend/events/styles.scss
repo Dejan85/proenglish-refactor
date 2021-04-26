@@ -85,7 +85,7 @@
     }
   }
 
-  &__content-calendar-info {
+  &__daily-events-calendar-info {
     justify-content: flex-start;
     margin-bottom: 2rem;
   }
@@ -95,8 +95,14 @@
     color: $main-color;
   }
 
-  &__content {
+  &__daily-events {
     flex-direction: column;
     margin: 5rem 0;
+  }
+
+  &__monthly-content {
+    margin: 5rem 0;
+    outline: 1px solid red;
+    height: 20rem;
   }
 }

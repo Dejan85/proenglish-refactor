@@ -8,7 +8,8 @@ import {
 } from "~/src/components/ui";
 import { CalendarOfEventsWidget } from "~/src/widgets/index";
 import { UiRenderProps } from "../types";
-import EventsContent from "./EventsContent";
+import DailyEventsProps from "./DailyEvents";
+import MonthlyEvents from "./MonthlyEvents";
 import { filterEventsForCurrentMonth } from "~/src/utils/timeAndDateHandlers";
 import { months } from "../constants";
 
@@ -20,7 +21,7 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
     filteredDailyEventsData,
     eventsData,
   } = props;
-  const [active, setActive] = useState<string>("daily");
+  const [active, setActive] = useState<string>("monthly");
   const [searchedEvents, setSearchedEvents] = useState<object[]>();
 
   const { highlightDates } = filteredActiveEventsDates;
@@ -113,7 +114,20 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
         <Heading className="events__heading-h2" as="h2">
           Dešavanja koja su trenutno aktuelna
         </Heading>
-        <EventsContent events={searchedEvents || filteredDailyEventsData} />
+        {active === "daily" ? (
+          <DailyEventsProps
+            events={searchedEvents || filteredDailyEventsData}
+          />
+        ) : (
+          <></>
+        )}
+        {active === "monthly" ? (
+          <MonthlyEvents
+            filteredActiveEventsDates={filteredActiveEventsDates}
+          />
+        ) : (
+          <></>
+        )}
       </SubContainer>
     </ContentContainer>
   );

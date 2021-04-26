@@ -1,2 +1,3 @@
 import CalendarOfEventsWidget from './events/CalendarOfEventsWidget';
-export { CalendarOfEventsWidget };
+import Scheduler from './scheduler/Scheduler';
+export { CalendarOfEventsWidget, Scheduler };

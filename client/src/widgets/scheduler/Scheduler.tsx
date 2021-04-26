@@ -30,8 +30,9 @@ const Scheduler = (props: SchedulerProps) => {
   for (let i = 1; i <= paddingDays + daysInMonth; i++) {
     if (i > paddingDays) {
       const sortedEvents = events?.filter((event: any) => {
-        const date = event.date.slice(0, 2);
-        if (i === Number(date)) {
+        const date: number = Number(event.date.slice(0, 2));
+        const day: number = i - paddingDays;
+        if (day === date) {
           return event;
         }
       });

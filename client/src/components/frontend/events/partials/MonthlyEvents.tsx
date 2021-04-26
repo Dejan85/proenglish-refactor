@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { ContentContainer, CalendarInfo, Text } from "~/src/components/ui";
-import uniqid from "uniqid";
 import { MonthlyEventsProps } from "../types";
 import { Scheduler } from "~/src/widgets/index";
 

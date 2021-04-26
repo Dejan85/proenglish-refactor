@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./styles.scss";
 import { ContentContainer, Text } from "~/src/components/ui";
 import { weeksDays } from "./constants";
@@ -8,10 +8,8 @@ import DaySquare from "./DaySquare";
 
 const Scheduler = (props: SchedulerProps) => {
   const { events, currentMonth } = props;
-  console.log("test", currentMonth);
 
   const date: Date = currentMonth ? currentMonth : new Date();
-  const day: number = date.getDate();
   const month: number = date.getMonth();
   const year: number = date.getFullYear();
 
@@ -25,15 +23,27 @@ const Scheduler = (props: SchedulerProps) => {
     day: "numeric",
   });
 
-  const paddingDays = weeksDays.indexOf(dateString.split(",")[0]);
+  const paddingDays: number = weeksDays.indexOf(dateString.split(",")[0]);
 
-  const test: JSX.Element[] = [];
+  const renderDays: JSX.Element[] = [];
 
   for (let i = 1; i <= paddingDays + daysInMonth; i++) {
     if (i > paddingDays) {
-      test.push(<DaySquare key={uniqid()} day={i - paddingDays} />);
+      const sortedEvents = events?.filter((event: any) => {
+        const date = event.date.slice(0, 2);
+        if (i === Number(date)) {
+          return event;
+        }
+      });
+      renderDays.push(
+        <DaySquare
+          key={uniqid()}
+          day={i - paddingDays}
+          sortedEvents={sortedEvents}
+        />
+      );
     } else {
-      test.push(
+      renderDays.push(
         <DaySquare key={uniqid()} className="scheduler__day-square-padding" />
       );
     }
@@ -51,10 +61,10 @@ const Scheduler = (props: SchedulerProps) => {
     <ContentContainer className="scheduler">
       <ContentContainer className="scheduler__weekdays">{Wd}</ContentContainer>
       <ContentContainer className="scheduler__calendar">
-        {...test}
+        {...renderDays}
       </ContentContainer>
     </ContentContainer>
   );
 };
 
-export default Scheduler;
+export default memo(Scheduler);

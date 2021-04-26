@@ -19,7 +19,7 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
     filteredDailyEventsData,
     eventsData,
   } = props;
-  const [active, setActive] = useState<string>("monthly");
+  const [active, setActive] = useState<string>("daily");
   const [searchedEvents, setSearchedEvents] = useState<object[]>();
   const [currentMonth, setCurrentMonth] = useState(new Date());
 

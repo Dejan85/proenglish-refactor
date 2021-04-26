@@ -15,6 +15,7 @@ const CalendarUi = (props: CalendarProps): JSX.Element => {
     generateHighlhtDates,
     generateDailyEvents,
     inline,
+    setCurrentMonth,
   } = props;
 
   const onChange = (date: Date) => {
@@ -22,10 +23,22 @@ const CalendarUi = (props: CalendarProps): JSX.Element => {
     setStartDate(date);
   };
 
+  const onMonthChange = (date: Date) => {
+    setStartDate(date);
+
+    if (generateHighlhtDates) {
+      generateHighlhtDates(date);
+    }
+
+    if (setCurrentMonth) {
+      setCurrentMonth(date);
+    }
+  };
+
   return (
     <DatePicker
       onChange={onChange}
-      onMonthChange={generateHighlhtDates}
+      onMonthChange={onMonthChange}
       inline={inline}
       highlightDates={highlightDates}
       selected={startDate}

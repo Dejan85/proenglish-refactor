@@ -10,8 +10,6 @@ import { CalendarOfEventsWidget } from "~/src/widgets/index";
 import { UiRenderProps } from "../types";
 import DailyEventsProps from "./DailyEvents";
 import MonthlyEvents from "./MonthlyEvents";
-import { filterEventsForCurrentMonth } from "~/src/utils/timeAndDateHandlers";
-import { months } from "../constants";
 
 const RenderUi = (props: UiRenderProps): JSX.Element => {
   const {
@@ -23,6 +21,7 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
   } = props;
   const [active, setActive] = useState<string>("monthly");
   const [searchedEvents, setSearchedEvents] = useState<object[]>();
+  const [currentMonth, setCurrentMonth] = useState(new Date());
 
   const { highlightDates } = filteredActiveEventsDates;
 
@@ -64,6 +63,7 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
             highlightDates={highlightDates}
             generateHighlhtDates={generateHighlhtDates}
             generateDailyEvents={generateDailyEvents}
+            setCurrentMonth={setCurrentMonth}
           />
         </ContentContainer>
 
@@ -124,6 +124,7 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
             filteredActiveEventsDates?.filteredEvents?.length && (
               <MonthlyEvents
                 filteredActiveEventsDates={filteredActiveEventsDates}
+                currentMonth={currentMonth}
               />
             )}
         </>

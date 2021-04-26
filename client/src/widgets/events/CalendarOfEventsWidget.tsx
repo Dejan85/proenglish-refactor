@@ -8,6 +8,7 @@ const CalendarOfEventsWidget = (props: UiRenderProps): JSX.Element => {
     generateDailyEvents,
     highlightDates,
     inline,
+    setCurrentMonth,
   } = props;
 
   return (
@@ -16,6 +17,7 @@ const CalendarOfEventsWidget = (props: UiRenderProps): JSX.Element => {
       generateHighlhtDates={generateHighlhtDates}
       generateDailyEvents={generateDailyEvents}
       inline={inline}
+      setCurrentMonth={setCurrentMonth}
     />
   );
 };

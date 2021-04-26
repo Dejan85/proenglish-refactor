@@ -6,47 +6,46 @@ import uniqid from "uniqid";
 import { SchedulerProps } from "./types";
 import DaySquare from "./DaySquare";
 
-let nav: number = 0;
-const date: Date = new Date();
-const day: number = date.getDate();
-const month: number = date.getMonth();
-const year: number = date.getFullYear();
-
-const firstDayOfMonth: Date = new Date(year, month, 1);
-const daysInMonth: number = new Date(year, month + 1, 0).getDate();
-
-const dateString: string = firstDayOfMonth.toLocaleDateString("en-us", {
-  weekday: "long",
-  year: "numeric",
-  month: "numeric",
-  day: "numeric",
-});
-
-const paddingDays = weeksDays.indexOf(dateString.split(",")[0]);
-
-const test: JSX.Element[] = [];
-
-for (let i = 1; i <= paddingDays + daysInMonth; i++) {
-  if (i > paddingDays) {
-    test.push(<DaySquare key={uniqid()} day={i - paddingDays} />);
-  } else {
-    test.push(
-      <DaySquare key={uniqid()} className="scheduler__day-square-padding" />
-    );
-  }
-}
-
-const Wd = weeksDays.map(
-  (day): JSX.Element => (
-    <Text className="scheduler__weekdays-day" key={uniqid()} as="p">
-      {day}
-    </Text>
-  )
-);
-
 const Scheduler = (props: SchedulerProps) => {
-  const { events } = props;
-  console.log("test", events);
+  const { events, currentMonth } = props;
+  console.log("test", currentMonth);
+
+  const date: Date = currentMonth ? currentMonth : new Date();
+  const day: number = date.getDate();
+  const month: number = date.getMonth();
+  const year: number = date.getFullYear();
+
+  const firstDayOfMonth: Date = new Date(year, month, 1);
+  const daysInMonth: number = new Date(year, month + 1, 0).getDate();
+
+  const dateString: string = firstDayOfMonth.toLocaleDateString("en-GB", {
+    weekday: "long",
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  });
+
+  const paddingDays = weeksDays.indexOf(dateString.split(",")[0]);
+
+  const test: JSX.Element[] = [];
+
+  for (let i = 1; i <= paddingDays + daysInMonth; i++) {
+    if (i > paddingDays) {
+      test.push(<DaySquare key={uniqid()} day={i - paddingDays} />);
+    } else {
+      test.push(
+        <DaySquare key={uniqid()} className="scheduler__day-square-padding" />
+      );
+    }
+  }
+
+  const Wd = weeksDays.map(
+    (day): JSX.Element => (
+      <Text className="scheduler__weekdays-day" key={uniqid()} as="p">
+        {day}
+      </Text>
+    )
+  );
 
   return (
     <ContentContainer className="scheduler">

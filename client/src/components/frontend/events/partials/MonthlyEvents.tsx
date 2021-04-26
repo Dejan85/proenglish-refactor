@@ -6,13 +6,13 @@ import { Scheduler } from "~/src/widgets/index";
 
 const MonthlyEvents = (props: MonthlyEventsProps) => {
   const {
-    filteredActiveEventsDates: { filteredEvents, highlightDates },
+    filteredActiveEventsDates: { filteredEvents },
+    currentMonth,
   } = props;
-  //   console.log("test", filteredEvents);
 
   return (
     <ContentContainer className="events__monthly-content">
-      <Scheduler events={filteredEvents} />
+      <Scheduler events={filteredEvents} currentMonth={currentMonth} />
     </ContentContainer>
   );
 };

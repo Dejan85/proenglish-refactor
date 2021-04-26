@@ -26,7 +26,7 @@ const useEventsDataHook = () => {
     filteredDailyEventsData,
   } = useSelector(getEventsState);
 
-  const generateHighlhtDates = (value = new Date()): void => {
+  const generateHighlhtDates = (value: Date): void => {
     const filteredEvents = filterEventsForCurrentMonth(eventsData, value);
     const fullYear: number = value.getFullYear();
     const month: number = value.getMonth();
@@ -49,13 +49,13 @@ const useEventsDataHook = () => {
   }, [filteredActiveEventsDates]);
 
   useEffect(() => {
-    generateHighlhtDates();
+    generateHighlhtDates(new Date());
   }, [eventsData]);
 
   useEffect(() => {
     if (!eventsData.length) {
       dispatch(fetchEventsData());
-      generateHighlhtDates();
+      generateHighlhtDates(new Date());
     }
   }, []);
 

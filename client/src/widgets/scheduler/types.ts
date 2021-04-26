@@ -4,7 +4,7 @@ export interface SchedulerProps {
 }
 
 export interface DaySquareProps {
-    day?: number;
+    day?: string;
     sortedEvents?: object[];
     className?: string;
 }

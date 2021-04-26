@@ -38,7 +38,7 @@ const Scheduler = (props: SchedulerProps) => {
       renderDays.push(
         <DaySquare
           key={uniqid()}
-          day={i - paddingDays}
+          day={String(i - paddingDays)}
           sortedEvents={sortedEvents}
         />
       );

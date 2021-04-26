@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import DatePicker from "react-datepicker";
+import DatePicker, { registerLocale } from "react-datepicker";
+import enGB from "date-fns/locale/en-GB";
 // import "react-datepicker/dist/react-datepicker.css";
 
 import { CalendarProps } from "./types";
 
 const CalendarUi = (props: CalendarProps): JSX.Element => {
   const [startDate, setStartDate] = useState(new Date());
+
+  registerLocale("en-GB", enGB);
 
   const {
     highlightDates,
@@ -27,6 +30,7 @@ const CalendarUi = (props: CalendarProps): JSX.Element => {
       highlightDates={highlightDates}
       selected={startDate}
       closeOnScroll={true}
+      locale={"en-GB"}
     />
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ContentContainer } from "~/src/components/ui";
 import { MonthlyEventsProps } from "../types";
 import { Scheduler } from "~/src/widgets/index";

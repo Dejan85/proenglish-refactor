@@ -27,7 +27,9 @@ const DailyEvents = (props: DailyEventsProps): JSX.Element => {
           );
         })
       ) : (
-        <Text as="p">Nema događaja.</Text>
+        <Text className="events__daily-events-no-events-text" as="p">
+          Nema događaja.
+        </Text>
       )}
     </ContentContainer>
   );

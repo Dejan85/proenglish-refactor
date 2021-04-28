@@ -1,10 +1,15 @@
 @import "../../../../styles/variables/fonts";
 @import "../../../../styles/variables/colors";
+@import "../../../../styles/mixins/respond";
 
 .home-experience {
   margin-top: 10rem;
   height: 80vh;
   justify-content: center;
+
+  @include respond(900) {
+    height: 57vh;
+  }
 
   &__container {
     flex-direction: column;

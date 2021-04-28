@@ -2,9 +2,15 @@
 @import "../../styles/variables/fonts";
 @import "./stylesheets/mixins.scss";
 @import "./stylesheets/variables.scss";
+@import "../../styles/mixins/respond";
 
 .react-datepicker {
   width: 39rem;
+
+  @include respond(900) {
+    width: 120rem;
+    height: 50rem;
+  }
 
   &__input-container {
     margin: 2rem 0;

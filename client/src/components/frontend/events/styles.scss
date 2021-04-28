@@ -112,4 +112,41 @@
   &__weekly-content {
     margin: 5rem 0;
   }
+
+  &__weekdays {
+    flex-direction: column;
+    width: 14.28%;
+  }
+
+  &__weekdays-header {
+    background-color: #00a2a6;
+    padding: 1.6rem 0;
+    border-left: 0.1px solid #00acb0;
+    font-size: 1.6rem;
+    font-family: $poppins-sans-serif;
+    color: white;
+    text-align: center;
+  }
+
+  &__weekdays-content {
+    border: 0.1px solid #eee;
+    height: 50rem;
+  }
+
+  &__weekdays-content-event-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  &__weekdays-content-event-text {
+    font-size: 1.4rem;
+    font-family: $poppins-sans-serif;
+    text-align: center;
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
 }

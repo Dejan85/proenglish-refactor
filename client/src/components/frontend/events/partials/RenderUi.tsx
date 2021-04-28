@@ -24,7 +24,7 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
   const [searchedEvents, setSearchedEvents] = useState<object[]>();
   const [currentMonth, setCurrentMonth] = useState(new Date());
 
-  const { highlightDates } = filteredActiveEventsDates;
+  const { highlightDates, filteredEvents } = filteredActiveEventsDates;
 
   const onChange = (e: { target: { value: string } }) => {
     const searchTerm = e.target.value.toLowerCase();
@@ -56,17 +56,21 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
         <Heading className="events__heading" as="h1">
           Budite u toku nasih i vasih desavanja.
         </Heading>
-        <ContentContainer className="events__date-picker">
-          <Text className="events__date-picker-heading" as="p">
-            Izaberi daatum
-          </Text>
-          <CalendarOfEventsWidget
-            highlightDates={highlightDates}
-            generateHighlhtDates={generateHighlhtDates}
-            generateDailyEvents={generateDailyEvents}
-            setCurrentMonth={setCurrentMonth}
-          />
-        </ContentContainer>
+        <>
+          {active !== "weekly" && (
+            <ContentContainer className="events__date-picker">
+              <Text className="events__date-picker-heading" as="p">
+                Izaberi daatum
+              </Text>
+              <CalendarOfEventsWidget
+                highlightDates={highlightDates}
+                generateHighlhtDates={generateHighlhtDates}
+                generateDailyEvents={generateDailyEvents}
+                setCurrentMonth={setCurrentMonth}
+              />
+            </ContentContainer>
+          )}
+        </>
 
         <ContentContainer className="events__nav">
           <Button
@@ -122,7 +126,7 @@ const RenderUi = (props: UiRenderProps): JSX.Element => {
             />
           )}
 
-          {active === "weekly" && <WeeklyEvents />}
+          {active === "weekly" && <WeeklyEvents events={filteredEvents} />}
 
           {active === "monthly" &&
             filteredActiveEventsDates?.filteredEvents?.length && (

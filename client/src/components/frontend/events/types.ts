@@ -14,3 +14,7 @@ export interface MonthlyEventsProps {
     filteredActiveEventsDates: { highlightDates: Date[]; filteredEvents: object[]; };
     currentMonth?: any;
 }
+
+export interface WeeklyEventsProps {
+    events: object[];
+}

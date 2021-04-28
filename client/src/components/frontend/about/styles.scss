@@ -1,5 +1,6 @@
 @import "../../styles/variables/colors";
 @import "../../styles/variables/fonts";
+@import "../../styles/mixins/respond";
 
 .about {
   display: flex;
@@ -60,6 +61,14 @@
       color: #000 !important;
       font-size: 2rem;
       font-family: $lato-sans-serif;
+
+      @include respond(900) {
+        font-size: 3rem;
+      }
+    }
+
+    @include respond(900) {
+      width: 100%;
     }
   }
 
@@ -70,5 +79,9 @@
 
   &__image {
     width: 40%;
+
+    @include respond(900) {
+      display: none;
+    }
   }
 }

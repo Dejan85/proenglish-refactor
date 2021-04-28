@@ -20,7 +20,9 @@ import {
 import img from "./images/img2.jpg";
 import img2 from "./images/img.jpg";
 
-const renderImage = (img: string): JSX.Element => <Image alt="img" src={img} />;
+const renderImage = (img: string): JSX.Element => (
+  <Image disablelazyLoad alt="img" src={img} />
+);
 
 const imageUi = renderImage(img);
 const imageUi2 = renderImage(img2);

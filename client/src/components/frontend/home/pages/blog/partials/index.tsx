@@ -21,6 +21,7 @@ const RenderModal = (props: { blogData: object[] }): JSX.Element => {
               src={item.photo}
               type="base64"
               className="home-blog__modal-image"
+              disablelazyLoad
             />
             <Link
               as={LinkRouter}

@@ -37,7 +37,12 @@ const MemoizedUi: JSX.Element = (
         </Link>
       </ContentContainer>
       <ContentContainer className="home-about__image-container">
-        <Image className="home-about__image" alt="img" src={img} />
+        <Image
+          disablelazyLoad
+          className="home-about__image"
+          alt="img"
+          src={img}
+        />
       </ContentContainer>
     </ContentContainer>
   </SubContainer>

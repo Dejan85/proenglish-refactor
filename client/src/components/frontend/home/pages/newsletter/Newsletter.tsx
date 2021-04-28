@@ -14,7 +14,7 @@ const MemoizedUi: JSX.Element = (
   <>
     <ContentContainer className="home-newsletter">
       <ContentContainer className="home-newsletter__image">
-        <Image src={img} alt="img" />
+        <Image disablelazyLoad src={img} alt="img" />
       </ContentContainer>
 
       <ContentContainer className="home-newsletter__modal-container">

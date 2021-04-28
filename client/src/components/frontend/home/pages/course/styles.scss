@@ -10,7 +10,7 @@
   @include respond(900) {
     flex-direction: column;
     box-shadow: none;
-    height: 65rem;
+    height: auto;
   }
 
   &--no-margin-top {

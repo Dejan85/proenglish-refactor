@@ -7,11 +7,6 @@
 .react-datepicker {
   width: 39rem;
 
-  @include respond(900) {
-    width: 120rem;
-    height: 50rem;
-  }
-
   &__input-container {
     margin: 2rem 0;
     input {

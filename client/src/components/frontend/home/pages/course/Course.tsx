@@ -41,15 +41,15 @@ const MemoizedUi: JSX.Element = (
           <Text as="p" className="default-paragraph">
             {text}
           </Text>
-          <Link className="home-about__link" to={linkPath} as={RouterLink}>
+          <Link className="home-course__link" to={linkPath} as={RouterLink}>
             {linkText}
           </Link>
         </ContentContainer>
       </ContentContainer>
     </ContentContainer>
 
-    <ContentContainer className="home-course home-course--no-margin-top">
-      <ContentContainer className="home-course__left-text-container">
+    <ContentContainer className="home-course home-course--no-margin-top ">
+      <ContentContainer className="home-course__left-text-container home-course__left-text-container--order-2">
         <ContentContainer className="home-course__left-text">
           <Heading as="h2" className="default-heading">
             {headingText2}
@@ -57,12 +57,12 @@ const MemoizedUi: JSX.Element = (
           <Text as="p" className="default-paragraph">
             {text2}
           </Text>
-          <Link className="home-about__link" to={linkPath} as={RouterLink}>
+          <Link className="home-course__link" to={linkPath} as={RouterLink}>
             {linkText2}
           </Link>
         </ContentContainer>
       </ContentContainer>
-      <ContentContainer className="home-course__right-image-container">
+      <ContentContainer className="home-course__right-image-container home-course__right-image-container--order-1">
         {imageUi2}
       </ContentContainer>
     </ContentContainer>

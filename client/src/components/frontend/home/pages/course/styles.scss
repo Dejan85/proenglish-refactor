@@ -1,10 +1,17 @@
 @import "../../../../styles/variables/fonts";
 @import "../../../../styles/variables/colors";
+@import "../../../../styles/mixins/respond";
 
 .home-course {
   height: 55rem;
   margin-top: 10rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+
+  @include respond(900) {
+    flex-direction: column;
+    box-shadow: none;
+    height: 65rem;
+  }
 
   &--no-margin-top {
     margin-top: 0rem;
@@ -15,10 +22,40 @@
   &__right-text-container,
   &__left-text-container {
     width: 50%;
+
+    @include respond(900) {
+      width: 100%;
+    }
+  }
+
+  &__left-image-container,
+  &__right-image-container {
+    @include respond(900) {
+      height: 35rem;
+    }
+
+    &--order-1 {
+      order: 1;
+    }
+  }
+
+  &__right-image-container {
+    &--order-1 {
+      @include respond(900) {
+        order: 1;
+        margin-top: 5rem;
+      }
+    }
   }
 
   &__left-text-container {
     justify-content: flex-end;
+
+    &--order-2 {
+      @include respond(900) {
+        order: 2;
+      }
+    }
   }
 
   &__left-text,
@@ -26,8 +63,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-evenly;
-    max-width: 60rem;
-    width: 100%;
+    width: 60rem;
     margin-left: 5rem;
   }
 
@@ -35,6 +71,15 @@
     align-items: flex-start;
     margin-left: 0rem;
     margin-right: 5rem;
+  }
+
+  &__left-text,
+  &__right-text {
+    @include respond(900) {
+      align-items: center;
+      width: 100%;
+      margin: 2rem;
+    }
   }
 
   &__link {
@@ -53,6 +98,10 @@
 
     &:hover {
       background-color: darken($color: $main-color, $amount: 20%);
+    }
+
+    @include respond(900) {
+      margin: 4rem;
     }
   }
 }

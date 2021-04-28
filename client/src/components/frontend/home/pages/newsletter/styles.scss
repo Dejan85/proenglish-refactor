@@ -1,5 +1,6 @@
 @import "../../../../styles/variables/fonts";
 @import "../../../../styles/variables/colors";
+@import "../../../../styles/mixins/respond";
 
 .home-newsletter {
   margin-top: 10rem;
@@ -22,6 +23,10 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
     background-color: lighten($main-color, 35%);
+
+    @include respond(1200) {
+      margin-left: -8rem;
+    }
   }
 
   &__text {

@@ -1,5 +1,6 @@
 @import "../../../../styles/variables/fonts";
 @import "../../../../styles/variables/colors";
+@import "../../../../styles/mixins/respond";
 
 .home-about {
   &__content {
@@ -25,6 +26,10 @@
     line-height: 60px;
     font-size: 3.7rem;
     color: #1a1a24;
+
+    @include respond(900) {
+      font-size: 4.2rem;
+    }
   }
 
   &__image-container {
@@ -54,6 +59,10 @@
 
     &:hover {
       background-color: darken($color: $main-color, $amount: 20%);
+    }
+
+    @include respond(900) {
+      font-size: 2.2rem;
     }
   }
 }

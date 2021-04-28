@@ -1,5 +1,6 @@
 @import "../../styles/variables/colors";
 @import "../../styles/variables/fonts";
+@import "../../styles/mixins/respond";
 
 .course {
   flex-direction: column;
@@ -15,6 +16,11 @@
     height: 100%;
     background-color: white;
     padding: 10rem 0 10rem 27rem;
+
+    @include respond(900) {
+      width: 100%;
+      padding: 20rem 2rem 10rem 2rem;
+    }
   }
 
   &__heading {
@@ -32,12 +38,22 @@
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
+
+    @include respond(900) {
+      top: 5rem;
+      left: 1rem;
+      transform: translate(0, 0);
+    }
   }
 
   &__text-container {
     flex-direction: column;
     justify-content: center;
     width: 62rem;
+
+    @include respond(900) {
+      width: 100%;
+    }
   }
 
   &__text {
@@ -46,6 +62,10 @@
     color: #000;
     text-align: justify;
     padding-bottom: 2rem;
+
+    @include respond(900) {
+      font-size: 2.5rem;
+    }
   }
 
   &__text-span {
@@ -56,6 +76,10 @@
   &__bottom-container {
     background-image: url(./images/background2.jpg);
     height: 95vh;
+
+    @include respond(900) {
+      height: 80vh;
+    }
   }
 
   &__left-content {
@@ -64,6 +88,11 @@
     height: 100%;
     background-color: white;
     padding: 0 7rem;
+
+    @include respond(900) {
+      width: 80%;
+      padding: 0 3rem 0 2rem;
+    }
   }
 
   &__diagram {
@@ -74,6 +103,10 @@
     transition: 0.5s all;
     background: linear-gradient(180deg, #ee9a20, #6d4408);
     padding: 3rem 2rem;
+
+    @include respond(900) {
+      width: 20%;
+    }
   }
 
   &__diagram-text {
@@ -81,6 +114,10 @@
     font-size: 2rem;
     font-family: $poppins-sans-serif;
     text-align: center;
+
+    @include respond(900) {
+      font-size: 2.5rem;
+    }
   }
 
   &__diagram-nav-container {
@@ -114,5 +151,9 @@
 
   &__text-paragraph {
     margin-top: 2rem;
+
+    @include respond(900) {
+      font-size: 2.5rem;
+    }
   }
 }

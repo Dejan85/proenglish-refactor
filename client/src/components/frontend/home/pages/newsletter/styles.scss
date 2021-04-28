@@ -25,7 +25,8 @@
     background-color: lighten($main-color, 35%);
 
     @include respond(1200) {
-      margin-left: -8rem;
+      width: 100%;
+      margin-right: 2rem;
     }
   }
 

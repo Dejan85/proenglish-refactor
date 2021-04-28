@@ -11,6 +11,10 @@
     height: 57vh;
   }
 
+  @include respond(600) {
+    height: 40vh;
+  }
+
   &__container {
     flex-direction: column;
     justify-content: flex-start;
@@ -27,5 +31,9 @@
     font-size: 3.5rem;
     font-family: $lato-sans-serif;
     font-weight: 800;
+
+    @include respond(600) {
+      font-size: 4.5rem;
+    }
   }
 }

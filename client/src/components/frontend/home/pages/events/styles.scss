@@ -1,14 +1,23 @@
 @import "../../../../styles/variables/fonts";
 @import "../../../../styles/variables/colors";
+@import "../../../../styles/mixins/respond";
 
 .home-events {
+  @include respond(900) {
+    flex-direction: column;
+  }
+
   &__calendar {
-    max-width: 39rem;
+    width: 39rem;
     height: 57rem;
     margin-top: 10rem;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+
+    @include respond(900) {
+      width: 100%;
+    }
   }
 
   &__calendar-heading {
@@ -16,6 +25,12 @@
     font-size: 2.6rem;
     color: #1a1a24;
     font-weight: 600;
+
+    @include respond(900) {
+      width: 100%;
+      text-align: center;
+      font-size: 3.2rem;
+    }
   }
 
   &__content-container {
@@ -26,18 +41,25 @@
   &__monthly-events {
     position: relative;
     flex-direction: column;
-    max-width: 30rem;
-    width: 100%;
+    width: 30rem;
     height: 57rem;
     margin-top: 10rem;
+
+    @include respond(900) {
+      width: 100%;
+    }
   }
 
   &__events-for-today {
     flex-direction: column;
-    max-width: 40rem;
+    width: 40rem;
     width: 100%;
     height: 57rem;
     margin-top: 10rem;
+
+    @include respond(900) {
+      width: 100%;
+    }
   }
 
   &__link {
@@ -56,6 +78,10 @@
 
     &:hover {
       background-color: darken($color: $main-color, $amount: 20%);
+    }
+
+    @include respond(900) {
+      font-size: 2.2rem;
     }
   }
 }

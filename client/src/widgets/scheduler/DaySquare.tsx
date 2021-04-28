@@ -6,7 +6,6 @@ import { Scrollbars } from "react-custom-scrollbars";
 
 const DaySquare = (props: DaySquareProps) => {
   const { day, sortedEvents, className: customClassName } = props;
-  // console.log("test sortedEvents", sortedEvents);
 
   return (
     <ContentContainer className={`scheduler__day-square ${customClassName}`}>

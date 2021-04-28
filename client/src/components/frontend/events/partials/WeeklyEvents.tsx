@@ -21,7 +21,7 @@ const lastday = new Date(date.setDate(last)).toLocaleDateString("en-GB", {
 let wd: number;
 const weekDays: number[] = [];
 
-const WeeklyEvents = (props: WeeklyEventsProps) => {
+const WeeklyEvents = (props: WeeklyEventsProps): JSX.Element => {
   const { events } = props;
   const [weeklyEvents, setWeeklyEvents] = useState<object[]>([]);
   let counter: number = 1;
@@ -36,8 +36,6 @@ const WeeklyEvents = (props: WeeklyEventsProps) => {
     });
     setWeeklyEvents(weeklyEvent);
   }, [weekDays, events]);
-
-  console.log("test", weeklyEvents);
 
   return (
     <ContentContainer className="events__weekly-content">

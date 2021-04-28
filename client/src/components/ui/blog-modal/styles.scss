@@ -1,7 +1,12 @@
+@import "../../styles/mixins/respond";
+
 .blog-modal {
-  max-width: 27rem;
-  width: 100%;
+  width: 27rem;
   min-height: 62rem;
   height: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+
+  @include respond(900) {
+    width: 100%;
+  }
 }

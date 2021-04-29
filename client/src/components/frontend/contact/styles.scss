@@ -1,11 +1,21 @@
 @import "../../styles/variables/fonts";
 @import "../../styles/variables/colors";
+@import "../../styles/mixins/respond";
 
 .contact {
+  @include respond(900) {
+    flex-direction: column;
+  }
+
   min-height: 98rem;
+
   &__map {
     width: 50%;
     flex-direction: column;
+
+    @include respond(900) {
+      width: 100%;
+    }
   }
 
   &__form-content {
@@ -13,6 +23,11 @@
     width: 50%;
     padding: 2rem 10rem 0rem 10rem;
     justify-content: space-around;
+
+    @include respond(900) {
+      width: 100%;
+      padding: 2rem 10rem 4rem 10rem;
+    }
   }
 
   &__heading-container {
@@ -92,6 +107,10 @@
 
   &__contact-info-text-container {
     flex-direction: column;
+
+    @include respond(900) {
+      margin-top: 2rem;
+    }
   }
 
   &__contact-info-text {

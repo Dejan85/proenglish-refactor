@@ -3,6 +3,7 @@ import { WrapperType } from "~/src/global-types";
 import { NavigationProps } from "./types";
 import List from "./partials/List";
 import uniqid from "uniqid";
+import ResponsiveNavigation from "./ResponsiveNav";
 
 const Wrapper: WrapperType = "ul";
 const className: string = "navigation";
@@ -30,5 +31,7 @@ const Navigation = (props: NavigationProps): JSX.Element => {
     </Wrapper>
   );
 };
+
+Navigation.ResponsiveNavigation = ResponsiveNavigation;
 
 export default Navigation;

@@ -3,11 +3,15 @@ import { ListProps } from "../types";
 import { WrapperType } from "~/src/global-types";
 
 const Wrapper: WrapperType = "li";
-const className: string = "navigation__list";
+const className: string = "responsive-navigation__list";
 
 const List = (props: ListProps): JSX.Element => {
-  const { children } = props;
-  return <Wrapper className={className}>{children}</Wrapper>;
+  const { children, onClick } = props;
+  return (
+    <Wrapper onClick={onClick} className={className}>
+      {children}
+    </Wrapper>
+  );
 };
 
 export default List;

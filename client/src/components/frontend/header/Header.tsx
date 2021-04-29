@@ -18,6 +18,11 @@ const MemoizedUi: JSX.Element = (
         linksPath={linksPath}
       />
     </SubContainer>
+    <Navigation.ResponsiveNavigation
+      routerLink={NavLink}
+      linksText={linksText}
+      linksPath={linksPath}
+    />
   </HeaderUi>
 );
 

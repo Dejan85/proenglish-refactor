@@ -9,4 +9,5 @@ export interface NavigationProps {
 
 export interface ListProps {
     children?: JSX.Element | JSX.Element[];
+    onClick?: any;
 }

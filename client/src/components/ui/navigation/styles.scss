@@ -58,13 +58,12 @@
     justify-content: flex-end;
     align-items: center;
     background-color: white;
-    z-index: 100;
 
     &__icon {
       color: black !important;
       font-size: 4rem !important;
       margin-right: 2rem;
-      z-index: 102;
+      z-index: 109;
     }
 
     &__container {
@@ -72,7 +71,8 @@
       width: 100%;
       flex-direction: column;
       top: 0;
-      z-index: 103;
+      z-index: 108;
+      background-color: white;
     }
 
     &__link {

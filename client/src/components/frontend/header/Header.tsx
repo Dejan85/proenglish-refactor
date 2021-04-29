@@ -10,7 +10,7 @@ import { linksText, linksPath } from "./constants";
 
 const MemoizedUi: JSX.Element = (
   <HeaderUi>
-    <SubContainer>
+    <SubContainer className="position-relative">
       <Logo />
       <Navigation
         routerLink={NavLink}
